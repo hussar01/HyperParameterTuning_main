@@ -1,0 +1,4379 @@
+-------------------------------
+
+EPOCHS = 24
+CLASSES = 10
+INNER_FOLD = 2
+NUM_SAMPLES = 24
+DIR = os.getcwd()
+
+#-------PRUNER SETTING------------
+MIN_RESOURCE = 8      #till this no of epoch the pruning will not happen for the current fold
+REDUCTION_FACTOR = 2  #responisble for double resource and halving the trials at each rung
+#-------TPE SETTING-------------
+N_STARTUP_TRIALS = 8 
+---------------------------------
+Study statistics: 
+  Number of finished trials:  24
+  Number of pruned trials:  20
+  Number of complete trials:  4
+Best hyperparameters found:
+{'l1': 96, 'l2': 96, 'lr': 0.008169619653037311, 'batch_size': 256}
+Best trial:
+  Value:  0.05901664003514748
+-----------------------------------------
+Average training loss: 0.0019
+Using best hyperparameters {'l1': 96, 'l2': 96, 'lr': 0.008169619653037311, 'batch_size': 256} on final Test set to find Test loss for overfitting
+Testing loss : 0.0502
+Calculated Overfitting : 0.0482
+Using best hyperparameters {'l1': 96, 'l2': 96, 'lr': 0.008169619653037311, 'batch_size': 256} on final Test set with testing set size : 10000
+Test set accuracy with best hyperparameters: 0.9844
+Total time taken for hyperparameter tuning and evaluation: 1:24:41
+--------------------------------------------------
+[I 2024-11-19 00:05:27,855] A new study created in RDB with name: asha_pruner_ranges
+
+Selected Hyperparameters for Trial 1:
+  l1: 224, l2: 224, lr: 0.008471801418819975, batch_size: 256
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 1.5335635384917259
+**STATS for Epoch 1** : 
+Average training loss: 0.0594
+Average validation loss: 0.3377
+Validation Accuracy: 0.8958
+Overfitting: 0.2783
+Best model saved at epoch 1 with validation loss: 0.3377
+[Epoch 2, Batch 100] loss: 0.2424743241071701
+**STATS for Epoch 2** : 
+Average training loss: 0.0241
+Average validation loss: 0.1772
+Validation Accuracy: 0.9433
+Overfitting: 0.1531
+Best model saved at epoch 2 with validation loss: 0.1772
+[Epoch 3, Batch 100] loss: 0.13664363205432892
+**STATS for Epoch 3** : 
+Average training loss: 0.0162
+Average validation loss: 0.1298
+Validation Accuracy: 0.9604
+Overfitting: 0.1136
+Best model saved at epoch 3 with validation loss: 0.1298
+[Epoch 4, Batch 100] loss: 0.09201435305178166
+**STATS for Epoch 4** : 
+Average training loss: 0.0144
+Average validation loss: 0.0958
+Validation Accuracy: 0.9711
+Overfitting: 0.0814
+Best model saved at epoch 4 with validation loss: 0.0958
+[Epoch 5, Batch 100] loss: 0.07694351311773062
+**STATS for Epoch 5** : 
+Average training loss: 0.0111
+Average validation loss: 0.0847
+Validation Accuracy: 0.9747
+Overfitting: 0.0737
+Best model saved at epoch 5 with validation loss: 0.0847
+[Epoch 6, Batch 100] loss: 0.06654742935672403
+**STATS for Epoch 6** : 
+Average training loss: 0.0101
+Average validation loss: 0.0865
+Validation Accuracy: 0.9740
+Overfitting: 0.0764
+[Epoch 7, Batch 100] loss: 0.05221455758437514
+**STATS for Epoch 7** : 
+Average training loss: 0.0093
+Average validation loss: 0.0837
+Validation Accuracy: 0.9745
+Overfitting: 0.0744
+Best model saved at epoch 7 with validation loss: 0.0837
+[Epoch 8, Batch 100] loss: 0.05023414886556566
+**STATS for Epoch 8** : 
+Average training loss: 0.0053
+Average validation loss: 0.0609
+Validation Accuracy: 0.9816
+Overfitting: 0.0556
+Best model saved at epoch 8 with validation loss: 0.0609
+[Epoch 9, Batch 100] loss: 0.04031945429742336
+**STATS for Epoch 9** : 
+Average training loss: 0.0063
+Average validation loss: 0.0618
+Validation Accuracy: 0.9811
+Overfitting: 0.0555
+[Epoch 10, Batch 100] loss: 0.03660502159968018
+**STATS for Epoch 10** : 
+Average training loss: 0.0054
+Average validation loss: 0.0570
+Validation Accuracy: 0.9823
+Overfitting: 0.0516
+Best model saved at epoch 10 with validation loss: 0.0570
+[Epoch 11, Batch 100] loss: 0.03192396638449282
+**STATS for Epoch 11** : 
+Average training loss: 0.0043
+Average validation loss: 0.0628
+Validation Accuracy: 0.9814
+Overfitting: 0.0586
+[Epoch 12, Batch 100] loss: 0.030510017839260398
+**STATS for Epoch 12** : 
+Average training loss: 0.0060
+Average validation loss: 0.0581
+Validation Accuracy: 0.9821
+Overfitting: 0.0521
+[Epoch 13, Batch 100] loss: 0.026744735399261116
+**STATS for Epoch 13** : 
+Average training loss: 0.0036
+Average validation loss: 0.0549
+Validation Accuracy: 0.9835
+Overfitting: 0.0513
+Best model saved at epoch 13 with validation loss: 0.0549
+[Epoch 14, Batch 100] loss: 0.023270605970174073
+**STATS for Epoch 14** : 
+Average training loss: 0.0042
+Average validation loss: 0.0650
+Validation Accuracy: 0.9818
+Overfitting: 0.0607
+[Epoch 15, Batch 100] loss: 0.024153900626115502
+**STATS for Epoch 15** : 
+Average training loss: 0.0028
+Average validation loss: 0.0541
+Validation Accuracy: 0.9847
+Overfitting: 0.0513
+Best model saved at epoch 15 with validation loss: 0.0541
+[Epoch 16, Batch 100] loss: 0.018266326629091053
+**STATS for Epoch 16** : 
+Average training loss: 0.0038
+Average validation loss: 0.0634
+Validation Accuracy: 0.9823
+Overfitting: 0.0596
+[Epoch 17, Batch 100] loss: 0.017843023240566254
+**STATS for Epoch 17** : 
+Average training loss: 0.0028
+Average validation loss: 0.0586
+Validation Accuracy: 0.9831
+Overfitting: 0.0558
+[Epoch 18, Batch 100] loss: 0.015580533291213214
+**STATS for Epoch 18** : 
+Average training loss: 0.0020
+Average validation loss: 0.0577
+Validation Accuracy: 0.9839
+Overfitting: 0.0557
+[Epoch 19, Batch 100] loss: 0.014372395067475736
+**STATS for Epoch 19** : 
+Average training loss: 0.0017
+Average validation loss: 0.0544
+Validation Accuracy: 0.9849
+Overfitting: 0.0527
+[Epoch 20, Batch 100] loss: 0.012218403546139598
+**STATS for Epoch 20** : 
+Average training loss: 0.0018
+Average validation loss: 0.0589
+Validation Accuracy: 0.9846
+Overfitting: 0.0571
+[Epoch 21, Batch 100] loss: 0.012805856509367004
+**STATS for Epoch 21** : 
+Average training loss: 0.0013
+Average validation loss: 0.0595
+Validation Accuracy: 0.9846
+Overfitting: 0.0582
+[Epoch 22, Batch 100] loss: 0.00907376041985117
+**STATS for Epoch 22** : 
+Average training loss: 0.0017
+Average validation loss: 0.0593
+Validation Accuracy: 0.9852
+Overfitting: 0.0577
+[Epoch 23, Batch 100] loss: 0.008398679269012064
+**STATS for Epoch 23** : 
+Average training loss: 0.0009
+Average validation loss: 0.0611
+Validation Accuracy: 0.9855
+Overfitting: 0.0601
+[Epoch 24, Batch 100] loss: 0.006975141660077498
+**STATS for Epoch 24** : 
+Average training loss: 0.0015
+Average validation loss: 0.0599
+Validation Accuracy: 0.9849
+Overfitting: 0.0584
+Fold 1 validation loss: 0.0599
+Fold 2/2
+Inner Training set size for fold 2 is 30000
+ Inner Validation set size for fold 2 is 30000
+[Epoch 1, Batch 100] loss: 1.6283121210336686
+**STATS for Epoch 1** : 
+Average training loss: 0.0606
+Average validation loss: 0.3891
+Validation Accuracy: 0.8742
+Overfitting: 0.3286
+Best model saved at epoch 1 with validation loss: 0.3891
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 0 is already reported.
+  warnings.warn(
+[Epoch 2, Batch 100] loss: 0.24029792964458466
+**STATS for Epoch 2** : 
+Average training loss: 0.0254
+Average validation loss: 0.2040
+Validation Accuracy: 0.9359
+Overfitting: 0.1786
+Best model saved at epoch 2 with validation loss: 0.2040
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 1 is already reported.
+  warnings.warn(
+[Epoch 3, Batch 100] loss: 0.15247855007648467
+**STATS for Epoch 3** : 
+Average training loss: 0.0186
+Average validation loss: 0.1222
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 2 is already reported.
+  warnings.warn(
+Validation Accuracy: 0.9631
+Overfitting: 0.1037
+Best model saved at epoch 3 with validation loss: 0.1222
+[Epoch 4, Batch 100] loss: 0.10229620765894651
+**STATS for Epoch 4** : 
+Average training loss: 0.0158
+Average validation loss: 0.1047
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 3 is already reported.
+  warnings.warn(
+Validation Accuracy: 0.9673
+Overfitting: 0.0889
+Best model saved at epoch 4 with validation loss: 0.1047
+[Epoch 5, Batch 100] loss: 0.0888686603307724
+**STATS for Epoch 5** : 
+Average training loss: 0.0129
+Average validation loss: 0.0847
+Validation Accuracy: 0.9745
+Overfitting: 0.0718
+Best model saved at epoch 5 with validation loss: 0.0847
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 4 is already reported.
+  warnings.warn(
+[Epoch 6, Batch 100] loss: 0.07335415871813894
+**STATS for Epoch 6** : 
+Average training loss: 0.0090
+Average validation loss: 0.0895
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 5 is already reported.
+  warnings.warn(
+Validation Accuracy: 0.9742
+Overfitting: 0.0805
+[Epoch 7, Batch 100] loss: 0.060867470875382426
+**STATS for Epoch 7** : 
+Average training loss: 0.0083
+Average validation loss: 0.0750
+Validation Accuracy: 0.9771
+Overfitting: 0.0668
+Best model saved at epoch 7 with validation loss: 0.0750
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 6 is already reported.
+  warnings.warn(
+[Epoch 8, Batch 100] loss: 0.05550131607800722
+**STATS for Epoch 8** : 
+Average training loss: 0.0076
+Average validation loss: 0.0769
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 7 is already reported.
+  warnings.warn(
+Validation Accuracy: 0.9767
+Overfitting: 0.0693
+[Epoch 9, Batch 100] loss: 0.04703615914098919
+**STATS for Epoch 9** : 
+Average training loss: 0.0077
+Average validation loss: 0.0680
+Validation Accuracy: 0.9801
+Overfitting: 0.0603
+Best model saved at epoch 9 with validation loss: 0.0680
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 8 is already reported.
+  warnings.warn(
+[Epoch 10, Batch 100] loss: 0.04648629589937627
+**STATS for Epoch 10** : 
+Average training loss: 0.0057
+Average validation loss: 0.0726
+Validation Accuracy: 0.9786
+Overfitting: 0.0668
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 9 is already reported.
+  warnings.warn(
+[Epoch 11, Batch 100] loss: 0.03827396709471941
+**STATS for Epoch 11** : 
+Average training loss: 0.0058
+Average validation loss: 0.0681
+Validation Accuracy: 0.9797
+Overfitting: 0.0622
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 10 is already reported.
+  warnings.warn(
+[Epoch 12, Batch 100] loss: 0.03629083977080882
+**STATS for Epoch 12** : 
+Average training loss: 0.0057
+Average validation loss: 0.0664
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 11 is already reported.
+  warnings.warn(
+Validation Accuracy: 0.9805
+Overfitting: 0.0607
+Best model saved at epoch 12 with validation loss: 0.0664
+[Epoch 13, Batch 100] loss: 0.03348812833428383
+**STATS for Epoch 13** : 
+Average training loss: 0.0050
+Average validation loss: 0.0556
+Validation Accuracy: 0.9844
+Overfitting: 0.0506
+Best model saved at epoch 13 with validation loss: 0.0556
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 12 is already reported.
+  warnings.warn(
+[Epoch 14, Batch 100] loss: 0.02577366251964122
+**STATS for Epoch 14** : 
+Average training loss: 0.0044
+Average validation loss: 0.0597
+Validation Accuracy: 0.9820
+Overfitting: 0.0554
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 13 is already reported.
+  warnings.warn(
+[Epoch 15, Batch 100] loss: 0.027575582722201942
+**STATS for Epoch 15** : 
+Average training loss: 0.0028
+Average validation loss: 0.0612
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 14 is already reported.
+  warnings.warn(
+Validation Accuracy: 0.9817
+Overfitting: 0.0585
+[Epoch 16, Batch 100] loss: 0.023689588089473544
+**STATS for Epoch 16** : 
+Average training loss: 0.0034
+Average validation loss: 0.0553
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 15 is already reported.
+  warnings.warn(
+Validation Accuracy: 0.9847
+Overfitting: 0.0519
+Best model saved at epoch 16 with validation loss: 0.0553
+[Epoch 17, Batch 100] loss: 0.02376122262561694
+**STATS for Epoch 17** : 
+Average training loss: 0.0031
+Average validation loss: 0.0604
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 16 is already reported.
+  warnings.warn(
+Validation Accuracy: 0.9830
+Overfitting: 0.0573
+[Epoch 18, Batch 100] loss: 0.01694014729000628
+**STATS for Epoch 18** : 
+Average training loss: 0.0031
+Average validation loss: 0.0596
+Validation Accuracy: 0.9838
+Overfitting: 0.0565
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 17 is already reported.
+  warnings.warn(
+[Epoch 19, Batch 100] loss: 0.01672078576637432
+**STATS for Epoch 19** : 
+Average training loss: 0.0031
+Average validation loss: 0.0573
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 18 is already reported.
+  warnings.warn(
+Validation Accuracy: 0.9840
+Overfitting: 0.0542
+[Epoch 20, Batch 100] loss: 0.017125605272594838
+**STATS for Epoch 20** : 
+Average training loss: 0.0034
+Average validation loss: 0.0587
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 19 is already reported.
+  warnings.warn(
+Validation Accuracy: 0.9846
+Overfitting: 0.0553
+[Epoch 21, Batch 100] loss: 0.017264409644994885
+**STATS for Epoch 21** : 
+Average training loss: 0.0018
+Average validation loss: 0.0581
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 20 is already reported.
+  warnings.warn(
+Validation Accuracy: 0.9847
+Overfitting: 0.0562
+[Epoch 22, Batch 100] loss: 0.014501559843774886
+**STATS for Epoch 22** : 
+Average training loss: 0.0025
+Average validation loss: 0.0655
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 21 is already reported.
+  warnings.warn(
+Validation Accuracy: 0.9833
+Overfitting: 0.0631
+[Epoch 23, Batch 100] loss: 0.012314499013591558
+**STATS for Epoch 23** : 
+Average training loss: 0.0010
+Average validation loss: 0.0547
+Validation Accuracy: 0.9859
+Overfitting: 0.0538
+Best model saved at epoch 23 with validation loss: 0.0547
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 22 is already reported.
+  warnings.warn(
+[Epoch 24, Batch 100] loss: 0.008858707189792767
+**STATS for Epoch 24** : 
+Average training loss: 0.0024
+Average validation loss: 0.0591
+/home/ahussain/PycharmProjects/optunaNew/.venv/lib/python3.8/site-packages/optuna/trial/_trial.py:493: UserWarning: The reported value is ignored because this `step` 23 is already reported.
+  warnings.warn(
+Validation Accuracy: 0.9851
+Overfitting: 0.0566
+Fold 2 validation loss: 0.0591
+Mean validation loss across all folds for Trial 1 is 0.0595 with trial config:  l1: 224, l2: 224, lr: 0.008471801418819975, batch_size: 256
+[I 2024-11-19 00:13:57,965] Trial 0 finished with value: 0.059496782082764404 and parameters: {'l1': 224, 'l2': 224, 'lr': 0.008471801418819975, 'batch_size': 256}. Best is trial 0 with value: 0.059496782082764404.
+
+Selected Hyperparameters for Trial 2:
+  l1: 352, l2: 256, lr: 1.2087541473056957e-05, batch_size: 16
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 2.3002633929252623
+[Epoch 1, Batch 200] loss: 2.3027689957618716
+[Epoch 1, Batch 300] loss: 2.3010748505592344
+[Epoch 1, Batch 400] loss: 2.301159384250641
+[Epoch 1, Batch 500] loss: 2.2992795133590698
+[Epoch 1, Batch 600] loss: 2.296737003326416
+[Epoch 1, Batch 700] loss: 2.2987999725341797
+[Epoch 1, Batch 800] loss: 2.29840868473053
+[Epoch 1, Batch 900] loss: 2.296944043636322
+[Epoch 1, Batch 1000] loss: 2.2982165575027467
+[Epoch 1, Batch 1100] loss: 2.2983733892440794
+[Epoch 1, Batch 1200] loss: 2.2965108442306517
+[Epoch 1, Batch 1300] loss: 2.296973023414612
+[Epoch 1, Batch 1400] loss: 2.295444600582123
+[Epoch 1, Batch 1500] loss: 2.2971211004257204
+[Epoch 1, Batch 1600] loss: 2.2952538180351256
+[Epoch 1, Batch 1700] loss: 2.2941997838020325
+[Epoch 1, Batch 1800] loss: 2.2916473269462587
+**STATS for Epoch 1** : 
+Average training loss: 0.0918
+Average validation loss: 2.2936
+Validation Accuracy: 0.0988
+Overfitting: 2.2017
+Best model saved at epoch 1 with validation loss: 2.2936
+[Epoch 2, Batch 100] loss: 2.2921509027481077
+[Epoch 2, Batch 200] loss: 2.294598379135132
+[Epoch 2, Batch 300] loss: 2.29192852973938
+[Epoch 2, Batch 400] loss: 2.290766363143921
+[Epoch 2, Batch 500] loss: 2.291402554512024
+[Epoch 2, Batch 600] loss: 2.2899513602256776
+[Epoch 2, Batch 700] loss: 2.2921511244773867
+[Epoch 2, Batch 800] loss: 2.2919459342956543
+[Epoch 2, Batch 900] loss: 2.2902576112747193
+[Epoch 2, Batch 1000] loss: 2.289899184703827
+[Epoch 2, Batch 1100] loss: 2.2893642354011536
+[Epoch 2, Batch 1200] loss: 2.2878661513328553
+[Epoch 2, Batch 1300] loss: 2.2874155974388124
+[Epoch 2, Batch 1400] loss: 2.288128845691681
+[Epoch 2, Batch 1500] loss: 2.287519047260284
+[Epoch 2, Batch 1600] loss: 2.2875165486335756
+[Epoch 2, Batch 1700] loss: 2.2843107271194456
+[Epoch 2, Batch 1800] loss: 2.2860895133018495
+**STATS for Epoch 2** : 
+Average training loss: 0.0915
+Average validation loss: 2.2852
+Validation Accuracy: 0.1022
+Overfitting: 2.1938
+Best model saved at epoch 2 with validation loss: 2.2852
+[Epoch 3, Batch 100] loss: 2.2852519297599794
+[Epoch 3, Batch 200] loss: 2.284653887748718
+[Epoch 3, Batch 300] loss: 2.282597875595093
+[Epoch 3, Batch 400] loss: 2.2846269249916076
+[Epoch 3, Batch 500] loss: 2.281957788467407
+[Epoch 3, Batch 600] loss: 2.28117547750473
+[Epoch 3, Batch 700] loss: 2.2811508631706237
+[Epoch 3, Batch 800] loss: 2.279219975471497
+[Epoch 3, Batch 900] loss: 2.281358368396759
+[Epoch 3, Batch 1000] loss: 2.2800075030326843
+[Epoch 3, Batch 1100] loss: 2.2799875926971436
+[Epoch 3, Batch 1200] loss: 2.2802625036239625
+[Epoch 3, Batch 1300] loss: 2.2788478994369505
+[Epoch 3, Batch 1400] loss: 2.2782052993774413
+[Epoch 3, Batch 1500] loss: 2.278978521823883
+[Epoch 3, Batch 1600] loss: 2.279599609375
+[Epoch 3, Batch 1700] loss: 2.2780057072639464
+[Epoch 3, Batch 1800] loss: 2.2761379170417784
+**STATS for Epoch 3** : 
+Average training loss: 0.0912
+Average validation loss: 2.2758
+Validation Accuracy: 0.1412
+Overfitting: 2.1846
+Best model saved at epoch 3 with validation loss: 2.2758
+[Epoch 4, Batch 100] loss: 2.2732392859458925
+[Epoch 4, Batch 200] loss: 2.2748481798172
+[Epoch 4, Batch 300] loss: 2.2765607142448427
+[Epoch 4, Batch 400] loss: 2.2745458006858827
+[Epoch 4, Batch 500] loss: 2.273262960910797
+[Epoch 4, Batch 600] loss: 2.272857894897461
+[Epoch 4, Batch 700] loss: 2.2741551327705385
+[Epoch 4, Batch 800] loss: 2.269752025604248
+[Epoch 4, Batch 900] loss: 2.2715222120285032
+[Epoch 4, Batch 1000] loss: 2.268727979660034
+[Epoch 4, Batch 1100] loss: 2.269066376686096
+[Epoch 4, Batch 1200] loss: 2.2687278294563296
+[Epoch 4, Batch 1300] loss: 2.2681389665603637
+[Epoch 4, Batch 1400] loss: 2.268180058002472
+[Epoch 4, Batch 1500] loss: 2.266941075325012
+[Epoch 4, Batch 1600] loss: 2.265464794635773
+[Epoch 4, Batch 1700] loss: 2.26601190328598
+[Epoch 4, Batch 1800] loss: 2.2630521488189697
+**STATS for Epoch 4** : 
+Average training loss: 0.0906
+Average validation loss: 2.2639
+Validation Accuracy: 0.2766
+Overfitting: 2.1734
+Best model saved at epoch 4 with validation loss: 2.2639
+[Epoch 5, Batch 100] loss: 2.2646523547172546
+[Epoch 5, Batch 200] loss: 2.261965637207031
+[Epoch 5, Batch 300] loss: 2.261081249713898
+[Epoch 5, Batch 400] loss: 2.2617591881752013
+[Epoch 5, Batch 500] loss: 2.261304407119751
+[Epoch 5, Batch 600] loss: 2.2586737060546875
+[Epoch 5, Batch 700] loss: 2.259129831790924
+[Epoch 5, Batch 800] loss: 2.256210272312164
+[Epoch 5, Batch 900] loss: 2.256656906604767
+[Epoch 5, Batch 1000] loss: 2.258212993144989
+[Epoch 5, Batch 1100] loss: 2.255324885845184
+[Epoch 5, Batch 1200] loss: 2.2519428968429565
+[Epoch 5, Batch 1300] loss: 2.2540401721000674
+[Epoch 5, Batch 1400] loss: 2.2517989563941954
+[Epoch 5, Batch 1500] loss: 2.250295252799988
+[Epoch 5, Batch 1600] loss: 2.253317139148712
+[Epoch 5, Batch 1700] loss: 2.2506151819229125
+[Epoch 5, Batch 1800] loss: 2.2516487884521483
+**STATS for Epoch 5** : 
+Average training loss: 0.0899
+Average validation loss: 2.2480
+Validation Accuracy: 0.4156
+Overfitting: 2.1581
+Best model saved at epoch 5 with validation loss: 2.2480
+[Epoch 6, Batch 100] loss: 2.2457270312309263
+[Epoch 6, Batch 200] loss: 2.247004783153534
+[Epoch 6, Batch 300] loss: 2.245235414505005
+[Epoch 6, Batch 400] loss: 2.2439579343795777
+[Epoch 6, Batch 500] loss: 2.242179977893829
+[Epoch 6, Batch 600] loss: 2.2418928027153013
+[Epoch 6, Batch 700] loss: 2.238602948188782
+[Epoch 6, Batch 800] loss: 2.2405058217048643
+[Epoch 6, Batch 900] loss: 2.238118495941162
+[Epoch 6, Batch 1000] loss: 2.2363557195663453
+[Epoch 6, Batch 1100] loss: 2.237330675125122
+[Epoch 6, Batch 1200] loss: 2.233758420944214
+[Epoch 6, Batch 1300] loss: 2.235819025039673
+[Epoch 6, Batch 1400] loss: 2.2332664585113524
+[Epoch 6, Batch 1500] loss: 2.2319656300544737
+[Epoch 6, Batch 1600] loss: 2.2315696048736573
+[Epoch 6, Batch 1700] loss: 2.2289665818214415
+[Epoch 6, Batch 1800] loss: 2.2277513432502745
+**STATS for Epoch 6** : 
+Average training loss: 0.0890
+Average validation loss: 2.2255
+Validation Accuracy: 0.5148
+Overfitting: 2.1365
+Best model saved at epoch 6 with validation loss: 2.2255
+[Epoch 7, Batch 100] loss: 2.224862504005432
+[Epoch 7, Batch 200] loss: 2.2230853819847107
+[Epoch 7, Batch 300] loss: 2.220717089176178
+[Epoch 7, Batch 400] loss: 2.2169072604179383
+[Epoch 7, Batch 500] loss: 2.2213930821418764
+[Epoch 7, Batch 600] loss: 2.218084099292755
+[Epoch 7, Batch 700] loss: 2.2130445861816406
+[Epoch 7, Batch 800] loss: 2.2114989590644836
+[Epoch 7, Batch 900] loss: 2.21144202709198
+[Epoch 7, Batch 1000] loss: 2.2096690702438355
+[Epoch 7, Batch 1100] loss: 2.20405282497406
+[Epoch 7, Batch 1200] loss: 2.206242685317993
+[Epoch 7, Batch 1300] loss: 2.204065363407135
+[Epoch 7, Batch 1400] loss: 2.20064532995224
+[Epoch 7, Batch 1500] loss: 2.2003261375427248
+[Epoch 7, Batch 1600] loss: 2.201436140537262
+[Epoch 7, Batch 1700] loss: 2.197564866542816
+[Epoch 7, Batch 1800] loss: 2.194797549247742
+**STATS for Epoch 7** : 
+Average training loss: 0.0877
+Average validation loss: 2.1910
+Validation Accuracy: 0.5694
+Overfitting: 2.1033
+Best model saved at epoch 7 with validation loss: 2.1910
+[Epoch 8, Batch 100] loss: 2.1899154114723207
+[Epoch 8, Batch 200] loss: 2.1867391586303713
+[Epoch 8, Batch 300] loss: 2.181829085350037
+[Epoch 8, Batch 400] loss: 2.1876014614105226
+[Epoch 8, Batch 500] loss: 2.177542579174042
+[Epoch 8, Batch 600] loss: 2.1759451842308044
+[Epoch 8, Batch 700] loss: 2.176311209201813
+[Epoch 8, Batch 800] loss: 2.171982915401459
+[Epoch 8, Batch 900] loss: 2.1619867873191834
+[Epoch 8, Batch 1000] loss: 2.164942255020142
+[Epoch 8, Batch 1100] loss: 2.1609644794464113
+[Epoch 8, Batch 1200] loss: 2.159322602748871
+[Epoch 8, Batch 1300] loss: 2.156306917667389
+[Epoch 8, Batch 1400] loss: 2.154711060523987
+[Epoch 8, Batch 1500] loss: 2.154666500091553
+[Epoch 8, Batch 1600] loss: 2.1436066699028014
+[Epoch 8, Batch 1700] loss: 2.1425603461265563
+[Epoch 8, Batch 1800] loss: 2.136358590126038
+**STATS for Epoch 8** : 
+Average training loss: 0.0854
+Average validation loss: 2.1333
+Validation Accuracy: 0.5968
+Overfitting: 2.0479
+Best model saved at epoch 8 with validation loss: 2.1333
+[Epoch 9, Batch 100] loss: 2.1269273376464843
+[Epoch 9, Batch 200] loss: 2.1305949330329894
+[Epoch 9, Batch 300] loss: 2.1277392673492432
+[Epoch 9, Batch 400] loss: 2.1176613473892214
+[Epoch 9, Batch 500] loss: 2.113532781600952
+[Epoch 9, Batch 600] loss: 2.1153846096992495
+[Epoch 9, Batch 700] loss: 2.100308408737183
+[Epoch 9, Batch 800] loss: 2.093910822868347
+[Epoch 9, Batch 900] loss: 2.090522073507309
+[Epoch 9, Batch 1000] loss: 2.0901021909713746
+[Epoch 9, Batch 1100] loss: 2.0811859977245333
+[Epoch 9, Batch 1200] loss: 2.0715530729293823
+[Epoch 9, Batch 1300] loss: 2.0699735891819
+[Epoch 9, Batch 1400] loss: 2.069229896068573
+[Epoch 9, Batch 1500] loss: 2.0579660642147064
+[Epoch 9, Batch 1600] loss: 2.047154483795166
+[Epoch 9, Batch 1700] loss: 2.0377192080020903
+[Epoch 9, Batch 1800] loss: 2.0405217099189756
+**STATS for Epoch 9** : 
+Average training loss: 0.0814
+Average validation loss: 2.0278
+Validation Accuracy: 0.6059
+Overfitting: 1.9464
+[I 2024-11-19 00:16:20,260] Trial 1 pruned. 
+
+Selected Hyperparameters for Trial 3:
+  l1: 192, l2: 128, lr: 0.0005342937261279777, batch_size: 32
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 2.297382266521454
+[Epoch 1, Batch 200] loss: 2.2826097202301026
+[Epoch 1, Batch 300] loss: 2.2606993341445922
+[Epoch 1, Batch 400] loss: 2.2219510746002196
+[Epoch 1, Batch 500] loss: 2.1261031365394594
+[Epoch 1, Batch 600] loss: 1.7999687361717225
+[Epoch 1, Batch 700] loss: 1.1108181935548782
+[Epoch 1, Batch 800] loss: 0.7093190142512321
+[Epoch 1, Batch 900] loss: 0.5622713303565979
+**STATS for Epoch 1** : 
+Average training loss: 0.0202
+Average validation loss: 0.4788
+Validation Accuracy: 0.8662
+Overfitting: 0.4585
+Best model saved at epoch 1 with validation loss: 0.4788
+[Epoch 2, Batch 100] loss: 0.4850929886102676
+[Epoch 2, Batch 200] loss: 0.4496732274442911
+[Epoch 2, Batch 300] loss: 0.38211094215512276
+[Epoch 2, Batch 400] loss: 0.39304776303470135
+[Epoch 2, Batch 500] loss: 0.338780971467495
+[Epoch 2, Batch 600] loss: 0.31717907696962355
+[Epoch 2, Batch 700] loss: 0.29555205412209035
+[Epoch 2, Batch 800] loss: 0.29690343350172044
+[Epoch 2, Batch 900] loss: 0.27516013368964193
+**STATS for Epoch 2** : 
+Average training loss: 0.0101
+Average validation loss: 0.2448
+Validation Accuracy: 0.9274
+Overfitting: 0.2347
+Best model saved at epoch 2 with validation loss: 0.2448
+[Epoch 3, Batch 100] loss: 0.25161652252078054
+[Epoch 3, Batch 200] loss: 0.25544353608042003
+[Epoch 3, Batch 300] loss: 0.25838912308216094
+[Epoch 3, Batch 400] loss: 0.21972139798104762
+[Epoch 3, Batch 500] loss: 0.1878869580477476
+[Epoch 3, Batch 600] loss: 0.22692332157865167
+[Epoch 3, Batch 700] loss: 0.2096087145805359
+[Epoch 3, Batch 800] loss: 0.20458798278123141
+[Epoch 3, Batch 900] loss: 0.179517557695508
+**STATS for Epoch 3** : 
+Average training loss: 0.0092
+Average validation loss: 0.1869
+Validation Accuracy: 0.9431
+Overfitting: 0.1777
+Best model saved at epoch 3 with validation loss: 0.1869
+[Epoch 4, Batch 100] loss: 0.17525239631533623
+[Epoch 4, Batch 200] loss: 0.1776566013880074
+[Epoch 4, Batch 300] loss: 0.1852658699452877
+[Epoch 4, Batch 400] loss: 0.17705309569835662
+[Epoch 4, Batch 500] loss: 0.15964950377121567
+[Epoch 4, Batch 600] loss: 0.13921924628317356
+[Epoch 4, Batch 700] loss: 0.1578009546175599
+[Epoch 4, Batch 800] loss: 0.14569730328395963
+[Epoch 4, Batch 900] loss: 0.1408222471550107
+**STATS for Epoch 4** : 
+Average training loss: 0.0056
+Average validation loss: 0.1412
+Validation Accuracy: 0.9568
+Overfitting: 0.1356
+Best model saved at epoch 4 with validation loss: 0.1412
+[Epoch 5, Batch 100] loss: 0.12640766873955728
+[Epoch 5, Batch 200] loss: 0.13736292308196427
+[Epoch 5, Batch 300] loss: 0.13716766385361553
+[Epoch 5, Batch 400] loss: 0.12707565128803253
+[Epoch 5, Batch 500] loss: 0.14225109135732056
+[Epoch 5, Batch 600] loss: 0.13054116068407892
+[Epoch 5, Batch 700] loss: 0.1292422924377024
+[Epoch 5, Batch 800] loss: 0.11995432118885219
+[Epoch 5, Batch 900] loss: 0.102126355888322
+**STATS for Epoch 5** : 
+Average training loss: 0.0058
+Average validation loss: 0.1221
+Validation Accuracy: 0.9632
+Overfitting: 0.1163
+Best model saved at epoch 5 with validation loss: 0.1221
+[Epoch 6, Batch 100] loss: 0.11524102137424051
+[Epoch 6, Batch 200] loss: 0.1250016368087381
+[Epoch 6, Batch 300] loss: 0.1170423536375165
+[Epoch 6, Batch 400] loss: 0.09932255947031081
+[Epoch 6, Batch 500] loss: 0.1025105147715658
+[Epoch 6, Batch 600] loss: 0.12522493604570628
+[Epoch 6, Batch 700] loss: 0.09395932414568961
+[Epoch 6, Batch 800] loss: 0.09571869876235724
+[Epoch 6, Batch 900] loss: 0.09783254243433476
+**STATS for Epoch 6** : 
+Average training loss: 0.0049
+Average validation loss: 0.1118
+Validation Accuracy: 0.9667
+Overfitting: 0.1069
+Best model saved at epoch 6 with validation loss: 0.1118
+[Epoch 7, Batch 100] loss: 0.09825272610411048
+[Epoch 7, Batch 200] loss: 0.09778423244599253
+[Epoch 7, Batch 300] loss: 0.11688711087219417
+[Epoch 7, Batch 400] loss: 0.0901857091858983
+[Epoch 7, Batch 500] loss: 0.09828072256408632
+[Epoch 7, Batch 600] loss: 0.10495259818620979
+[Epoch 7, Batch 700] loss: 0.07905695151537656
+[Epoch 7, Batch 800] loss: 0.0989025119598955
+[Epoch 7, Batch 900] loss: 0.08765087227802723
+**STATS for Epoch 7** : 
+Average training loss: 0.0029
+Average validation loss: 0.1047
+Validation Accuracy: 0.9668
+Overfitting: 0.1018
+Best model saved at epoch 7 with validation loss: 0.1047
+[Epoch 8, Batch 100] loss: 0.0849309552833438
+[Epoch 8, Batch 200] loss: 0.08215302437078208
+[Epoch 8, Batch 300] loss: 0.09822843326255679
+[Epoch 8, Batch 400] loss: 0.0848685171501711
+[Epoch 8, Batch 500] loss: 0.08314197646453976
+[Epoch 8, Batch 600] loss: 0.08086934030521661
+[Epoch 8, Batch 700] loss: 0.07589494014158844
+[Epoch 8, Batch 800] loss: 0.0890987945534289
+[Epoch 8, Batch 900] loss: 0.08383336335420609
+**STATS for Epoch 8** : 
+Average training loss: 0.0035
+Average validation loss: 0.0886
+Validation Accuracy: 0.9726
+Overfitting: 0.0851
+Best model saved at epoch 8 with validation loss: 0.0886
+[Epoch 9, Batch 100] loss: 0.07322039648424834
+[Epoch 9, Batch 200] loss: 0.06430848268326372
+[Epoch 9, Batch 300] loss: 0.07861002068500966
+[Epoch 9, Batch 400] loss: 0.07688684672582895
+[Epoch 9, Batch 500] loss: 0.08462048608344049
+[Epoch 9, Batch 600] loss: 0.08141888383310288
+[Epoch 9, Batch 700] loss: 0.06350931358756498
+[Epoch 9, Batch 800] loss: 0.08960176574066281
+[Epoch 9, Batch 900] loss: 0.06873992103384807
+**STATS for Epoch 9** : 
+Average training loss: 0.0032
+Average validation loss: 0.0993
+Validation Accuracy: 0.9694
+Overfitting: 0.0961
+[I 2024-11-19 00:18:18,239] Trial 2 pruned. 
+
+Selected Hyperparameters for Trial 4:
+  l1: 256, l2: 224, lr: 6.290644294586152e-05, batch_size: 128
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 2.3032050561904907
+[Epoch 1, Batch 200] loss: 2.301380434036255
+**STATS for Epoch 1** : 
+Average training loss: 0.3422
+Average validation loss: 2.2992
+Validation Accuracy: 0.1416
+Overfitting: 1.9570
+Best model saved at epoch 1 with validation loss: 2.2992
+[Epoch 2, Batch 100] loss: 2.2980063152313233
+[Epoch 2, Batch 200] loss: 2.2965399646759033
+**STATS for Epoch 2** : 
+Average training loss: 0.3417
+Average validation loss: 2.2944
+Validation Accuracy: 0.1623
+Overfitting: 1.9527
+Best model saved at epoch 2 with validation loss: 2.2944
+[Epoch 3, Batch 100] loss: 2.2939975881576538
+[Epoch 3, Batch 200] loss: 2.2909701609611512
+**STATS for Epoch 3** : 
+Average training loss: 0.3409
+Average validation loss: 2.2894
+Validation Accuracy: 0.1776
+Overfitting: 1.9485
+Best model saved at epoch 3 with validation loss: 2.2894
+[Epoch 4, Batch 100] loss: 2.288504228591919
+[Epoch 4, Batch 200] loss: 2.2858537101745604
+**STATS for Epoch 4** : 
+Average training loss: 0.3403
+Average validation loss: 2.2843
+Validation Accuracy: 0.1888
+Overfitting: 1.9439
+Best model saved at epoch 4 with validation loss: 2.2843
+[Epoch 5, Batch 100] loss: 2.2831123995780946
+[Epoch 5, Batch 200] loss: 2.2807364583015444
+**STATS for Epoch 5** : 
+Average training loss: 0.3393
+Average validation loss: 2.2785
+Validation Accuracy: 0.2031
+Overfitting: 1.9391
+Best model saved at epoch 5 with validation loss: 2.2785
+[Epoch 6, Batch 100] loss: 2.277294852733612
+[Epoch 6, Batch 200] loss: 2.274144287109375
+**STATS for Epoch 6** : 
+Average training loss: 0.3384
+Average validation loss: 2.2718
+Validation Accuracy: 0.2225
+Overfitting: 1.9333
+Best model saved at epoch 6 with validation loss: 2.2718
+[Epoch 7, Batch 100] loss: 2.2700771832466127
+[Epoch 7, Batch 200] loss: 2.266805579662323
+**STATS for Epoch 7** : 
+Average training loss: 0.3372
+Average validation loss: 2.2637
+Validation Accuracy: 0.2779
+Overfitting: 1.9265
+Best model saved at epoch 7 with validation loss: 2.2637
+[Epoch 8, Batch 100] loss: 2.2612695598602297
+[Epoch 8, Batch 200] loss: 2.2579747462272644
+**STATS for Epoch 8** : 
+Average training loss: 0.3357
+Average validation loss: 2.2536
+Validation Accuracy: 0.3556
+Overfitting: 1.9180
+Best model saved at epoch 8 with validation loss: 2.2536
+[Epoch 9, Batch 100] loss: 2.250174276828766
+[Epoch 9, Batch 200] loss: 2.2460692715644837
+**STATS for Epoch 9** : 
+Average training loss: 0.3341
+Average validation loss: 2.2407
+Validation Accuracy: 0.4103
+Overfitting: 1.9067
+[I 2024-11-19 00:19:59,073] Trial 3 pruned. 
+
+Selected Hyperparameters for Trial 5:
+  l1: 64, l2: 64, lr: 0.07286653737491042, batch_size: 16
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 1.9406509816646575
+[Epoch 1, Batch 200] loss: 2.4114049673080444
+[Epoch 1, Batch 300] loss: 2.313448328971863
+[Epoch 1, Batch 400] loss: 2.3121825766563417
+[Epoch 1, Batch 500] loss: 2.313968846797943
+[Epoch 1, Batch 600] loss: 2.30991183757782
+[Epoch 1, Batch 700] loss: 2.3128750276565553
+[Epoch 1, Batch 800] loss: 2.313458733558655
+[Epoch 1, Batch 900] loss: 2.3157433700561523
+[Epoch 1, Batch 1000] loss: 2.3105898094177246
+[Epoch 1, Batch 1100] loss: 2.311688220500946
+[Epoch 1, Batch 1200] loss: 2.30817405462265
+[Epoch 1, Batch 1300] loss: 2.3115635204315184
+[Epoch 1, Batch 1400] loss: 2.3082850623130797
+[Epoch 1, Batch 1500] loss: 2.3155244302749636
+[Epoch 1, Batch 1600] loss: 2.3076149320602415
+[Epoch 1, Batch 1700] loss: 2.307044594287872
+[Epoch 1, Batch 1800] loss: 2.305302503108978
+**STATS for Epoch 1** : 
+Average training loss: 0.0927
+Average validation loss: 2.3140
+Validation Accuracy: 0.1036
+Overfitting: 2.2213
+Best model saved at epoch 1 with validation loss: 2.3140
+[Epoch 2, Batch 100] loss: 2.3129127502441404
+[Epoch 2, Batch 200] loss: 2.3165851736068728
+[Epoch 2, Batch 300] loss: 2.3131799411773684
+[Epoch 2, Batch 400] loss: 2.311158332824707
+[Epoch 2, Batch 500] loss: 2.308039700984955
+[Epoch 2, Batch 600] loss: 2.309144129753113
+[Epoch 2, Batch 700] loss: 2.314700253009796
+[Epoch 2, Batch 800] loss: 2.307200710773468
+[Epoch 2, Batch 900] loss: 2.3141963958740233
+[Epoch 2, Batch 1000] loss: 2.31340087890625
+[Epoch 2, Batch 1100] loss: 2.3108637285232545
+[Epoch 2, Batch 1200] loss: 2.3070573687553404
+[Epoch 2, Batch 1300] loss: 2.308970642089844
+[Epoch 2, Batch 1400] loss: 2.3101219272613527
+[Epoch 2, Batch 1500] loss: 2.313337092399597
+[Epoch 2, Batch 1600] loss: 2.311365399360657
+[Epoch 2, Batch 1700] loss: 2.317725944519043
+[Epoch 2, Batch 1800] loss: 2.3116573596000674
+**STATS for Epoch 2** : 
+Average training loss: 0.0925
+Average validation loss: 2.3108
+Validation Accuracy: 0.0986
+Overfitting: 2.2183
+Best model saved at epoch 2 with validation loss: 2.3108
+[Epoch 3, Batch 100] loss: 2.3099495697021486
+[Epoch 3, Batch 200] loss: 2.313248879909515
+[Epoch 3, Batch 300] loss: 2.311970343589783
+[Epoch 3, Batch 400] loss: 2.3143187665939333
+[Epoch 3, Batch 500] loss: 2.3095822930336
+[Epoch 3, Batch 600] loss: 2.3138059616088866
+[Epoch 3, Batch 700] loss: 2.3154876923561094
+[Epoch 3, Batch 800] loss: 2.306717698574066
+[Epoch 3, Batch 900] loss: 2.310604069232941
+[Epoch 3, Batch 1000] loss: 2.3103107714653017
+[Epoch 3, Batch 1100] loss: 2.312593386173248
+[Epoch 3, Batch 1200] loss: 2.310565209388733
+[Epoch 3, Batch 1300] loss: 2.309046607017517
+[Epoch 3, Batch 1400] loss: 2.310909035205841
+[Epoch 3, Batch 1500] loss: 2.311731638908386
+[Epoch 3, Batch 1600] loss: 2.3089097690582276
+[Epoch 3, Batch 1700] loss: 2.3125007367134094
+[Epoch 3, Batch 1800] loss: 2.309844560623169
+**STATS for Epoch 3** : 
+Average training loss: 0.0924
+Average validation loss: 2.3101
+Validation Accuracy: 0.0986
+Overfitting: 2.2177
+Best model saved at epoch 3 with validation loss: 2.3101
+[Epoch 4, Batch 100] loss: 2.317121045589447
+[Epoch 4, Batch 200] loss: 2.3095650601387026
+[Epoch 4, Batch 300] loss: 2.3093100714683534
+[Epoch 4, Batch 400] loss: 2.3080385637283327
+[Epoch 4, Batch 500] loss: 2.310375232696533
+[Epoch 4, Batch 600] loss: 2.3083233213424683
+[Epoch 4, Batch 700] loss: 2.3089817142486573
+[Epoch 4, Batch 800] loss: 2.3103148245811465
+[Epoch 4, Batch 900] loss: 2.3147102665901182
+[Epoch 4, Batch 1000] loss: 2.3110602164268492
+[Epoch 4, Batch 1100] loss: 2.3116658687591554
+[Epoch 4, Batch 1200] loss: 2.3114316415786744
+[Epoch 4, Batch 1300] loss: 2.3137661361694337
+[Epoch 4, Batch 1400] loss: 2.311389081478119
+[Epoch 4, Batch 1500] loss: 2.3119727396965026
+[Epoch 4, Batch 1600] loss: 2.310477120876312
+[Epoch 4, Batch 1700] loss: 2.305642931461334
+[Epoch 4, Batch 1800] loss: 2.311331112384796
+**STATS for Epoch 4** : 
+Average training loss: 0.0923
+Average validation loss: 2.3120
+Validation Accuracy: 0.1036
+Overfitting: 2.2196
+[Epoch 5, Batch 100] loss: 2.315129895210266
+[Epoch 5, Batch 200] loss: 2.3119504761695864
+[Epoch 5, Batch 300] loss: 2.314291045665741
+[Epoch 5, Batch 400] loss: 2.312297074794769
+[Epoch 5, Batch 500] loss: 2.3147742438316343
+[Epoch 5, Batch 600] loss: 2.313601140975952
+[Epoch 5, Batch 700] loss: 2.3076538896560668
+[Epoch 5, Batch 800] loss: 2.310321590900421
+[Epoch 5, Batch 900] loss: 2.3125987362861635
+[Epoch 5, Batch 1000] loss: 2.3112175250053406
+[Epoch 5, Batch 1100] loss: 2.308836586475372
+[Epoch 5, Batch 1200] loss: 2.3055580687522887
+[Epoch 5, Batch 1300] loss: 2.316006283760071
+[Epoch 5, Batch 1400] loss: 2.3084912133216857
+[Epoch 5, Batch 1500] loss: 2.310518982410431
+[Epoch 5, Batch 1600] loss: 2.3108729672431947
+[Epoch 5, Batch 1700] loss: 2.3153447341918945
+[Epoch 5, Batch 1800] loss: 2.3118263339996337
+**STATS for Epoch 5** : 
+Average training loss: 0.0925
+Average validation loss: 2.3097
+Validation Accuracy: 0.0998
+Overfitting: 2.2172
+Best model saved at epoch 5 with validation loss: 2.3097
+[Epoch 6, Batch 100] loss: 2.3112756848335265
+[Epoch 6, Batch 200] loss: 2.312613835334778
+[Epoch 6, Batch 300] loss: 2.3141380453109743
+[Epoch 6, Batch 400] loss: 2.311061239242554
+[Epoch 6, Batch 500] loss: 2.3109574556350707
+[Epoch 6, Batch 600] loss: 2.313641302585602
+[Epoch 6, Batch 700] loss: 2.315359742641449
+[Epoch 6, Batch 800] loss: 2.31191392660141
+[Epoch 6, Batch 900] loss: 2.303861458301544
+[Epoch 6, Batch 1000] loss: 2.3085278725624083
+[Epoch 6, Batch 1100] loss: 2.3148352479934693
+[Epoch 6, Batch 1200] loss: 2.308271470069885
+[Epoch 6, Batch 1300] loss: 2.311803798675537
+[Epoch 6, Batch 1400] loss: 2.3103326964378357
+[Epoch 6, Batch 1500] loss: 2.311005210876465
+[Epoch 6, Batch 1600] loss: 2.3163121008872984
+[Epoch 6, Batch 1700] loss: 2.3151028776168823
+[Epoch 6, Batch 1800] loss: 2.3123600697517395
+**STATS for Epoch 6** : 
+Average training loss: 0.0924
+Average validation loss: 2.3146
+Validation Accuracy: 0.1122
+Overfitting: 2.2222
+[Epoch 7, Batch 100] loss: 2.310456945896149
+[Epoch 7, Batch 200] loss: 2.3107306432723997
+[Epoch 7, Batch 300] loss: 2.3124103641510008
+[Epoch 7, Batch 400] loss: 2.3106304574012757
+[Epoch 7, Batch 500] loss: 2.3058976197242735
+[Epoch 7, Batch 600] loss: 2.3153595495224
+[Epoch 7, Batch 700] loss: 2.3097179675102235
+[Epoch 7, Batch 800] loss: 2.315301384925842
+[Epoch 7, Batch 900] loss: 2.3123442697525025
+[Epoch 7, Batch 1000] loss: 2.3113071513175965
+[Epoch 7, Batch 1100] loss: 2.3101912999153136
+[Epoch 7, Batch 1200] loss: 2.310529923439026
+[Epoch 7, Batch 1300] loss: 2.3157094287872315
+[Epoch 7, Batch 1400] loss: 2.31003790140152
+[Epoch 7, Batch 1500] loss: 2.3113316082954407
+[Epoch 7, Batch 1600] loss: 2.3102078890800475
+[Epoch 7, Batch 1700] loss: 2.3076498985290526
+[Epoch 7, Batch 1800] loss: 2.3115606713294983
+**STATS for Epoch 7** : 
+Average training loss: 0.0924
+Average validation loss: 2.3072
+Validation Accuracy: 0.0987
+Overfitting: 2.2148
+Best model saved at epoch 7 with validation loss: 2.3072
+[Epoch 8, Batch 100] loss: 2.307864980697632
+[Epoch 8, Batch 200] loss: 2.312657668590546
+[Epoch 8, Batch 300] loss: 2.310047070980072
+[Epoch 8, Batch 400] loss: 2.3168986439704895
+[Epoch 8, Batch 500] loss: 2.3073520159721372
+[Epoch 8, Batch 600] loss: 2.3123303151130674
+[Epoch 8, Batch 700] loss: 2.310721371173859
+[Epoch 8, Batch 800] loss: 2.310945074558258
+[Epoch 8, Batch 900] loss: 2.3081740641593935
+[Epoch 8, Batch 1000] loss: 2.314555518627167
+[Epoch 8, Batch 1100] loss: 2.3104349827766417
+[Epoch 8, Batch 1200] loss: 2.311132185459137
+[Epoch 8, Batch 1300] loss: 2.314564390182495
+[Epoch 8, Batch 1400] loss: 2.307859487533569
+[Epoch 8, Batch 1500] loss: 2.309923894405365
+[Epoch 8, Batch 1600] loss: 2.3149299907684324
+[Epoch 8, Batch 1700] loss: 2.3176195406913758
+[Epoch 8, Batch 1800] loss: 2.3076189947128296
+**STATS for Epoch 8** : 
+Average training loss: 0.0925
+Average validation loss: 2.3187
+Validation Accuracy: 0.0986
+Overfitting: 2.2262
+[Epoch 9, Batch 100] loss: 2.309166624546051
+[Epoch 9, Batch 200] loss: 2.3119481301307676
+[Epoch 9, Batch 300] loss: 2.3117722034454347
+[Epoch 9, Batch 400] loss: 2.3147336506843565
+[Epoch 9, Batch 500] loss: 2.3128327679634095
+[Epoch 9, Batch 600] loss: 2.304559543132782
+[Epoch 9, Batch 700] loss: 2.309457640647888
+[Epoch 9, Batch 800] loss: 2.3167250871658327
+[Epoch 9, Batch 900] loss: 2.309688823223114
+[Epoch 9, Batch 1000] loss: 2.310941879749298
+[Epoch 9, Batch 1100] loss: 2.3176619839668273
+[Epoch 9, Batch 1200] loss: 2.313256313800812
+[Epoch 9, Batch 1300] loss: 2.308582851886749
+[Epoch 9, Batch 1400] loss: 2.3160305976867677
+[Epoch 9, Batch 1500] loss: 2.3097246789932253
+[Epoch 9, Batch 1600] loss: 2.3118182182312013
+[Epoch 9, Batch 1700] loss: 2.30928352355957
+[Epoch 9, Batch 1800] loss: 2.311377394199371
+**STATS for Epoch 9** : 
+Average training loss: 0.0925
+Average validation loss: 2.3068
+Validation Accuracy: 0.1036
+Overfitting: 2.2143
+[I 2024-11-19 00:22:18,130] Trial 4 pruned. 
+
+Selected Hyperparameters for Trial 6:
+  l1: 96, l2: 64, lr: 1.3726318898045866e-05, batch_size: 16
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 2.3031939172744753
+[Epoch 1, Batch 200] loss: 2.3048341774940493
+[Epoch 1, Batch 300] loss: 2.3046877670288084
+[Epoch 1, Batch 400] loss: 2.2999762201309206
+[Epoch 1, Batch 500] loss: 2.3048481607437132
+[Epoch 1, Batch 600] loss: 2.300603201389313
+[Epoch 1, Batch 700] loss: 2.303213307857513
+[Epoch 1, Batch 800] loss: 2.304447934627533
+[Epoch 1, Batch 900] loss: 2.3023406744003294
+[Epoch 1, Batch 1000] loss: 2.3018959617614745
+[Epoch 1, Batch 1100] loss: 2.298859133720398
+[Epoch 1, Batch 1200] loss: 2.2986749982833863
+[Epoch 1, Batch 1300] loss: 2.304543912410736
+[Epoch 1, Batch 1400] loss: 2.301606442928314
+[Epoch 1, Batch 1500] loss: 2.299354512691498
+[Epoch 1, Batch 1600] loss: 2.302307279109955
+[Epoch 1, Batch 1700] loss: 2.299029240608215
+[Epoch 1, Batch 1800] loss: 2.3009795689582826
+**STATS for Epoch 1** : 
+Average training loss: 0.0920
+Average validation loss: 2.3001
+Validation Accuracy: 0.1007
+Overfitting: 2.2081
+Best model saved at epoch 1 with validation loss: 2.3001
+[Epoch 2, Batch 100] loss: 2.294340982437134
+[Epoch 2, Batch 200] loss: 2.303977420330048
+[Epoch 2, Batch 300] loss: 2.296126446723938
+[Epoch 2, Batch 400] loss: 2.2976594090461733
+[Epoch 2, Batch 500] loss: 2.297401797771454
+[Epoch 2, Batch 600] loss: 2.301605749130249
+[Epoch 2, Batch 700] loss: 2.297540872097015
+[Epoch 2, Batch 800] loss: 2.2980261182785036
+[Epoch 2, Batch 900] loss: 2.2969247603416445
+[Epoch 2, Batch 1000] loss: 2.2964214849472047
+[Epoch 2, Batch 1100] loss: 2.294845836162567
+[Epoch 2, Batch 1200] loss: 2.296178727149963
+[Epoch 2, Batch 1300] loss: 2.300260877609253
+[Epoch 2, Batch 1400] loss: 2.295291202068329
+[Epoch 2, Batch 1500] loss: 2.2919734621047976
+[Epoch 2, Batch 1600] loss: 2.2967219853401186
+[Epoch 2, Batch 1700] loss: 2.298321399688721
+[Epoch 2, Batch 1800] loss: 2.294378900527954
+**STATS for Epoch 2** : 
+Average training loss: 0.0919
+Average validation loss: 2.2954
+Validation Accuracy: 0.1007
+Overfitting: 2.2035
+Best model saved at epoch 2 with validation loss: 2.2954
+[Epoch 3, Batch 100] loss: 2.294964191913605
+[Epoch 3, Batch 200] loss: 2.2934837555885315
+[Epoch 3, Batch 300] loss: 2.292253212928772
+[Epoch 3, Batch 400] loss: 2.298887348175049
+[Epoch 3, Batch 500] loss: 2.2915128374099734
+[Epoch 3, Batch 600] loss: 2.291856780052185
+[Epoch 3, Batch 700] loss: 2.2924394392967224
+[Epoch 3, Batch 800] loss: 2.297207570075989
+[Epoch 3, Batch 900] loss: 2.295175726413727
+[Epoch 3, Batch 1000] loss: 2.2921435499191283
+[Epoch 3, Batch 1100] loss: 2.2912264013290407
+[Epoch 3, Batch 1200] loss: 2.2893675780296325
+[Epoch 3, Batch 1300] loss: 2.2932202053070068
+[Epoch 3, Batch 1400] loss: 2.291706793308258
+[Epoch 3, Batch 1500] loss: 2.2920642471313477
+[Epoch 3, Batch 1600] loss: 2.2887727713584898
+[Epoch 3, Batch 1700] loss: 2.289081544876099
+[Epoch 3, Batch 1800] loss: 2.2920212531089783
+**STATS for Epoch 3** : 
+Average training loss: 0.0916
+Average validation loss: 2.2906
+Validation Accuracy: 0.1011
+Overfitting: 2.1990
+Best model saved at epoch 3 with validation loss: 2.2906
+[Epoch 4, Batch 100] loss: 2.28981858253479
+[Epoch 4, Batch 200] loss: 2.2900319123268127
+[Epoch 4, Batch 300] loss: 2.2854367113113403
+[Epoch 4, Batch 400] loss: 2.2910560822486876
+[Epoch 4, Batch 500] loss: 2.2871857213974
+[Epoch 4, Batch 600] loss: 2.287692129611969
+[Epoch 4, Batch 700] loss: 2.288547353744507
+[Epoch 4, Batch 800] loss: 2.289575507640839
+[Epoch 4, Batch 900] loss: 2.2922356367111205
+[Epoch 4, Batch 1000] loss: 2.2908911967277525
+[Epoch 4, Batch 1100] loss: 2.286433379650116
+[Epoch 4, Batch 1200] loss: 2.286176607608795
+[Epoch 4, Batch 1300] loss: 2.2845331263542175
+[Epoch 4, Batch 1400] loss: 2.2880691862106324
+[Epoch 4, Batch 1500] loss: 2.2821987891197204
+[Epoch 4, Batch 1600] loss: 2.2837331247329713
+[Epoch 4, Batch 1700] loss: 2.2827704048156736
+[Epoch 4, Batch 1800] loss: 2.289816162586212
+**STATS for Epoch 4** : 
+Average training loss: 0.0914
+Average validation loss: 2.2852
+Validation Accuracy: 0.1058
+Overfitting: 2.1938
+Best model saved at epoch 4 with validation loss: 2.2852
+[Epoch 5, Batch 100] loss: 2.2834938526153565
+[Epoch 5, Batch 200] loss: 2.288161423206329
+[Epoch 5, Batch 300] loss: 2.284328100681305
+[Epoch 5, Batch 400] loss: 2.2821778059005737
+[Epoch 5, Batch 500] loss: 2.280404167175293
+[Epoch 5, Batch 600] loss: 2.2840008401870726
+[Epoch 5, Batch 700] loss: 2.2845197200775145
+[Epoch 5, Batch 800] loss: 2.2801728534698484
+[Epoch 5, Batch 900] loss: 2.281511423587799
+[Epoch 5, Batch 1000] loss: 2.2798312091827393
+[Epoch 5, Batch 1100] loss: 2.2843146347999572
+[Epoch 5, Batch 1200] loss: 2.2825718235969545
+[Epoch 5, Batch 1300] loss: 2.28281592130661
+[Epoch 5, Batch 1400] loss: 2.277647433280945
+[Epoch 5, Batch 1500] loss: 2.2775303077697755
+[Epoch 5, Batch 1600] loss: 2.28156768321991
+[Epoch 5, Batch 1700] loss: 2.277518832683563
+[Epoch 5, Batch 1800] loss: 2.2788814210891726
+**STATS for Epoch 5** : 
+Average training loss: 0.0911
+Average validation loss: 2.2787
+Validation Accuracy: 0.1195
+Overfitting: 2.1876
+Best model saved at epoch 5 with validation loss: 2.2787
+[Epoch 6, Batch 100] loss: 2.273890814781189
+[Epoch 6, Batch 200] loss: 2.2798911046981813
+[Epoch 6, Batch 300] loss: 2.2771320748329162
+[Epoch 6, Batch 400] loss: 2.2770551586151124
+[Epoch 6, Batch 500] loss: 2.2765147638320924
+[Epoch 6, Batch 600] loss: 2.2783025431632997
+[Epoch 6, Batch 700] loss: 2.2756346344947813
+[Epoch 6, Batch 800] loss: 2.2717395567893983
+[Epoch 6, Batch 900] loss: 2.2756058168411255
+[Epoch 6, Batch 1000] loss: 2.275553789138794
+[Epoch 6, Batch 1100] loss: 2.274447412490845
+[Epoch 6, Batch 1200] loss: 2.2755837845802307
+[Epoch 6, Batch 1300] loss: 2.2721023750305176
+[Epoch 6, Batch 1400] loss: 2.2738412737846376
+[Epoch 6, Batch 1500] loss: 2.275866527557373
+[Epoch 6, Batch 1600] loss: 2.2681646394729613
+[Epoch 6, Batch 1700] loss: 2.2724843621253967
+[Epoch 6, Batch 1800] loss: 2.269242045879364
+**STATS for Epoch 6** : 
+Average training loss: 0.0907
+Average validation loss: 2.2704
+Validation Accuracy: 0.1441
+Overfitting: 2.1797
+Best model saved at epoch 6 with validation loss: 2.2704
+[Epoch 7, Batch 100] loss: 2.2665667819976805
+[Epoch 7, Batch 200] loss: 2.2671697878837587
+[Epoch 7, Batch 300] loss: 2.2729530358314514
+[Epoch 7, Batch 400] loss: 2.2694204235076905
+[Epoch 7, Batch 500] loss: 2.2690195870399474
+[Epoch 7, Batch 600] loss: 2.2702994656562807
+[Epoch 7, Batch 700] loss: 2.265269174575806
+[Epoch 7, Batch 800] loss: 2.264954035282135
+[Epoch 7, Batch 900] loss: 2.2663351821899416
+[Epoch 7, Batch 1000] loss: 2.2644510531425475
+[Epoch 7, Batch 1100] loss: 2.26536248922348
+[Epoch 7, Batch 1200] loss: 2.2623109316825865
+[Epoch 7, Batch 1300] loss: 2.264967427253723
+[Epoch 7, Batch 1400] loss: 2.2617479610443114
+[Epoch 7, Batch 1500] loss: 2.257306904792786
+[Epoch 7, Batch 1600] loss: 2.2626479768753054
+[Epoch 7, Batch 1700] loss: 2.2589211320877074
+[Epoch 7, Batch 1800] loss: 2.260477306842804
+**STATS for Epoch 7** : 
+Average training loss: 0.0905
+Average validation loss: 2.2597
+Validation Accuracy: 0.2014
+Overfitting: 2.1692
+Best model saved at epoch 7 with validation loss: 2.2597
+[Epoch 8, Batch 100] loss: 2.2588856077194213
+[Epoch 8, Batch 200] loss: 2.2606183433532716
+[Epoch 8, Batch 300] loss: 2.256519846916199
+[Epoch 8, Batch 400] loss: 2.254594612121582
+[Epoch 8, Batch 500] loss: 2.2604690408706665
+[Epoch 8, Batch 600] loss: 2.2557805514335634
+[Epoch 8, Batch 700] loss: 2.256780836582184
+[Epoch 8, Batch 800] loss: 2.2549020719528197
+[Epoch 8, Batch 900] loss: 2.2540590286254885
+[Epoch 8, Batch 1000] loss: 2.2525024700164793
+[Epoch 8, Batch 1100] loss: 2.251092450618744
+[Epoch 8, Batch 1200] loss: 2.248235054016113
+[Epoch 8, Batch 1300] loss: 2.2524802565574644
+[Epoch 8, Batch 1400] loss: 2.2475579929351808
+[Epoch 8, Batch 1500] loss: 2.2524739861488343
+[Epoch 8, Batch 1600] loss: 2.2464797616004946
+[Epoch 8, Batch 1700] loss: 2.2470163321495056
+[Epoch 8, Batch 1800] loss: 2.244025309085846
+**STATS for Epoch 8** : 
+Average training loss: 0.0897
+Average validation loss: 2.2454
+Validation Accuracy: 0.2531
+Overfitting: 2.1557
+Best model saved at epoch 8 with validation loss: 2.2454
+[Epoch 9, Batch 100] loss: 2.2442964220047
+[Epoch 9, Batch 200] loss: 2.240664896965027
+[Epoch 9, Batch 300] loss: 2.2435242557525634
+[Epoch 9, Batch 400] loss: 2.2437470817565917
+[Epoch 9, Batch 500] loss: 2.241262767314911
+[Epoch 9, Batch 600] loss: 2.2381926941871644
+[Epoch 9, Batch 700] loss: 2.2417862129211428
+[Epoch 9, Batch 800] loss: 2.237526578903198
+[Epoch 9, Batch 900] loss: 2.2381497502326964
+[Epoch 9, Batch 1000] loss: 2.236486749649048
+[Epoch 9, Batch 1100] loss: 2.23418790102005
+[Epoch 9, Batch 1200] loss: 2.2365235614776613
+[Epoch 9, Batch 1300] loss: 2.228798644542694
+[Epoch 9, Batch 1400] loss: 2.231720833778381
+[Epoch 9, Batch 1500] loss: 2.2305113244056702
+[Epoch 9, Batch 1600] loss: 2.231494083404541
+[Epoch 9, Batch 1700] loss: 2.2278413915634157
+[Epoch 9, Batch 1800] loss: 2.2259022331237794
+**STATS for Epoch 9** : 
+Average training loss: 0.0889
+Average validation loss: 2.2253
+Validation Accuracy: 0.3283
+Overfitting: 2.1364
+[I 2024-11-19 00:24:38,506] Trial 5 pruned. 
+
+Selected Hyperparameters for Trial 7:
+  l1: 320, l2: 64, lr: 0.07556810141274425, batch_size: 32
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 1.4157485729455948
+[Epoch 1, Batch 200] loss: 0.998592135310173
+[Epoch 1, Batch 300] loss: 0.8702816267311573
+[Epoch 1, Batch 400] loss: 0.6731960393488408
+[Epoch 1, Batch 500] loss: 0.7183121156692505
+[Epoch 1, Batch 600] loss: 0.7066191336512566
+[Epoch 1, Batch 700] loss: 0.6627443408966065
+[Epoch 1, Batch 800] loss: 0.6515652858093381
+[Epoch 1, Batch 900] loss: 0.6148966155946255
+**STATS for Epoch 1** : 
+Average training loss: 0.0422
+Average validation loss: 1.5316
+Validation Accuracy: 0.6277
+Overfitting: 1.4894
+Best model saved at epoch 1 with validation loss: 1.5316
+[Epoch 2, Batch 100] loss: 1.1276497620344161
+[Epoch 2, Batch 200] loss: 1.191910710334778
+[Epoch 2, Batch 300] loss: 1.019903276860714
+[Epoch 2, Batch 400] loss: 0.9143801680207253
+[Epoch 2, Batch 500] loss: 1.9654830819368363
+[Epoch 2, Batch 600] loss: 2.30619482755661
+[Epoch 2, Batch 700] loss: 2.3104853200912476
+[Epoch 2, Batch 800] loss: 2.304498858451843
+[Epoch 2, Batch 900] loss: 2.30687447309494
+**STATS for Epoch 2** : 
+Average training loss: 0.0934
+Average validation loss: 2.3065
+Validation Accuracy: 0.1122
+Overfitting: 2.2131
+[Epoch 3, Batch 100] loss: 2.3072475242614745
+[Epoch 3, Batch 200] loss: 2.303150520324707
+[Epoch 3, Batch 300] loss: 2.3052126455307005
+[Epoch 3, Batch 400] loss: 2.3066290545463564
+[Epoch 3, Batch 500] loss: 2.305856943130493
+[Epoch 3, Batch 600] loss: 2.3072077345848085
+[Epoch 3, Batch 700] loss: 2.305010097026825
+[Epoch 3, Batch 800] loss: 2.3031638836860657
+[Epoch 3, Batch 900] loss: 2.3113454794883728
+**STATS for Epoch 3** : 
+Average training loss: 0.0936
+Average validation loss: 2.3063
+Validation Accuracy: 0.1036
+Overfitting: 2.2127
+[Epoch 4, Batch 100] loss: 2.30632563829422
+[Epoch 4, Batch 200] loss: 2.306720407009125
+[Epoch 4, Batch 300] loss: 2.3063058161735537
+[Epoch 4, Batch 400] loss: 2.3109467887878417
+[Epoch 4, Batch 500] loss: 2.306872088909149
+[Epoch 4, Batch 600] loss: 2.3056526827812194
+[Epoch 4, Batch 700] loss: 2.3050988054275514
+[Epoch 4, Batch 800] loss: 2.305347352027893
+[Epoch 4, Batch 900] loss: 2.304957218170166
+**STATS for Epoch 4** : 
+Average training loss: 0.0935
+Average validation loss: 2.3064
+Validation Accuracy: 0.0987
+Overfitting: 2.2129
+[Epoch 5, Batch 100] loss: 2.307746937274933
+[Epoch 5, Batch 200] loss: 2.3057137441635134
+[Epoch 5, Batch 300] loss: 2.3073214197158816
+[Epoch 5, Batch 400] loss: 2.3081032252311706
+[Epoch 5, Batch 500] loss: 2.3070558643341066
+[Epoch 5, Batch 600] loss: 2.3064634895324705
+[Epoch 5, Batch 700] loss: 2.305415840148926
+[Epoch 5, Batch 800] loss: 2.305656089782715
+[Epoch 5, Batch 900] loss: 2.30656094789505
+**STATS for Epoch 5** : 
+Average training loss: 0.0936
+Average validation loss: 2.3070
+Validation Accuracy: 0.1122
+Overfitting: 2.2134
+[Epoch 6, Batch 100] loss: 2.3086105585098267
+[Epoch 6, Batch 200] loss: 2.305641522407532
+[Epoch 6, Batch 300] loss: 2.308013038635254
+[Epoch 6, Batch 400] loss: 2.3051863002777098
+[Epoch 6, Batch 500] loss: 2.304517569541931
+[Epoch 6, Batch 600] loss: 2.306030011177063
+[Epoch 6, Batch 700] loss: 2.3076286911964417
+[Epoch 6, Batch 800] loss: 2.306608338356018
+[Epoch 6, Batch 900] loss: 2.3066996359825134
+**STATS for Epoch 6** : 
+Average training loss: 0.0935
+Average validation loss: 2.3085
+Validation Accuracy: 0.1007
+Overfitting: 2.2150
+[Epoch 7, Batch 100] loss: 2.3085341167449953
+[Epoch 7, Batch 200] loss: 2.3075111079216004
+[Epoch 7, Batch 300] loss: 2.306218581199646
+[Epoch 7, Batch 400] loss: 2.3040133476257325
+[Epoch 7, Batch 500] loss: 2.3077998542785645
+[Epoch 7, Batch 600] loss: 2.304345979690552
+[Epoch 7, Batch 700] loss: 2.3083272981643677
+[Epoch 7, Batch 800] loss: 2.3045896911621093
+[Epoch 7, Batch 900] loss: 2.3046067905426026
+**STATS for Epoch 7** : 
+Average training loss: 0.0934
+Average validation loss: 2.3054
+Validation Accuracy: 0.1122
+Overfitting: 2.2120
+[Epoch 8, Batch 100] loss: 2.305986580848694
+[Epoch 8, Batch 200] loss: 2.3068522906303404
+[Epoch 8, Batch 300] loss: 2.306028251647949
+[Epoch 8, Batch 400] loss: 2.3062144994735716
+[Epoch 8, Batch 500] loss: 2.3076142144203184
+[Epoch 8, Batch 600] loss: 2.3072690391540527
+[Epoch 8, Batch 700] loss: 2.3059988903999327
+[Epoch 8, Batch 800] loss: 2.3056221628189086
+[Epoch 8, Batch 900] loss: 2.3064520263671877
+**STATS for Epoch 8** : 
+Average training loss: 0.0934
+Average validation loss: 2.3082
+Validation Accuracy: 0.1122
+Overfitting: 2.2147
+[Epoch 9, Batch 100] loss: 2.3052597355842592
+[Epoch 9, Batch 200] loss: 2.3056510281562805
+[Epoch 9, Batch 300] loss: 2.3094931626319886
+[Epoch 9, Batch 400] loss: 2.3064499831199647
+[Epoch 9, Batch 500] loss: 2.3023612236976625
+[Epoch 9, Batch 600] loss: 2.3082300138473513
+[Epoch 9, Batch 700] loss: 2.307415542602539
+[Epoch 9, Batch 800] loss: 2.3080140018463133
+[Epoch 9, Batch 900] loss: 2.302850205898285
+**STATS for Epoch 9** : 
+Average training loss: 0.0934
+Average validation loss: 2.3056
+Validation Accuracy: 0.0986
+Overfitting: 2.2122
+[I 2024-11-19 00:26:36,616] Trial 6 pruned. 
+
+Selected Hyperparameters for Trial 8:
+  l1: 96, l2: 32, lr: 1.5167330688076188e-05, batch_size: 128
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 2.308828101158142
+[Epoch 1, Batch 200] loss: 2.3086084485054017
+**STATS for Epoch 1** : 
+Average training loss: 0.3437
+Average validation loss: 2.3085
+Validation Accuracy: 0.0986
+Overfitting: 1.9649
+Best model saved at epoch 1 with validation loss: 2.3085
+[Epoch 2, Batch 100] loss: 2.3091627311706544
+[Epoch 2, Batch 200] loss: 2.306976385116577
+**STATS for Epoch 2** : 
+Average training loss: 0.3435
+Average validation loss: 2.3078
+Validation Accuracy: 0.0986
+Overfitting: 1.9643
+Best model saved at epoch 2 with validation loss: 2.3078
+[Epoch 3, Batch 100] loss: 2.3077834033966065
+[Epoch 3, Batch 200] loss: 2.3077237820625305
+**STATS for Epoch 3** : 
+Average training loss: 0.3428
+Average validation loss: 2.3069
+Validation Accuracy: 0.0986
+Overfitting: 1.9641
+Best model saved at epoch 3 with validation loss: 2.3069
+[Epoch 4, Batch 100] loss: 2.305958526134491
+[Epoch 4, Batch 200] loss: 2.3068868923187256
+**STATS for Epoch 4** : 
+Average training loss: 0.3431
+Average validation loss: 2.3060
+Validation Accuracy: 0.0986
+Overfitting: 1.9629
+Best model saved at epoch 4 with validation loss: 2.3060
+[Epoch 5, Batch 100] loss: 2.3049372577667238
+[Epoch 5, Batch 200] loss: 2.305013599395752
+**STATS for Epoch 5** : 
+Average training loss: 0.3436
+Average validation loss: 2.3053
+Validation Accuracy: 0.0986
+Overfitting: 1.9617
+Best model saved at epoch 5 with validation loss: 2.3053
+[Epoch 6, Batch 100] loss: 2.3038772559165954
+[Epoch 6, Batch 200] loss: 2.3061997532844543
+**STATS for Epoch 6** : 
+Average training loss: 0.3427
+Average validation loss: 2.3045
+Validation Accuracy: 0.0986
+Overfitting: 1.9618
+Best model saved at epoch 6 with validation loss: 2.3045
+[Epoch 7, Batch 100] loss: 2.303717865943909
+[Epoch 7, Batch 200] loss: 2.3032037591934205
+**STATS for Epoch 7** : 
+Average training loss: 0.3432
+Average validation loss: 2.3037
+Validation Accuracy: 0.0987
+Overfitting: 1.9605
+Best model saved at epoch 7 with validation loss: 2.3037
+[Epoch 8, Batch 100] loss: 2.303440191745758
+[Epoch 8, Batch 200] loss: 2.3013532996177672
+**STATS for Epoch 8** : 
+Average training loss: 0.3433
+Average validation loss: 2.3029
+Validation Accuracy: 0.0989
+Overfitting: 1.9596
+Best model saved at epoch 8 with validation loss: 2.3029
+[Epoch 9, Batch 100] loss: 2.302185065746307
+[Epoch 9, Batch 200] loss: 2.3024610042572022
+**STATS for Epoch 9** : 
+Average training loss: 0.3426
+Average validation loss: 2.3020
+Validation Accuracy: 0.0992
+Overfitting: 1.9593
+[I 2024-11-19 00:28:15,463] Trial 7 pruned. 
+
+Selected Hyperparameters for Trial 9:
+  l1: 352, l2: 224, lr: 0.03870856382081391, batch_size: 256
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 1.4676467075943946
+**STATS for Epoch 1** : 
+Average training loss: 0.0335
+Average validation loss: 0.2039
+Validation Accuracy: 0.9349
+Overfitting: 0.1704
+Best model saved at epoch 1 with validation loss: 0.2039
+[Epoch 2, Batch 100] loss: 0.13754638813436032
+**STATS for Epoch 2** : 
+Average training loss: 0.0137
+Average validation loss: 0.1099
+Validation Accuracy: 0.9661
+Overfitting: 0.0962
+Best model saved at epoch 2 with validation loss: 0.1099
+[Epoch 3, Batch 100] loss: 0.08547408156096935
+**STATS for Epoch 3** : 
+Average training loss: 0.0124
+Average validation loss: 0.0910
+Validation Accuracy: 0.9728
+Overfitting: 0.0786
+Best model saved at epoch 3 with validation loss: 0.0910
+[Epoch 4, Batch 100] loss: 0.06282831389456987
+**STATS for Epoch 4** : 
+Average training loss: 0.0099
+Average validation loss: 0.0884
+Validation Accuracy: 0.9722
+Overfitting: 0.0785
+Best model saved at epoch 4 with validation loss: 0.0884
+[Epoch 5, Batch 100] loss: 0.04972142699174583
+**STATS for Epoch 5** : 
+Average training loss: 0.0080
+Average validation loss: 0.0728
+Validation Accuracy: 0.9776
+Overfitting: 0.0648
+Best model saved at epoch 5 with validation loss: 0.0728
+[Epoch 6, Batch 100] loss: 0.04004692760761827
+**STATS for Epoch 6** : 
+Average training loss: 0.0050
+Average validation loss: 0.0640
+Validation Accuracy: 0.9824
+Overfitting: 0.0590
+Best model saved at epoch 6 with validation loss: 0.0640
+[Epoch 7, Batch 100] loss: 0.029836482144892217
+**STATS for Epoch 7** : 
+Average training loss: 0.0047
+Average validation loss: 0.0780
+Validation Accuracy: 0.9784
+Overfitting: 0.0734
+[Epoch 8, Batch 100] loss: 0.02912822586018592
+**STATS for Epoch 8** : 
+Average training loss: 0.0046
+Average validation loss: 0.0696
+Validation Accuracy: 0.9812
+Overfitting: 0.0650
+[Epoch 9, Batch 100] loss: 0.019786754806991668
+**STATS for Epoch 9** : 
+Average training loss: 0.0040
+Average validation loss: 0.0646
+Validation Accuracy: 0.9836
+Overfitting: 0.0606
+[Epoch 10, Batch 100] loss: 0.021711864767130464
+**STATS for Epoch 10** : 
+Average training loss: 0.0028
+Average validation loss: 0.0733
+Validation Accuracy: 0.9814
+Overfitting: 0.0705
+[Epoch 11, Batch 100] loss: 0.01642217782442458
+**STATS for Epoch 11** : 
+Average training loss: 0.0021
+Average validation loss: 0.0801
+Validation Accuracy: 0.9815
+Overfitting: 0.0780
+[Epoch 12, Batch 100] loss: 0.015023836212931201
+**STATS for Epoch 12** : 
+Average training loss: 0.0019
+Average validation loss: 0.0769
+Validation Accuracy: 0.9812
+Overfitting: 0.0750
+[Epoch 13, Batch 100] loss: 0.01681880856747739
+**STATS for Epoch 13** : 
+Average training loss: 0.0018
+Average validation loss: 0.0856
+Validation Accuracy: 0.9808
+Overfitting: 0.0838
+[Epoch 14, Batch 100] loss: 0.008835989413491917
+**STATS for Epoch 14** : 
+Average training loss: 0.0017
+Average validation loss: 0.0783
+Validation Accuracy: 0.9833
+Overfitting: 0.0766
+[Epoch 15, Batch 100] loss: 0.007208315613097511
+**STATS for Epoch 15** : 
+Average training loss: 0.0010
+Average validation loss: 0.0839
+Validation Accuracy: 0.9825
+Overfitting: 0.0828
+[Epoch 16, Batch 100] loss: 0.004407030127476901
+**STATS for Epoch 16** : 
+Average training loss: 0.0012
+Average validation loss: 0.0797
+Validation Accuracy: 0.9832
+Overfitting: 0.0785
+[Epoch 17, Batch 100] loss: 0.00621950824817759
+**STATS for Epoch 17** : 
+Average training loss: 0.0014
+Average validation loss: 0.0937
+Validation Accuracy: 0.9818
+Overfitting: 0.0923
+[I 2024-11-19 00:31:16,663] Trial 8 pruned. 
+[W 2024-11-19 00:31:16,699] The parameter 'l2' in trial#9 is sampled independently instead of being sampled by multivariate TPE sampler. (optimization performance may be degraded). You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler`, if this independent sampling is intended behavior.
+
+Selected Hyperparameters for Trial 10:
+  l1: 96, l2: 96, lr: 0.00946889520909023, batch_size: 64
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 1.5741742035746575
+[Epoch 1, Batch 200] loss: 0.29818069949746134
+[Epoch 1, Batch 300] loss: 0.1909932044893503
+[Epoch 1, Batch 400] loss: 0.1461549161374569
+**STATS for Epoch 1** : 
+Average training loss: 0.0203
+Average validation loss: 0.1174
+Validation Accuracy: 0.9625
+Overfitting: 0.0971
+Best model saved at epoch 1 with validation loss: 0.1174
+[Epoch 2, Batch 100] loss: 0.10347567792050541
+[Epoch 2, Batch 200] loss: 0.11902954160235822
+[Epoch 2, Batch 300] loss: 0.08785156433470548
+[Epoch 2, Batch 400] loss: 0.0845461001060903
+**STATS for Epoch 2** : 
+Average training loss: 0.0134
+Average validation loss: 0.1036
+Validation Accuracy: 0.9676
+Overfitting: 0.0902
+Best model saved at epoch 2 with validation loss: 0.1036
+[Epoch 3, Batch 100] loss: 0.08815266829915344
+[Epoch 3, Batch 200] loss: 0.061341865002177656
+[Epoch 3, Batch 300] loss: 0.06889798321994021
+[Epoch 3, Batch 400] loss: 0.06972225866047665
+**STATS for Epoch 3** : 
+Average training loss: 0.0088
+Average validation loss: 0.0930
+Validation Accuracy: 0.9718
+Overfitting: 0.0842
+Best model saved at epoch 3 with validation loss: 0.0930
+[Epoch 4, Batch 100] loss: 0.051298266872763634
+[Epoch 4, Batch 200] loss: 0.056606887092348186
+[Epoch 4, Batch 300] loss: 0.04352341050747782
+[Epoch 4, Batch 400] loss: 0.055743765922961756
+**STATS for Epoch 4** : 
+Average training loss: 0.0062
+Average validation loss: 0.0590
+Validation Accuracy: 0.9828
+Overfitting: 0.0528
+Best model saved at epoch 4 with validation loss: 0.0590
+[Epoch 5, Batch 100] loss: 0.04344573098700494
+[Epoch 5, Batch 200] loss: 0.040733261505374686
+[Epoch 5, Batch 300] loss: 0.040060688741505146
+[Epoch 5, Batch 400] loss: 0.041492375949164856
+**STATS for Epoch 5** : 
+Average training loss: 0.0081
+Average validation loss: 0.0579
+Validation Accuracy: 0.9825
+Overfitting: 0.0497
+Best model saved at epoch 5 with validation loss: 0.0579
+[Epoch 6, Batch 100] loss: 0.03759097678470425
+[Epoch 6, Batch 200] loss: 0.03621157535002567
+[Epoch 6, Batch 300] loss: 0.03470240764640039
+[Epoch 6, Batch 400] loss: 0.031901016390766014
+**STATS for Epoch 6** : 
+Average training loss: 0.0057
+Average validation loss: 0.0548
+Validation Accuracy: 0.9840
+Overfitting: 0.0490
+Best model saved at epoch 6 with validation loss: 0.0548
+[Epoch 7, Batch 100] loss: 0.02565245722362306
+[Epoch 7, Batch 200] loss: 0.02741908112540841
+[Epoch 7, Batch 300] loss: 0.032191649401793254
+[Epoch 7, Batch 400] loss: 0.02494152060826309
+**STATS for Epoch 7** : 
+Average training loss: 0.0047
+Average validation loss: 0.0661
+Validation Accuracy: 0.9813
+Overfitting: 0.0613
+[Epoch 8, Batch 100] loss: 0.021099551246588816
+[Epoch 8, Batch 200] loss: 0.026114366560068446
+[Epoch 8, Batch 300] loss: 0.023461423051776363
+[Epoch 8, Batch 400] loss: 0.029118567196419462
+**STATS for Epoch 8** : 
+Average training loss: 0.0036
+Average validation loss: 0.0516
+Validation Accuracy: 0.9854
+Overfitting: 0.0480
+Best model saved at epoch 8 with validation loss: 0.0516
+[Epoch 9, Batch 100] loss: 0.015187924770871178
+[Epoch 9, Batch 200] loss: 0.015086548366816714
+[Epoch 9, Batch 300] loss: 0.025894339329970536
+[Epoch 9, Batch 400] loss: 0.028707973660202696
+**STATS for Epoch 9** : 
+Average training loss: 0.0033
+Average validation loss: 0.0502
+Validation Accuracy: 0.9860
+Overfitting: 0.0469
+Best model saved at epoch 9 with validation loss: 0.0502
+[Epoch 10, Batch 100] loss: 0.013979019170656103
+[Epoch 10, Batch 200] loss: 0.011388746603042819
+[Epoch 10, Batch 300] loss: 0.019355066078278468
+[Epoch 10, Batch 400] loss: 0.015564938676325255
+**STATS for Epoch 10** : 
+Average training loss: 0.0030
+Average validation loss: 0.0587
+Validation Accuracy: 0.9848
+Overfitting: 0.0558
+[Epoch 11, Batch 100] loss: 0.011113410291363835
+[Epoch 11, Batch 200] loss: 0.011161950096793589
+[Epoch 11, Batch 300] loss: 0.014765641186386347
+[Epoch 11, Batch 400] loss: 0.017515190446865746
+**STATS for Epoch 11** : 
+Average training loss: 0.0024
+Average validation loss: 0.0640
+Validation Accuracy: 0.9842
+Overfitting: 0.0616
+[Epoch 12, Batch 100] loss: 0.012223222794564208
+[Epoch 12, Batch 200] loss: 0.00813563613788574
+[Epoch 12, Batch 300] loss: 0.01747180831656806
+[Epoch 12, Batch 400] loss: 0.012265596326033119
+**STATS for Epoch 12** : 
+Average training loss: 0.0023
+Average validation loss: 0.0569
+Validation Accuracy: 0.9856
+Overfitting: 0.0546
+[Epoch 13, Batch 100] loss: 0.013301435306602797
+[Epoch 13, Batch 200] loss: 0.015766340936606865
+[Epoch 13, Batch 300] loss: 0.0063607412736746485
+[Epoch 13, Batch 400] loss: 0.015162692687013077
+**STATS for Epoch 13** : 
+Average training loss: 0.0020
+Average validation loss: 0.0682
+Validation Accuracy: 0.9848
+Overfitting: 0.0662
+[Epoch 14, Batch 100] loss: 0.009216777646215632
+[Epoch 14, Batch 200] loss: 0.011622153538592101
+[Epoch 14, Batch 300] loss: 0.015488718791530118
+[Epoch 14, Batch 400] loss: 0.009110583243673318
+**STATS for Epoch 14** : 
+Average training loss: 0.0016
+Average validation loss: 0.0566
+Validation Accuracy: 0.9861
+Overfitting: 0.0550
+[Epoch 15, Batch 100] loss: 0.006385289122808899
+[Epoch 15, Batch 200] loss: 0.0077488563225506365
+[Epoch 15, Batch 300] loss: 0.0065373720102252265
+[Epoch 15, Batch 400] loss: 0.008844550220455858
+**STATS for Epoch 15** : 
+Average training loss: 0.0013
+Average validation loss: 0.0603
+Validation Accuracy: 0.9866
+Overfitting: 0.0591
+[Epoch 16, Batch 100] loss: 0.0037897241798418692
+[Epoch 16, Batch 200] loss: 0.004199763070282643
+[Epoch 16, Batch 300] loss: 0.0027643984518908836
+[Epoch 16, Batch 400] loss: 0.01334342040863703
+**STATS for Epoch 16** : 
+Average training loss: 0.0024
+Average validation loss: 0.0665
+Validation Accuracy: 0.9849
+Overfitting: 0.0641
+[Epoch 17, Batch 100] loss: 0.012940873235711478
+[Epoch 17, Batch 200] loss: 0.00923486892843357
+[Epoch 17, Batch 300] loss: 0.01441500306038506
+[Epoch 17, Batch 400] loss: 0.007103575660476053
+**STATS for Epoch 17** : 
+Average training loss: 0.0009
+Average validation loss: 0.0581
+Validation Accuracy: 0.9878
+Overfitting: 0.0571
+[Epoch 18, Batch 100] loss: 0.001991136283504602
+[Epoch 18, Batch 200] loss: 0.004366353419400184
+[Epoch 18, Batch 300] loss: 0.0030596176344897686
+[Epoch 18, Batch 400] loss: 0.0021418161211840927
+**STATS for Epoch 18** : 
+Average training loss: 0.0011
+Average validation loss: 0.0619
+Validation Accuracy: 0.9875
+Overfitting: 0.0609
+[Epoch 19, Batch 100] loss: 0.0027221070108862477
+[Epoch 19, Batch 200] loss: 0.002025656089817858
+[Epoch 19, Batch 300] loss: 0.0024765222196788273
+[Epoch 19, Batch 400] loss: 0.004384302125999966
+**STATS for Epoch 19** : 
+Average training loss: 0.0015
+Average validation loss: 0.0768
+Validation Accuracy: 0.9842
+Overfitting: 0.0753
+[Epoch 20, Batch 100] loss: 0.003733666413316996
+[Epoch 20, Batch 200] loss: 0.0022804198377889408
+[Epoch 20, Batch 300] loss: 0.004232162336666079
+[Epoch 20, Batch 400] loss: 0.0027930889665731228
+**STATS for Epoch 20** : 
+Average training loss: 0.0005
+Average validation loss: 0.0620
+Validation Accuracy: 0.9874
+Overfitting: 0.0614
+[Epoch 21, Batch 100] loss: 0.001803814509030417
+[Epoch 21, Batch 200] loss: 0.0008145092657014175
+[Epoch 21, Batch 300] loss: 0.00036585589240075935
+[Epoch 21, Batch 400] loss: 0.0008639103846280705
+**STATS for Epoch 21** : 
+Average training loss: 0.0001
+Average validation loss: 0.0609
+Validation Accuracy: 0.9881
+Overfitting: 0.0608
+[Epoch 22, Batch 100] loss: 0.00045019280918950243
+[Epoch 22, Batch 200] loss: 0.0003475078426674827
+[Epoch 22, Batch 300] loss: 0.000252327738742224
+[Epoch 22, Batch 400] loss: 0.0008387575693654981
+**STATS for Epoch 22** : 
+Average training loss: 0.0001
+Average validation loss: 0.0654
+Validation Accuracy: 0.9881
+Overfitting: 0.0653
+[Epoch 23, Batch 100] loss: 0.00030742201098235
+[Epoch 23, Batch 200] loss: 0.00016323692765126907
+[Epoch 23, Batch 300] loss: 0.00018339004521408241
+[Epoch 23, Batch 400] loss: 0.00042755799072836
+**STATS for Epoch 23** : 
+Average training loss: 0.0000
+Average validation loss: 0.0654
+Validation Accuracy: 0.9883
+Overfitting: 0.0654
+[Epoch 24, Batch 100] loss: 0.0002030916307779762
+[Epoch 24, Batch 200] loss: 0.00017271290759765634
+[Epoch 24, Batch 300] loss: 0.00016478466393721192
+[Epoch 24, Batch 400] loss: 0.000151499192004394
+**STATS for Epoch 24** : 
+Average training loss: 0.0000
+Average validation loss: 0.0670
+Validation Accuracy: 0.9883
+Overfitting: 0.0670
+Fold 1 validation loss: 0.0670
+Fold 2/2
+Inner Training set size for fold 2 is 30000
+ Inner Validation set size for fold 2 is 30000
+[Epoch 1, Batch 100] loss: 1.612484435737133
+[Epoch 1, Batch 200] loss: 0.40087115079164504
+[Epoch 1, Batch 300] loss: 0.23054459676146508
+[Epoch 1, Batch 400] loss: 0.1788621547445655
+**STATS for Epoch 1** : 
+Average training loss: 0.0249
+Average validation loss: 0.1418
+Validation Accuracy: 0.9550
+Overfitting: 0.1169
+Best model saved at epoch 1 with validation loss: 0.1418
+[Epoch 2, Batch 100] loss: 0.11933006130158902
+[Epoch 2, Batch 200] loss: 0.1138866906054318
+[Epoch 2, Batch 300] loss: 0.09221332892775536
+[Epoch 2, Batch 400] loss: 0.09510057005099952
+**STATS for Epoch 2** : 
+Average training loss: 0.0125
+Average validation loss: 0.0872
+Validation Accuracy: 0.9733
+Overfitting: 0.0748
+Best model saved at epoch 2 with validation loss: 0.0872
+[Epoch 3, Batch 100] loss: 0.06671454099472612
+[Epoch 3, Batch 200] loss: 0.07348314178874717
+[Epoch 3, Batch 300] loss: 0.06843237075489014
+[Epoch 3, Batch 400] loss: 0.0668248394317925
+**STATS for Epoch 3** : 
+Average training loss: 0.0074
+Average validation loss: 0.0631
+Validation Accuracy: 0.9808
+Overfitting: 0.0557
+Best model saved at epoch 3 with validation loss: 0.0631
+[Epoch 4, Batch 100] loss: 0.049656012926716356
+[Epoch 4, Batch 200] loss: 0.05790672061499208
+[Epoch 4, Batch 300] loss: 0.047692411153111604
+[Epoch 4, Batch 400] loss: 0.05815400940715335
+**STATS for Epoch 4** : 
+Average training loss: 0.0069
+Average validation loss: 0.0756
+Validation Accuracy: 0.9774
+Overfitting: 0.0687
+[Epoch 5, Batch 100] loss: 0.03500181515701115
+[Epoch 5, Batch 200] loss: 0.0336009110766463
+[Epoch 5, Batch 300] loss: 0.04639370182529092
+[Epoch 5, Batch 400] loss: 0.04891343189694453
+**STATS for Epoch 5** : 
+Average training loss: 0.0072
+Average validation loss: 0.0677
+Validation Accuracy: 0.9786
+Overfitting: 0.0604
+[Epoch 6, Batch 100] loss: 0.03292393152951263
+[Epoch 6, Batch 200] loss: 0.0311925637582317
+[Epoch 6, Batch 300] loss: 0.03114587867865339
+[Epoch 6, Batch 400] loss: 0.03563591223908588
+**STATS for Epoch 6** : 
+Average training loss: 0.0052
+Average validation loss: 0.0603
+Validation Accuracy: 0.9821
+Overfitting: 0.0551
+Best model saved at epoch 6 with validation loss: 0.0603
+[Epoch 7, Batch 100] loss: 0.02121667873405386
+[Epoch 7, Batch 200] loss: 0.024683948414749465
+[Epoch 7, Batch 300] loss: 0.03168952889100183
+[Epoch 7, Batch 400] loss: 0.02612573348800652
+**STATS for Epoch 7** : 
+Average training loss: 0.0042
+Average validation loss: 0.0585
+Validation Accuracy: 0.9840
+Overfitting: 0.0543
+Best model saved at epoch 7 with validation loss: 0.0585
+[Epoch 8, Batch 100] loss: 0.01923907996097114
+[Epoch 8, Batch 200] loss: 0.02016833540867083
+[Epoch 8, Batch 300] loss: 0.026636880986916366
+[Epoch 8, Batch 400] loss: 0.032067692354612515
+**STATS for Epoch 8** : 
+Average training loss: 0.0034
+Average validation loss: 0.0536
+Validation Accuracy: 0.9847
+Overfitting: 0.0503
+Best model saved at epoch 8 with validation loss: 0.0536
+[Epoch 9, Batch 100] loss: 0.017658865942503325
+[Epoch 9, Batch 200] loss: 0.022008690152142664
+[Epoch 9, Batch 300] loss: 0.023409451316110788
+[Epoch 9, Batch 400] loss: 0.02152154027528013
+**STATS for Epoch 9** : 
+Average training loss: 0.0028
+Average validation loss: 0.0558
+Validation Accuracy: 0.9847
+Overfitting: 0.0529
+[Epoch 10, Batch 100] loss: 0.01201204223150853
+[Epoch 10, Batch 200] loss: 0.008202345000754577
+[Epoch 10, Batch 300] loss: 0.01575236197619233
+[Epoch 10, Batch 400] loss: 0.019695602952997434
+**STATS for Epoch 10** : 
+Average training loss: 0.0052
+Average validation loss: 0.0562
+Validation Accuracy: 0.9845
+Overfitting: 0.0510
+[Epoch 11, Batch 100] loss: 0.015668325812694093
+[Epoch 11, Batch 200] loss: 0.017965989120275482
+[Epoch 11, Batch 300] loss: 0.011691629279375775
+[Epoch 11, Batch 400] loss: 0.013647500638035126
+**STATS for Epoch 11** : 
+Average training loss: 0.0035
+Average validation loss: 0.0601
+Validation Accuracy: 0.9837
+Overfitting: 0.0567
+[Epoch 12, Batch 100] loss: 0.011971961141825886
+[Epoch 12, Batch 200] loss: 0.011372984697518405
+[Epoch 12, Batch 300] loss: 0.017306771987932734
+[Epoch 12, Batch 400] loss: 0.020944445634959265
+**STATS for Epoch 12** : 
+Average training loss: 0.0034
+Average validation loss: 0.0608
+Validation Accuracy: 0.9840
+Overfitting: 0.0574
+[Epoch 13, Batch 100] loss: 0.010952956699802598
+[Epoch 13, Batch 200] loss: 0.009091126405619434
+[Epoch 13, Batch 300] loss: 0.014005774310571723
+[Epoch 13, Batch 400] loss: 0.018870992460288106
+**STATS for Epoch 13** : 
+Average training loss: 0.0012
+Average validation loss: 0.0583
+Validation Accuracy: 0.9860
+Overfitting: 0.0571
+[Epoch 14, Batch 100] loss: 0.005380415512445324
+[Epoch 14, Batch 200] loss: 0.008479336739765132
+[Epoch 14, Batch 300] loss: 0.007044694791838993
+[Epoch 14, Batch 400] loss: 0.01120150142458442
+**STATS for Epoch 14** : 
+Average training loss: 0.0019
+Average validation loss: 0.0621
+Validation Accuracy: 0.9849
+Overfitting: 0.0601
+[Epoch 15, Batch 100] loss: 0.011097302499983926
+[Epoch 15, Batch 200] loss: 0.012309166499617276
+[Epoch 15, Batch 300] loss: 0.015741138191151548
+[Epoch 15, Batch 400] loss: 0.018086110962249224
+**STATS for Epoch 15** : 
+Average training loss: 0.0019
+Average validation loss: 0.0602
+Validation Accuracy: 0.9865
+Overfitting: 0.0583
+[Epoch 16, Batch 100] loss: 0.005845152349575073
+[Epoch 16, Batch 200] loss: 0.008059134838204045
+[Epoch 16, Batch 300] loss: 0.0055971212489021125
+[Epoch 16, Batch 400] loss: 0.006870802024877776
+**STATS for Epoch 16** : 
+Average training loss: 0.0013
+Average validation loss: 0.0672
+Validation Accuracy: 0.9857
+Overfitting: 0.0659
+[Epoch 17, Batch 100] loss: 0.005862596206461603
+[Epoch 17, Batch 200] loss: 0.007808210464390868
+[Epoch 17, Batch 300] loss: 0.005454989813770226
+[Epoch 17, Batch 400] loss: 0.012600965482815809
+**STATS for Epoch 17** : 
+Average training loss: 0.0015
+Average validation loss: 0.0688
+Validation Accuracy: 0.9847
+Overfitting: 0.0673
+[Epoch 18, Batch 100] loss: 0.007874811537894856
+[Epoch 18, Batch 200] loss: 0.008129663317768064
+[Epoch 18, Batch 300] loss: 0.010205152680291575
+[Epoch 18, Batch 400] loss: 0.010577484355699197
+**STATS for Epoch 18** : 
+Average training loss: 0.0012
+Average validation loss: 0.0676
+Validation Accuracy: 0.9859
+Overfitting: 0.0664
+[Epoch 19, Batch 100] loss: 0.005583659866533708
+[Epoch 19, Batch 200] loss: 0.003671282865379908
+[Epoch 19, Batch 300] loss: 0.004658637700367762
+[Epoch 19, Batch 400] loss: 0.0060427409157273355
+**STATS for Epoch 19** : 
+Average training loss: 0.0010
+Average validation loss: 0.0737
+Validation Accuracy: 0.9845
+Overfitting: 0.0727
+[Epoch 20, Batch 100] loss: 0.007377439948500069
+[Epoch 20, Batch 200] loss: 0.007307887786597575
+[Epoch 20, Batch 300] loss: 0.0035335139387552774
+[Epoch 20, Batch 400] loss: 0.007440886961812793
+**STATS for Epoch 20** : 
+Average training loss: 0.0012
+Average validation loss: 0.0725
+Validation Accuracy: 0.9850
+Overfitting: 0.0713
+[Epoch 21, Batch 100] loss: 0.0034704210148993296
+[Epoch 21, Batch 200] loss: 0.007346527942963803
+[Epoch 21, Batch 300] loss: 0.006564672449603677
+[Epoch 21, Batch 400] loss: 0.0025447096256812074
+**STATS for Epoch 21** : 
+Average training loss: 0.0004
+Average validation loss: 0.0689
+Validation Accuracy: 0.9860
+Overfitting: 0.0685
+[Epoch 22, Batch 100] loss: 0.0022392639493659773
+[Epoch 22, Batch 200] loss: 0.0013547373493111082
+[Epoch 22, Batch 300] loss: 0.0013805085195394895
+[Epoch 22, Batch 400] loss: 0.004586746160184702
+**STATS for Epoch 22** : 
+Average training loss: 0.0008
+Average validation loss: 0.0713
+Validation Accuracy: 0.9859
+Overfitting: 0.0705
+[Epoch 23, Batch 100] loss: 0.0030087966111739207
+[Epoch 23, Batch 200] loss: 0.001171865305565234
+[Epoch 23, Batch 300] loss: 0.00271811164428982
+[Epoch 23, Batch 400] loss: 0.003563804112507114
+**STATS for Epoch 23** : 
+Average training loss: 0.0009
+Average validation loss: 0.0809
+Validation Accuracy: 0.9851
+Overfitting: 0.0800
+[Epoch 24, Batch 100] loss: 0.00941583203594746
+[Epoch 24, Batch 200] loss: 0.0038551427558559228
+[Epoch 24, Batch 300] loss: 0.003753292612250334
+[Epoch 24, Batch 400] loss: 0.001539269291565688
+**STATS for Epoch 24** : 
+Average training loss: 0.0010
+Average validation loss: 0.0702
+Validation Accuracy: 0.9874
+Overfitting: 0.0693
+Fold 2 validation loss: 0.0702
+Mean validation loss across all folds for Trial 10 is 0.0686 with trial config:  l1: 96, l2: 96, lr: 0.00946889520909023, batch_size: 64
+[I 2024-11-19 00:40:37,952] Trial 9 finished with value: 0.06861249393639898 and parameters: {'l1': 96, 'l2': 96, 'lr': 0.00946889520909023, 'batch_size': 64}. Best is trial 0 with value: 0.059496782082764404.
+[W 2024-11-19 00:40:37,984] The parameter 'l2' in trial#10 is sampled independently instead of being sampled by multivariate TPE sampler. (optimization performance may be degraded). You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler`, if this independent sampling is intended behavior.
+
+Selected Hyperparameters for Trial 11:
+  l1: 128, l2: 128, lr: 0.09254459835550848, batch_size: 32
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 1.603339164853096
+[Epoch 1, Batch 200] loss: 1.7380369490385055
+[Epoch 1, Batch 300] loss: 1.2092420005798339
+[Epoch 1, Batch 400] loss: 1.1011673229932786
+[Epoch 1, Batch 500] loss: 1.1306463623046874
+[Epoch 1, Batch 600] loss: 0.8730268704891205
+[Epoch 1, Batch 700] loss: 0.7959975104033947
+[Epoch 1, Batch 800] loss: 1.0870891863107681
+[Epoch 1, Batch 900] loss: 0.8449468863010406
+**STATS for Epoch 1** : 
+Average training loss: 0.0402
+Average validation loss: 1.4747
+Validation Accuracy: 0.6405
+Overfitting: 1.4345
+Best model saved at epoch 1 with validation loss: 1.4747
+[Epoch 2, Batch 100] loss: 0.993758470416069
+[Epoch 2, Batch 200] loss: 0.8870220813155174
+[Epoch 2, Batch 300] loss: 1.111026711165905
+[Epoch 2, Batch 400] loss: 1.0035781601071359
+[Epoch 2, Batch 500] loss: 3.5823552787303923
+[Epoch 2, Batch 600] loss: 2.3098547291755676
+[Epoch 2, Batch 700] loss: 2.3157747554779053
+[Epoch 2, Batch 800] loss: 2.3047537994384766
+[Epoch 2, Batch 900] loss: 2.3081962633132935
+**STATS for Epoch 2** : 
+Average training loss: 0.0936
+Average validation loss: 2.3055
+Validation Accuracy: 0.1036
+Overfitting: 2.2119
+[Epoch 3, Batch 100] loss: 2.3099161863327025
+[Epoch 3, Batch 200] loss: 2.3069034218788147
+[Epoch 3, Batch 300] loss: 2.3065140795707704
+[Epoch 3, Batch 400] loss: 2.306059467792511
+[Epoch 3, Batch 500] loss: 2.3086576724052428
+[Epoch 3, Batch 600] loss: 2.306977186203003
+[Epoch 3, Batch 700] loss: 2.307477707862854
+[Epoch 3, Batch 800] loss: 2.3069080233573915
+[Epoch 3, Batch 900] loss: 2.30566997051239
+**STATS for Epoch 3** : 
+Average training loss: 0.0937
+Average validation loss: 2.3089
+Validation Accuracy: 0.0986
+Overfitting: 2.2152
+[Epoch 4, Batch 100] loss: 2.307315635681152
+[Epoch 4, Batch 200] loss: 2.308768639564514
+[Epoch 4, Batch 300] loss: 2.303304555416107
+[Epoch 4, Batch 400] loss: 2.3086887407302856
+[Epoch 4, Batch 500] loss: 2.3101566004753114
+[Epoch 4, Batch 600] loss: 2.3067752146720886
+[Epoch 4, Batch 700] loss: 2.3075424337387087
+[Epoch 4, Batch 800] loss: 2.3076329040527344
+[Epoch 4, Batch 900] loss: 2.309282450675964
+**STATS for Epoch 4** : 
+Average training loss: 0.0934
+Average validation loss: 2.3043
+Validation Accuracy: 0.1036
+Overfitting: 2.2109
+[Epoch 5, Batch 100] loss: 2.3079486179351805
+[Epoch 5, Batch 200] loss: 2.306149880886078
+[Epoch 5, Batch 300] loss: 2.3079869174957275
+[Epoch 5, Batch 400] loss: 2.309069037437439
+[Epoch 5, Batch 500] loss: 2.3041472315788267
+[Epoch 5, Batch 600] loss: 2.306215968132019
+[Epoch 5, Batch 700] loss: 2.3108010578155516
+[Epoch 5, Batch 800] loss: 2.3045755195617676
+[Epoch 5, Batch 900] loss: 2.305744173526764
+**STATS for Epoch 5** : 
+Average training loss: 0.0934
+Average validation loss: 2.3046
+Validation Accuracy: 0.0987
+Overfitting: 2.2112
+[Epoch 6, Batch 100] loss: 2.306984395980835
+[Epoch 6, Batch 200] loss: 2.3077189445495607
+[Epoch 6, Batch 300] loss: 2.3092653822898863
+[Epoch 6, Batch 400] loss: 2.3059781122207643
+[Epoch 6, Batch 500] loss: 2.3086384463310243
+[Epoch 6, Batch 600] loss: 2.3082975339889527
+[Epoch 6, Batch 700] loss: 2.3084611749649047
+[Epoch 6, Batch 800] loss: 2.308109383583069
+[Epoch 6, Batch 900] loss: 2.3043703031539917
+**STATS for Epoch 6** : 
+Average training loss: 0.0934
+Average validation loss: 2.3111
+Validation Accuracy: 0.0982
+Overfitting: 2.2177
+[Epoch 7, Batch 100] loss: 2.3103466033935547
+[Epoch 7, Batch 200] loss: 2.307082233428955
+[Epoch 7, Batch 300] loss: 2.3056710505485536
+[Epoch 7, Batch 400] loss: 2.3049808144569397
+[Epoch 7, Batch 500] loss: 2.3066436767578127
+[Epoch 7, Batch 600] loss: 2.3050926518440247
+[Epoch 7, Batch 700] loss: 2.305802917480469
+[Epoch 7, Batch 800] loss: 2.3100729632377623
+[Epoch 7, Batch 900] loss: 2.3072962403297423
+**STATS for Epoch 7** : 
+Average training loss: 0.0934
+Average validation loss: 2.3048
+Validation Accuracy: 0.1122
+Overfitting: 2.2114
+[Epoch 8, Batch 100] loss: 2.3065038919448853
+[Epoch 8, Batch 200] loss: 2.309542925357819
+[Epoch 8, Batch 300] loss: 2.3089516806602477
+[Epoch 8, Batch 400] loss: 2.307254536151886
+[Epoch 8, Batch 500] loss: 2.3066363596916197
+[Epoch 8, Batch 600] loss: 2.305728940963745
+[Epoch 8, Batch 700] loss: 2.3082046365737914
+[Epoch 8, Batch 800] loss: 2.3082235503196715
+[Epoch 8, Batch 900] loss: 2.307125658988953
+**STATS for Epoch 8** : 
+Average training loss: 0.0935
+Average validation loss: 2.3080
+Validation Accuracy: 0.0986
+Overfitting: 2.2145
+[Epoch 9, Batch 100] loss: 2.30689120054245
+[Epoch 9, Batch 200] loss: 2.3109330487251283
+[Epoch 9, Batch 300] loss: 2.307446870803833
+[Epoch 9, Batch 400] loss: 2.308331551551819
+[Epoch 9, Batch 500] loss: 2.3057798314094544
+[Epoch 9, Batch 600] loss: 2.3074262976646422
+[Epoch 9, Batch 700] loss: 2.3111209750175474
+[Epoch 9, Batch 800] loss: 2.3050606441497803
+[Epoch 9, Batch 900] loss: 2.3094204330444335
+**STATS for Epoch 9** : 
+Average training loss: 0.0936
+Average validation loss: 2.3088
+Validation Accuracy: 0.0991
+Overfitting: 2.2152
+[I 2024-11-19 00:42:32,451] Trial 10 pruned. 
+[W 2024-11-19 00:42:32,485] The parameter 'l2' in trial#11 is sampled independently instead of being sampled by multivariate TPE sampler. (optimization performance may be degraded). You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler`, if this independent sampling is intended behavior.
+
+Selected Hyperparameters for Trial 12:
+  l1: 128, l2: 96, lr: 0.011000835226429966, batch_size: 64
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 1.7923973205685615
+[Epoch 1, Batch 200] loss: 0.3235404679179192
+[Epoch 1, Batch 300] loss: 0.19121647551655768
+[Epoch 1, Batch 400] loss: 0.1315570480749011
+**STATS for Epoch 1** : 
+Average training loss: 0.0180
+Average validation loss: 0.1319
+Validation Accuracy: 0.9577
+Overfitting: 0.1140
+Best model saved at epoch 1 with validation loss: 0.1319
+[Epoch 2, Batch 100] loss: 0.10903643287718295
+[Epoch 2, Batch 200] loss: 0.08473462850786745
+[Epoch 2, Batch 300] loss: 0.09758425144478679
+[Epoch 2, Batch 400] loss: 0.08497827492654324
+**STATS for Epoch 2** : 
+Average training loss: 0.0099
+Average validation loss: 0.0828
+Validation Accuracy: 0.9726
+Overfitting: 0.0728
+Best model saved at epoch 2 with validation loss: 0.0828
+[Epoch 3, Batch 100] loss: 0.05435963322408497
+[Epoch 3, Batch 200] loss: 0.07261514380574226
+[Epoch 3, Batch 300] loss: 0.06098633117042482
+[Epoch 3, Batch 400] loss: 0.06104740833863616
+**STATS for Epoch 3** : 
+Average training loss: 0.0098
+Average validation loss: 0.0603
+Validation Accuracy: 0.9809
+Overfitting: 0.0504
+Best model saved at epoch 3 with validation loss: 0.0603
+[Epoch 4, Batch 100] loss: 0.041429300301242616
+[Epoch 4, Batch 200] loss: 0.05132893973961473
+[Epoch 4, Batch 300] loss: 0.047902272152714434
+[Epoch 4, Batch 400] loss: 0.05083628159831278
+**STATS for Epoch 4** : 
+Average training loss: 0.0083
+Average validation loss: 0.0702
+Validation Accuracy: 0.9786
+Overfitting: 0.0618
+[Epoch 5, Batch 100] loss: 0.03588624614581931
+[Epoch 5, Batch 200] loss: 0.042123143194476145
+[Epoch 5, Batch 300] loss: 0.034568160057533534
+[Epoch 5, Batch 400] loss: 0.03821161219733767
+**STATS for Epoch 5** : 
+Average training loss: 0.0052
+Average validation loss: 0.0692
+Validation Accuracy: 0.9785
+Overfitting: 0.0640
+[Epoch 6, Batch 100] loss: 0.03122683794470504
+[Epoch 6, Batch 200] loss: 0.039848336954019035
+[Epoch 6, Batch 300] loss: 0.027938577857566996
+[Epoch 6, Batch 400] loss: 0.02508239906223025
+**STATS for Epoch 6** : 
+Average training loss: 0.0054
+Average validation loss: 0.0680
+Validation Accuracy: 0.9806
+Overfitting: 0.0626
+[Epoch 7, Batch 100] loss: 0.026808005942148157
+[Epoch 7, Batch 200] loss: 0.02284772392042214
+[Epoch 7, Batch 300] loss: 0.030545900839497334
+[Epoch 7, Batch 400] loss: 0.031332730660797094
+**STATS for Epoch 7** : 
+Average training loss: 0.0037
+Average validation loss: 0.0536
+Validation Accuracy: 0.9851
+Overfitting: 0.0498
+Best model saved at epoch 7 with validation loss: 0.0536
+[Epoch 8, Batch 100] loss: 0.02150699982390506
+[Epoch 8, Batch 200] loss: 0.019481011931638932
+[Epoch 8, Batch 300] loss: 0.020066105875011998
+[Epoch 8, Batch 400] loss: 0.02401371847372502
+**STATS for Epoch 8** : 
+Average training loss: 0.0044
+Average validation loss: 0.0609
+Validation Accuracy: 0.9826
+Overfitting: 0.0565
+[Epoch 9, Batch 100] loss: 0.012758051213459111
+[Epoch 9, Batch 200] loss: 0.011323630328552098
+[Epoch 9, Batch 300] loss: 0.017495561661562534
+[Epoch 9, Batch 400] loss: 0.02313029094642843
+**STATS for Epoch 9** : 
+Average training loss: 0.0028
+Average validation loss: 0.0619
+Validation Accuracy: 0.9848
+Overfitting: 0.0592
+[Epoch 10, Batch 100] loss: 0.013273385633874568
+[Epoch 10, Batch 200] loss: 0.011568434909913777
+[Epoch 10, Batch 300] loss: 0.013077057997506927
+[Epoch 10, Batch 400] loss: 0.014802428858965868
+**STATS for Epoch 10** : 
+Average training loss: 0.0028
+Average validation loss: 0.0536
+Validation Accuracy: 0.9860
+Overfitting: 0.0508
+[Epoch 11, Batch 100] loss: 0.00861383636329265
+[Epoch 11, Batch 200] loss: 0.007401891575646005
+[Epoch 11, Batch 300] loss: 0.012557698586206242
+[Epoch 11, Batch 400] loss: 0.017090591478627175
+**STATS for Epoch 11** : 
+Average training loss: 0.0013
+Average validation loss: 0.0598
+Validation Accuracy: 0.9847
+Overfitting: 0.0584
+[Epoch 12, Batch 100] loss: 0.007879435220966116
+[Epoch 12, Batch 200] loss: 0.003954775485763094
+[Epoch 12, Batch 300] loss: 0.008552452382491537
+[Epoch 12, Batch 400] loss: 0.014842619406699668
+**STATS for Epoch 12** : 
+Average training loss: 0.0017
+Average validation loss: 0.0630
+Validation Accuracy: 0.9843
+Overfitting: 0.0613
+[Epoch 13, Batch 100] loss: 0.012925883683965366
+[Epoch 13, Batch 200] loss: 0.01442684940188883
+[Epoch 13, Batch 300] loss: 0.014045657546957954
+[Epoch 13, Batch 400] loss: 0.014574731426291692
+**STATS for Epoch 13** : 
+Average training loss: 0.0018
+Average validation loss: 0.0667
+Validation Accuracy: 0.9848
+Overfitting: 0.0649
+[Epoch 14, Batch 100] loss: 0.009057818561232125
+[Epoch 14, Batch 200] loss: 0.006635988343914505
+[Epoch 14, Batch 300] loss: 0.007027604401628196
+[Epoch 14, Batch 400] loss: 0.005004718118470919
+**STATS for Epoch 14** : 
+Average training loss: 0.0013
+Average validation loss: 0.0683
+Validation Accuracy: 0.9847
+Overfitting: 0.0669
+[Epoch 15, Batch 100] loss: 0.007266668254851538
+[Epoch 15, Batch 200] loss: 0.01024539993792132
+[Epoch 15, Batch 300] loss: 0.01151037260231533
+[Epoch 15, Batch 400] loss: 0.009153490343869634
+**STATS for Epoch 15** : 
+Average training loss: 0.0008
+Average validation loss: 0.0640
+Validation Accuracy: 0.9856
+Overfitting: 0.0632
+[Epoch 16, Batch 100] loss: 0.005691130683553638
+[Epoch 16, Batch 200] loss: 0.00390850786488727
+[Epoch 16, Batch 300] loss: 0.004193986645204859
+[Epoch 16, Batch 400] loss: 0.005315586204251304
+**STATS for Epoch 16** : 
+Average training loss: 0.0006
+Average validation loss: 0.0711
+Validation Accuracy: 0.9858
+Overfitting: 0.0705
+[Epoch 17, Batch 100] loss: 0.0039109328909557916
+[Epoch 17, Batch 200] loss: 0.005735659278634557
+[Epoch 17, Batch 300] loss: 0.007005994306964567
+[Epoch 17, Batch 400] loss: 0.00693869395429374
+**STATS for Epoch 17** : 
+Average training loss: 0.0013
+Average validation loss: 0.0933
+Validation Accuracy: 0.9806
+Overfitting: 0.0920
+[I 2024-11-19 00:45:42,192] Trial 11 pruned. 
+[W 2024-11-19 00:45:42,227] The parameter 'l2' in trial#12 is sampled independently instead of being sampled by multivariate TPE sampler. (optimization performance may be degraded). You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler`, if this independent sampling is intended behavior.
+
+Selected Hyperparameters for Trial 13:
+  l1: 96, l2: 96, lr: 0.008169619653037311, batch_size: 256
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 1.4829860842227935
+**STATS for Epoch 1** : 
+Average training loss: 0.0620
+Average validation loss: 0.3746
+Validation Accuracy: 0.8888
+Overfitting: 0.3126
+Best model saved at epoch 1 with validation loss: 0.3746
+[Epoch 2, Batch 100] loss: 0.2522184626758099
+**STATS for Epoch 2** : 
+Average training loss: 0.0250
+Average validation loss: 0.1677
+Validation Accuracy: 0.9480
+Overfitting: 0.1427
+Best model saved at epoch 2 with validation loss: 0.1677
+[Epoch 3, Batch 100] loss: 0.14271765116602184
+**STATS for Epoch 3** : 
+Average training loss: 0.0207
+Average validation loss: 0.1246
+Validation Accuracy: 0.9608
+Overfitting: 0.1039
+Best model saved at epoch 3 with validation loss: 0.1246
+[Epoch 4, Batch 100] loss: 0.10321073889732361
+**STATS for Epoch 4** : 
+Average training loss: 0.0154
+Average validation loss: 0.0955
+Validation Accuracy: 0.9700
+Overfitting: 0.0801
+Best model saved at epoch 4 with validation loss: 0.0955
+[Epoch 5, Batch 100] loss: 0.08913296025246381
+**STATS for Epoch 5** : 
+Average training loss: 0.0113
+Average validation loss: 0.0910
+Validation Accuracy: 0.9711
+Overfitting: 0.0797
+Best model saved at epoch 5 with validation loss: 0.0910
+[Epoch 6, Batch 100] loss: 0.07021451162174344
+**STATS for Epoch 6** : 
+Average training loss: 0.0102
+Average validation loss: 0.0899
+Validation Accuracy: 0.9722
+Overfitting: 0.0797
+Best model saved at epoch 6 with validation loss: 0.0899
+[Epoch 7, Batch 100] loss: 0.06119839945808053
+**STATS for Epoch 7** : 
+Average training loss: 0.0089
+Average validation loss: 0.0708
+Validation Accuracy: 0.9775
+Overfitting: 0.0619
+Best model saved at epoch 7 with validation loss: 0.0708
+[Epoch 8, Batch 100] loss: 0.05126136819832027
+**STATS for Epoch 8** : 
+Average training loss: 0.0072
+Average validation loss: 0.0704
+Validation Accuracy: 0.9781
+Overfitting: 0.0632
+Best model saved at epoch 8 with validation loss: 0.0704
+[Epoch 9, Batch 100] loss: 0.04703474868088961
+**STATS for Epoch 9** : 
+Average training loss: 0.0071
+Average validation loss: 0.0729
+Validation Accuracy: 0.9768
+Overfitting: 0.0658
+[Epoch 10, Batch 100] loss: 0.044280363032594326
+**STATS for Epoch 10** : 
+Average training loss: 0.0079
+Average validation loss: 0.0768
+Validation Accuracy: 0.9764
+Overfitting: 0.0689
+[Epoch 11, Batch 100] loss: 0.04138986809179187
+**STATS for Epoch 11** : 
+Average training loss: 0.0055
+Average validation loss: 0.0623
+Validation Accuracy: 0.9806
+Overfitting: 0.0567
+Best model saved at epoch 11 with validation loss: 0.0623
+[Epoch 12, Batch 100] loss: 0.03612589281983673
+**STATS for Epoch 12** : 
+Average training loss: 0.0050
+Average validation loss: 0.0686
+Validation Accuracy: 0.9788
+Overfitting: 0.0635
+[Epoch 13, Batch 100] loss: 0.03009353785775602
+**STATS for Epoch 13** : 
+Average training loss: 0.0055
+Average validation loss: 0.0640
+Validation Accuracy: 0.9799
+Overfitting: 0.0584
+[Epoch 14, Batch 100] loss: 0.02877907585352659
+**STATS for Epoch 14** : 
+Average training loss: 0.0045
+Average validation loss: 0.0585
+Validation Accuracy: 0.9828
+Overfitting: 0.0540
+Best model saved at epoch 14 with validation loss: 0.0585
+[Epoch 15, Batch 100] loss: 0.027878814623691142
+**STATS for Epoch 15** : 
+Average training loss: 0.0050
+Average validation loss: 0.0606
+Validation Accuracy: 0.9826
+Overfitting: 0.0556
+[Epoch 16, Batch 100] loss: 0.023932987304870038
+**STATS for Epoch 16** : 
+Average training loss: 0.0032
+Average validation loss: 0.0612
+Validation Accuracy: 0.9826
+Overfitting: 0.0579
+[Epoch 17, Batch 100] loss: 0.023114442238584162
+**STATS for Epoch 17** : 
+Average training loss: 0.0037
+Average validation loss: 0.0580
+Validation Accuracy: 0.9834
+Overfitting: 0.0543
+Best model saved at epoch 17 with validation loss: 0.0580
+[Epoch 18, Batch 100] loss: 0.02082278295652941
+**STATS for Epoch 18** : 
+Average training loss: 0.0034
+Average validation loss: 0.0661
+Validation Accuracy: 0.9809
+Overfitting: 0.0627
+[Epoch 19, Batch 100] loss: 0.01801076508592814
+**STATS for Epoch 19** : 
+Average training loss: 0.0038
+Average validation loss: 0.0596
+Validation Accuracy: 0.9830
+Overfitting: 0.0558
+[Epoch 20, Batch 100] loss: 0.01704667668323964
+**STATS for Epoch 20** : 
+Average training loss: 0.0020
+Average validation loss: 0.0555
+Validation Accuracy: 0.9842
+Overfitting: 0.0535
+Best model saved at epoch 20 with validation loss: 0.0555
+[Epoch 21, Batch 100] loss: 0.014176963444333524
+**STATS for Epoch 21** : 
+Average training loss: 0.0025
+Average validation loss: 0.0617
+Validation Accuracy: 0.9824
+Overfitting: 0.0592
+[Epoch 22, Batch 100] loss: 0.013266780241392552
+**STATS for Epoch 22** : 
+Average training loss: 0.0016
+Average validation loss: 0.0559
+Validation Accuracy: 0.9846
+Overfitting: 0.0542
+[Epoch 23, Batch 100] loss: 0.013092056105379016
+**STATS for Epoch 23** : 
+Average training loss: 0.0032
+Average validation loss: 0.0581
+Validation Accuracy: 0.9847
+Overfitting: 0.0549
+[Epoch 24, Batch 100] loss: 0.015432108443928883
+**STATS for Epoch 24** : 
+Average training loss: 0.0013
+Average validation loss: 0.0599
+Validation Accuracy: 0.9840
+Overfitting: 0.0586
+Fold 1 validation loss: 0.0599
+Fold 2/2
+Inner Training set size for fold 2 is 30000
+ Inner Validation set size for fold 2 is 30000
+[Epoch 1, Batch 100] loss: 1.9122929441928864
+**STATS for Epoch 1** : 
+Average training loss: 0.0793
+Average validation loss: 0.4341
+Validation Accuracy: 0.8704
+Overfitting: 0.3547
+Best model saved at epoch 1 with validation loss: 0.4341
+[Epoch 2, Batch 100] loss: 0.3094280007481575
+**STATS for Epoch 2** : 
+Average training loss: 0.0342
+Average validation loss: 0.2157
+Validation Accuracy: 0.9337
+Overfitting: 0.1815
+Best model saved at epoch 2 with validation loss: 0.2157
+[Epoch 3, Batch 100] loss: 0.16710462674498558
+**STATS for Epoch 3** : 
+Average training loss: 0.0229
+Average validation loss: 0.1522
+Validation Accuracy: 0.9523
+Overfitting: 0.1293
+Best model saved at epoch 3 with validation loss: 0.1522
+[Epoch 4, Batch 100] loss: 0.12555155519396066
+**STATS for Epoch 4** : 
+Average training loss: 0.0171
+Average validation loss: 0.1097
+Validation Accuracy: 0.9660
+Overfitting: 0.0926
+Best model saved at epoch 4 with validation loss: 0.1097
+[Epoch 5, Batch 100] loss: 0.10227662097662688
+**STATS for Epoch 5** : 
+Average training loss: 0.0131
+Average validation loss: 0.0959
+Validation Accuracy: 0.9710
+Overfitting: 0.0828
+Best model saved at epoch 5 with validation loss: 0.0959
+[Epoch 6, Batch 100] loss: 0.08562440713867545
+**STATS for Epoch 6** : 
+Average training loss: 0.0119
+Average validation loss: 0.0900
+Validation Accuracy: 0.9734
+Overfitting: 0.0781
+Best model saved at epoch 6 with validation loss: 0.0900
+[Epoch 7, Batch 100] loss: 0.07539863117039204
+**STATS for Epoch 7** : 
+Average training loss: 0.0121
+Average validation loss: 0.0805
+Validation Accuracy: 0.9758
+Overfitting: 0.0684
+Best model saved at epoch 7 with validation loss: 0.0805
+[Epoch 8, Batch 100] loss: 0.06761460065841675
+**STATS for Epoch 8** : 
+Average training loss: 0.0091
+Average validation loss: 0.0786
+Validation Accuracy: 0.9763
+Overfitting: 0.0695
+Best model saved at epoch 8 with validation loss: 0.0786
+[Epoch 9, Batch 100] loss: 0.055741322543472055
+**STATS for Epoch 9** : 
+Average training loss: 0.0083
+Average validation loss: 0.0664
+Validation Accuracy: 0.9805
+Overfitting: 0.0581
+Best model saved at epoch 9 with validation loss: 0.0664
+[Epoch 10, Batch 100] loss: 0.054758562007918954
+**STATS for Epoch 10** : 
+Average training loss: 0.0083
+Average validation loss: 0.0717
+Validation Accuracy: 0.9775
+Overfitting: 0.0634
+[Epoch 11, Batch 100] loss: 0.05020685729570687
+**STATS for Epoch 11** : 
+Average training loss: 0.0062
+Average validation loss: 0.0694
+Validation Accuracy: 0.9791
+Overfitting: 0.0632
+[Epoch 12, Batch 100] loss: 0.044563745642080904
+**STATS for Epoch 12** : 
+Average training loss: 0.0070
+Average validation loss: 0.0624
+Validation Accuracy: 0.9812
+Overfitting: 0.0554
+Best model saved at epoch 12 with validation loss: 0.0624
+[Epoch 13, Batch 100] loss: 0.04118136667646468
+**STATS for Epoch 13** : 
+Average training loss: 0.0052
+Average validation loss: 0.0663
+Validation Accuracy: 0.9802
+Overfitting: 0.0611
+[Epoch 14, Batch 100] loss: 0.03500241708941758
+**STATS for Epoch 14** : 
+Average training loss: 0.0062
+Average validation loss: 0.0753
+Validation Accuracy: 0.9777
+Overfitting: 0.0691
+[Epoch 15, Batch 100] loss: 0.03523776482790709
+**STATS for Epoch 15** : 
+Average training loss: 0.0069
+Average validation loss: 0.0649
+Validation Accuracy: 0.9807
+Overfitting: 0.0581
+[Epoch 16, Batch 100] loss: 0.031528676254674794
+**STATS for Epoch 16** : 
+Average training loss: 0.0054
+Average validation loss: 0.0727
+Validation Accuracy: 0.9781
+Overfitting: 0.0673
+[Epoch 17, Batch 100] loss: 0.02636880995705724
+**STATS for Epoch 17** : 
+Average training loss: 0.0057
+Average validation loss: 0.0605
+Validation Accuracy: 0.9827
+Overfitting: 0.0549
+Best model saved at epoch 17 with validation loss: 0.0605
+[Epoch 18, Batch 100] loss: 0.030503700873814522
+**STATS for Epoch 18** : 
+Average training loss: 0.0040
+Average validation loss: 0.0620
+Validation Accuracy: 0.9813
+Overfitting: 0.0580
+[Epoch 19, Batch 100] loss: 0.024363037128932775
+**STATS for Epoch 19** : 
+Average training loss: 0.0038
+Average validation loss: 0.0599
+Validation Accuracy: 0.9834
+Overfitting: 0.0561
+Best model saved at epoch 19 with validation loss: 0.0599
+[Epoch 20, Batch 100] loss: 0.02324418703792617
+**STATS for Epoch 20** : 
+Average training loss: 0.0045
+Average validation loss: 0.0689
+Validation Accuracy: 0.9809
+Overfitting: 0.0644
+[Epoch 21, Batch 100] loss: 0.02227581465849653
+**STATS for Epoch 21** : 
+Average training loss: 0.0032
+Average validation loss: 0.0629
+Validation Accuracy: 0.9826
+Overfitting: 0.0597
+[Epoch 22, Batch 100] loss: 0.019826870718970893
+**STATS for Epoch 22** : 
+Average training loss: 0.0031
+Average validation loss: 0.0617
+Validation Accuracy: 0.9832
+Overfitting: 0.0586
+[Epoch 23, Batch 100] loss: 0.018837879879865797
+**STATS for Epoch 23** : 
+Average training loss: 0.0032
+Average validation loss: 0.0568
+Validation Accuracy: 0.9841
+Overfitting: 0.0536
+Best model saved at epoch 23 with validation loss: 0.0568
+[Epoch 24, Batch 100] loss: 0.017768815357703714
+**STATS for Epoch 24** : 
+Average training loss: 0.0023
+Average validation loss: 0.0581
+Validation Accuracy: 0.9844
+Overfitting: 0.0558
+Fold 2 validation loss: 0.0581
+Mean validation loss across all folds for Trial 13 is 0.0590 with trial config:  l1: 96, l2: 96, lr: 0.008169619653037311, batch_size: 256
+[I 2024-11-19 00:54:00,288] Trial 12 finished with value: 0.05901664003514748 and parameters: {'l1': 96, 'l2': 96, 'lr': 0.008169619653037311, 'batch_size': 256}. Best is trial 12 with value: 0.05901664003514748.
+[W 2024-11-19 00:54:00,320] The parameter 'l2' in trial#13 is sampled independently instead of being sampled by multivariate TPE sampler. (optimization performance may be degraded). You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler`, if this independent sampling is intended behavior.
+
+Selected Hyperparameters for Trial 14:
+  l1: 128, l2: 96, lr: 0.0194919910098972, batch_size: 256
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 1.1397330290079117
+**STATS for Epoch 1** : 
+Average training loss: 0.0351
+Average validation loss: 0.2217
+Validation Accuracy: 0.9314
+Overfitting: 0.1866
+Best model saved at epoch 1 with validation loss: 0.2217
+[Epoch 2, Batch 100] loss: 0.14645613990724088
+**STATS for Epoch 2** : 
+Average training loss: 0.0165
+Average validation loss: 0.1240
+Validation Accuracy: 0.9617
+Overfitting: 0.1075
+Best model saved at epoch 2 with validation loss: 0.1240
+[Epoch 3, Batch 100] loss: 0.09052929230034351
+**STATS for Epoch 3** : 
+Average training loss: 0.0130
+Average validation loss: 0.0870
+Validation Accuracy: 0.9740
+Overfitting: 0.0740
+Best model saved at epoch 3 with validation loss: 0.0870
+[Epoch 4, Batch 100] loss: 0.06836998749524355
+**STATS for Epoch 4** : 
+Average training loss: 0.0088
+Average validation loss: 0.0761
+Validation Accuracy: 0.9758
+Overfitting: 0.0673
+Best model saved at epoch 4 with validation loss: 0.0761
+[Epoch 5, Batch 100] loss: 0.05419084744527936
+**STATS for Epoch 5** : 
+Average training loss: 0.0079
+Average validation loss: 0.0637
+Validation Accuracy: 0.9805
+Overfitting: 0.0558
+Best model saved at epoch 5 with validation loss: 0.0637
+[Epoch 6, Batch 100] loss: 0.04837446829304099
+**STATS for Epoch 6** : 
+Average training loss: 0.0074
+Average validation loss: 0.0645
+Validation Accuracy: 0.9803
+Overfitting: 0.0571
+[Epoch 7, Batch 100] loss: 0.03954996452201158
+**STATS for Epoch 7** : 
+Average training loss: 0.0057
+Average validation loss: 0.0628
+Validation Accuracy: 0.9815
+Overfitting: 0.0571
+Best model saved at epoch 7 with validation loss: 0.0628
+[Epoch 8, Batch 100] loss: 0.029835850168019533
+**STATS for Epoch 8** : 
+Average training loss: 0.0053
+Average validation loss: 0.0644
+Validation Accuracy: 0.9811
+Overfitting: 0.0591
+[Epoch 9, Batch 100] loss: 0.027723932852968574
+**STATS for Epoch 9** : 
+Average training loss: 0.0045
+Average validation loss: 0.0671
+Validation Accuracy: 0.9807
+Overfitting: 0.0626
+[Epoch 10, Batch 100] loss: 0.02371988139115274
+**STATS for Epoch 10** : 
+Average training loss: 0.0039
+Average validation loss: 0.0668
+Validation Accuracy: 0.9810
+Overfitting: 0.0629
+[Epoch 11, Batch 100] loss: 0.02124257825082168
+**STATS for Epoch 11** : 
+Average training loss: 0.0030
+Average validation loss: 0.0573
+Validation Accuracy: 0.9839
+Overfitting: 0.0543
+Best model saved at epoch 11 with validation loss: 0.0573
+[Epoch 12, Batch 100] loss: 0.016444878727197645
+**STATS for Epoch 12** : 
+Average training loss: 0.0035
+Average validation loss: 0.0619
+Validation Accuracy: 0.9825
+Overfitting: 0.0585
+[Epoch 13, Batch 100] loss: 0.01567047289572656
+**STATS for Epoch 13** : 
+Average training loss: 0.0042
+Average validation loss: 0.0620
+Validation Accuracy: 0.9837
+Overfitting: 0.0578
+[Epoch 14, Batch 100] loss: 0.012821085952455178
+**STATS for Epoch 14** : 
+Average training loss: 0.0026
+Average validation loss: 0.0764
+Validation Accuracy: 0.9792
+Overfitting: 0.0738
+[Epoch 15, Batch 100] loss: 0.014297194583341478
+**STATS for Epoch 15** : 
+Average training loss: 0.0040
+Average validation loss: 0.0768
+Validation Accuracy: 0.9802
+Overfitting: 0.0728
+[Epoch 16, Batch 100] loss: 0.0100812171358848
+**STATS for Epoch 16** : 
+Average training loss: 0.0009
+Average validation loss: 0.0629
+Validation Accuracy: 0.9849
+Overfitting: 0.0620
+[Epoch 17, Batch 100] loss: 0.007291581035824493
+**STATS for Epoch 17** : 
+Average training loss: 0.0015
+Average validation loss: 0.0604
+Validation Accuracy: 0.9857
+Overfitting: 0.0589
+[I 2024-11-19 00:56:56,631] Trial 13 pruned. 
+[W 2024-11-19 00:56:56,667] The parameter 'l2' in trial#14 is sampled independently instead of being sampled by multivariate TPE sampler. (optimization performance may be degraded). You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler`, if this independent sampling is intended behavior.
+
+Selected Hyperparameters for Trial 15:
+  l1: 64, l2: 32, lr: 0.0011091980796438998, batch_size: 256
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 2.2986631989479065
+**STATS for Epoch 1** : 
+Average training loss: 0.3479
+Average validation loss: 2.2748
+Validation Accuracy: 0.1897
+Overfitting: 1.9269
+Best model saved at epoch 1 with validation loss: 2.2748
+[Epoch 2, Batch 100] loss: 2.2427286815643313
+**STATS for Epoch 2** : 
+Average training loss: 0.3306
+Average validation loss: 2.1508
+Validation Accuracy: 0.3567
+Overfitting: 1.8202
+Best model saved at epoch 2 with validation loss: 2.1508
+[Epoch 3, Batch 100] loss: 1.880895382165909
+**STATS for Epoch 3** : 
+Average training loss: 0.2071
+Average validation loss: 1.2382
+Validation Accuracy: 0.6492
+Overfitting: 1.0311
+Best model saved at epoch 3 with validation loss: 1.2382
+[Epoch 4, Batch 100] loss: 0.8768560326099396
+**STATS for Epoch 4** : 
+Average training loss: 0.0942
+Average validation loss: 0.5916
+Validation Accuracy: 0.8183
+Overfitting: 0.4975
+Best model saved at epoch 4 with validation loss: 0.5916
+[Epoch 5, Batch 100] loss: 0.5197535666823387
+**STATS for Epoch 5** : 
+Average training loss: 0.0683
+Average validation loss: 0.4491
+Validation Accuracy: 0.8629
+Overfitting: 0.3807
+Best model saved at epoch 5 with validation loss: 0.4491
+[Epoch 6, Batch 100] loss: 0.4066275602579117
+**STATS for Epoch 6** : 
+Average training loss: 0.0522
+Average validation loss: 0.3575
+Validation Accuracy: 0.8924
+Overfitting: 0.3053
+Best model saved at epoch 6 with validation loss: 0.3575
+[Epoch 7, Batch 100] loss: 0.3381327775120735
+**STATS for Epoch 7** : 
+Average training loss: 0.0496
+Average validation loss: 0.3045
+Validation Accuracy: 0.9098
+Overfitting: 0.2549
+Best model saved at epoch 7 with validation loss: 0.3045
+[Epoch 8, Batch 100] loss: 0.29857401832938196
+**STATS for Epoch 8** : 
+Average training loss: 0.0418
+Average validation loss: 0.2813
+Validation Accuracy: 0.9128
+Overfitting: 0.2395
+Best model saved at epoch 8 with validation loss: 0.2813
+[Epoch 9, Batch 100] loss: 0.26400182515382764
+**STATS for Epoch 9** : 
+Average training loss: 0.0403
+Average validation loss: 0.2490
+Validation Accuracy: 0.9238
+Overfitting: 0.2087
+[I 2024-11-19 00:58:29,226] Trial 14 pruned. 
+[W 2024-11-19 00:58:29,259] The parameter 'l2' in trial#15 is sampled independently instead of being sampled by multivariate TPE sampler. (optimization performance may be degraded). You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler`, if this independent sampling is intended behavior.
+
+Selected Hyperparameters for Trial 16:
+  l1: 192, l2: 160, lr: 0.0035382786079189905, batch_size: 256
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 2.268275272846222
+**STATS for Epoch 1** : 
+Average training loss: 0.3184
+Average validation loss: 1.9547
+Validation Accuracy: 0.5611
+Overfitting: 1.6363
+Best model saved at epoch 1 with validation loss: 1.9547
+[Epoch 2, Batch 100] loss: 0.8377105072140694
+**STATS for Epoch 2** : 
+Average training loss: 0.0581
+Average validation loss: 0.3777
+Validation Accuracy: 0.8857
+Overfitting: 0.3196
+Best model saved at epoch 2 with validation loss: 0.3777
+[Epoch 3, Batch 100] loss: 0.3058761066198349
+**STATS for Epoch 3** : 
+Average training loss: 0.0405
+Average validation loss: 0.2335
+Validation Accuracy: 0.9312
+Overfitting: 0.1930
+Best model saved at epoch 3 with validation loss: 0.2335
+[Epoch 4, Batch 100] loss: 0.20962663531303405
+**STATS for Epoch 4** : 
+Average training loss: 0.0283
+Average validation loss: 0.1823
+Validation Accuracy: 0.9453
+Overfitting: 0.1540
+Best model saved at epoch 4 with validation loss: 0.1823
+[Epoch 5, Batch 100] loss: 0.16364614300429822
+**STATS for Epoch 5** : 
+Average training loss: 0.0217
+Average validation loss: 0.1532
+Validation Accuracy: 0.9525
+Overfitting: 0.1314
+Best model saved at epoch 5 with validation loss: 0.1532
+[Epoch 6, Batch 100] loss: 0.1316319288313389
+**STATS for Epoch 6** : 
+Average training loss: 0.0166
+Average validation loss: 0.1402
+Validation Accuracy: 0.9574
+Overfitting: 0.1236
+Best model saved at epoch 6 with validation loss: 0.1402
+[Epoch 7, Batch 100] loss: 0.11272376533597708
+**STATS for Epoch 7** : 
+Average training loss: 0.0153
+Average validation loss: 0.1090
+Validation Accuracy: 0.9666
+Overfitting: 0.0937
+Best model saved at epoch 7 with validation loss: 0.1090
+[Epoch 8, Batch 100] loss: 0.0983941949531436
+**STATS for Epoch 8** : 
+Average training loss: 0.0145
+Average validation loss: 0.1027
+Validation Accuracy: 0.9685
+Overfitting: 0.0881
+Best model saved at epoch 8 with validation loss: 0.1027
+[Epoch 9, Batch 100] loss: 0.08851560108363628
+**STATS for Epoch 9** : 
+Average training loss: 0.0140
+Average validation loss: 0.1004
+Validation Accuracy: 0.9687
+Overfitting: 0.0864
+Best model saved at epoch 9 with validation loss: 0.1004
+[Epoch 10, Batch 100] loss: 0.07865065805613995
+**STATS for Epoch 10** : 
+Average training loss: 0.0135
+Average validation loss: 0.0979
+Validation Accuracy: 0.9691
+Overfitting: 0.0844
+Best model saved at epoch 10 with validation loss: 0.0979
+[Epoch 11, Batch 100] loss: 0.07280328545719385
+**STATS for Epoch 11** : 
+Average training loss: 0.0118
+Average validation loss: 0.0878
+Validation Accuracy: 0.9727
+Overfitting: 0.0760
+Best model saved at epoch 11 with validation loss: 0.0878
+[Epoch 12, Batch 100] loss: 0.06845417987555265
+**STATS for Epoch 12** : 
+Average training loss: 0.0111
+Average validation loss: 0.0890
+Validation Accuracy: 0.9716
+Overfitting: 0.0779
+[Epoch 13, Batch 100] loss: 0.06594912819564343
+**STATS for Epoch 13** : 
+Average training loss: 0.0097
+Average validation loss: 0.0834
+Validation Accuracy: 0.9737
+Overfitting: 0.0736
+Best model saved at epoch 13 with validation loss: 0.0834
+[Epoch 14, Batch 100] loss: 0.05761497626081109
+**STATS for Epoch 14** : 
+Average training loss: 0.0095
+Average validation loss: 0.0766
+Validation Accuracy: 0.9762
+Overfitting: 0.0671
+Best model saved at epoch 14 with validation loss: 0.0766
+[Epoch 15, Batch 100] loss: 0.057526579145342115
+**STATS for Epoch 15** : 
+Average training loss: 0.0086
+Average validation loss: 0.0924
+Validation Accuracy: 0.9709
+Overfitting: 0.0838
+[Epoch 16, Batch 100] loss: 0.05542500911280513
+**STATS for Epoch 16** : 
+Average training loss: 0.0080
+Average validation loss: 0.0698
+Validation Accuracy: 0.9783
+Overfitting: 0.0618
+Best model saved at epoch 16 with validation loss: 0.0698
+[Epoch 17, Batch 100] loss: 0.05131860883906483
+**STATS for Epoch 17** : 
+Average training loss: 0.0065
+Average validation loss: 0.0731
+Validation Accuracy: 0.9768
+Overfitting: 0.0666
+[I 2024-11-19 01:01:24,098] Trial 15 pruned. 
+[W 2024-11-19 01:01:24,132] The parameter 'l2' in trial#16 is sampled independently instead of being sampled by multivariate TPE sampler. (optimization performance may be degraded). You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler`, if this independent sampling is intended behavior.
+
+Selected Hyperparameters for Trial 17:
+  l1: 160, l2: 128, lr: 0.03348093820200741, batch_size: 256
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 0.9174784921854734
+**STATS for Epoch 1** : 
+Average training loss: 0.0188
+Average validation loss: 0.1168
+Validation Accuracy: 0.9642
+Overfitting: 0.0981
+Best model saved at epoch 1 with validation loss: 0.1168
+[Epoch 2, Batch 100] loss: 0.09540492359548808
+**STATS for Epoch 2** : 
+Average training loss: 0.0128
+Average validation loss: 0.0933
+Validation Accuracy: 0.9710
+Overfitting: 0.0805
+Best model saved at epoch 2 with validation loss: 0.0933
+[Epoch 3, Batch 100] loss: 0.06856994438916444
+**STATS for Epoch 3** : 
+Average training loss: 0.0082
+Average validation loss: 0.0716
+Validation Accuracy: 0.9777
+Overfitting: 0.0634
+Best model saved at epoch 3 with validation loss: 0.0716
+[Epoch 4, Batch 100] loss: 0.05041740806773305
+**STATS for Epoch 4** : 
+Average training loss: 0.0084
+Average validation loss: 0.0761
+Validation Accuracy: 0.9762
+Overfitting: 0.0677
+[Epoch 5, Batch 100] loss: 0.045399580970406535
+**STATS for Epoch 5** : 
+Average training loss: 0.0055
+Average validation loss: 0.0686
+Validation Accuracy: 0.9800
+Overfitting: 0.0630
+Best model saved at epoch 5 with validation loss: 0.0686
+[Epoch 6, Batch 100] loss: 0.03619899913202971
+**STATS for Epoch 6** : 
+Average training loss: 0.0059
+Average validation loss: 0.0793
+Validation Accuracy: 0.9764
+Overfitting: 0.0734
+[Epoch 7, Batch 100] loss: 0.02767269522882998
+**STATS for Epoch 7** : 
+Average training loss: 0.0063
+Average validation loss: 0.0643
+Validation Accuracy: 0.9810
+Overfitting: 0.0581
+Best model saved at epoch 7 with validation loss: 0.0643
+[Epoch 8, Batch 100] loss: 0.028452600245364012
+**STATS for Epoch 8** : 
+Average training loss: 0.0047
+Average validation loss: 0.0601
+Validation Accuracy: 0.9832
+Overfitting: 0.0554
+Best model saved at epoch 8 with validation loss: 0.0601
+[Epoch 9, Batch 100] loss: 0.019651269465684892
+**STATS for Epoch 9** : 
+Average training loss: 0.0031
+Average validation loss: 0.0590
+Validation Accuracy: 0.9837
+Overfitting: 0.0559
+Best model saved at epoch 9 with validation loss: 0.0590
+[Epoch 10, Batch 100] loss: 0.014545644525205716
+**STATS for Epoch 10** : 
+Average training loss: 0.0021
+Average validation loss: 0.0614
+Validation Accuracy: 0.9831
+Overfitting: 0.0593
+[Epoch 11, Batch 100] loss: 0.013709659327287228
+**STATS for Epoch 11** : 
+Average training loss: 0.0031
+Average validation loss: 0.0666
+Validation Accuracy: 0.9828
+Overfitting: 0.0636
+[Epoch 12, Batch 100] loss: 0.01780889312271029
+**STATS for Epoch 12** : 
+Average training loss: 0.0026
+Average validation loss: 0.0673
+Validation Accuracy: 0.9827
+Overfitting: 0.0646
+[Epoch 13, Batch 100] loss: 0.008661026096087881
+**STATS for Epoch 13** : 
+Average training loss: 0.0016
+Average validation loss: 0.0704
+Validation Accuracy: 0.9835
+Overfitting: 0.0687
+[Epoch 14, Batch 100] loss: 0.007776677353540436
+**STATS for Epoch 14** : 
+Average training loss: 0.0014
+Average validation loss: 0.0708
+Validation Accuracy: 0.9831
+Overfitting: 0.0694
+[Epoch 15, Batch 100] loss: 0.010308723806519992
+**STATS for Epoch 15** : 
+Average training loss: 0.0015
+Average validation loss: 0.0721
+Validation Accuracy: 0.9831
+Overfitting: 0.0706
+[Epoch 16, Batch 100] loss: 0.005228404094086727
+**STATS for Epoch 16** : 
+Average training loss: 0.0012
+Average validation loss: 0.0723
+Validation Accuracy: 0.9836
+Overfitting: 0.0711
+[Epoch 17, Batch 100] loss: 0.004986662558658281
+**STATS for Epoch 17** : 
+Average training loss: 0.0006
+Average validation loss: 0.0716
+Validation Accuracy: 0.9858
+Overfitting: 0.0710
+[I 2024-11-19 01:04:18,673] Trial 16 pruned. 
+[W 2024-11-19 01:04:18,706] The parameter 'l2' in trial#17 is sampled independently instead of being sampled by multivariate TPE sampler. (optimization performance may be degraded). You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler`, if this independent sampling is intended behavior.
+
+Selected Hyperparameters for Trial 18:
+  l1: 192, l2: 160, lr: 0.008674701629008586, batch_size: 128
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 1.3778709098696709
+[Epoch 1, Batch 200] loss: 0.30284973844885826
+**STATS for Epoch 1** : 
+Average training loss: 0.0276
+Average validation loss: 0.1916
+Validation Accuracy: 0.9367
+Overfitting: 0.1641
+Best model saved at epoch 1 with validation loss: 0.1916
+[Epoch 2, Batch 100] loss: 0.16000406589359045
+[Epoch 2, Batch 200] loss: 0.1250192491710186
+**STATS for Epoch 2** : 
+Average training loss: 0.0160
+Average validation loss: 0.1275
+Validation Accuracy: 0.9582
+Overfitting: 0.1116
+Best model saved at epoch 2 with validation loss: 0.1275
+[Epoch 3, Batch 100] loss: 0.10513732308521867
+[Epoch 3, Batch 200] loss: 0.09445389533415437
+**STATS for Epoch 3** : 
+Average training loss: 0.0134
+Average validation loss: 0.1212
+Validation Accuracy: 0.9631
+Overfitting: 0.1078
+Best model saved at epoch 3 with validation loss: 0.1212
+[Epoch 4, Batch 100] loss: 0.0741080296318978
+[Epoch 4, Batch 200] loss: 0.07466412701644004
+**STATS for Epoch 4** : 
+Average training loss: 0.0121
+Average validation loss: 0.0890
+Validation Accuracy: 0.9713
+Overfitting: 0.0770
+Best model saved at epoch 4 with validation loss: 0.0890
+[Epoch 5, Batch 100] loss: 0.05998726806603372
+[Epoch 5, Batch 200] loss: 0.05710526836104691
+**STATS for Epoch 5** : 
+Average training loss: 0.0095
+Average validation loss: 0.0724
+Validation Accuracy: 0.9776
+Overfitting: 0.0629
+Best model saved at epoch 5 with validation loss: 0.0724
+[Epoch 6, Batch 100] loss: 0.04940320025198162
+[Epoch 6, Batch 200] loss: 0.052216566987335684
+**STATS for Epoch 6** : 
+Average training loss: 0.0081
+Average validation loss: 0.0770
+Validation Accuracy: 0.9760
+Overfitting: 0.0689
+[Epoch 7, Batch 100] loss: 0.039444196969270706
+[Epoch 7, Batch 200] loss: 0.04218217327725142
+**STATS for Epoch 7** : 
+Average training loss: 0.0071
+Average validation loss: 0.0679
+Validation Accuracy: 0.9792
+Overfitting: 0.0609
+Best model saved at epoch 7 with validation loss: 0.0679
+[Epoch 8, Batch 100] loss: 0.029967483344953506
+[Epoch 8, Batch 200] loss: 0.03526356667513028
+**STATS for Epoch 8** : 
+Average training loss: 0.0044
+Average validation loss: 0.0708
+Validation Accuracy: 0.9782
+Overfitting: 0.0664
+[Epoch 9, Batch 100] loss: 0.03041394755942747
+[Epoch 9, Batch 200] loss: 0.0290333400759846
+**STATS for Epoch 9** : 
+Average training loss: 0.0057
+Average validation loss: 0.0677
+Validation Accuracy: 0.9793
+Overfitting: 0.0620
+Best model saved at epoch 9 with validation loss: 0.0677
+[Epoch 10, Batch 100] loss: 0.02445810489822179
+[Epoch 10, Batch 200] loss: 0.02688398464815691
+**STATS for Epoch 10** : 
+Average training loss: 0.0046
+Average validation loss: 0.0639
+Validation Accuracy: 0.9816
+Overfitting: 0.0593
+Best model saved at epoch 10 with validation loss: 0.0639
+[Epoch 11, Batch 100] loss: 0.019656128904316575
+[Epoch 11, Batch 200] loss: 0.018748739939182996
+**STATS for Epoch 11** : 
+Average training loss: 0.0031
+Average validation loss: 0.0587
+Validation Accuracy: 0.9832
+Overfitting: 0.0556
+Best model saved at epoch 11 with validation loss: 0.0587
+[Epoch 12, Batch 100] loss: 0.015594334916677326
+[Epoch 12, Batch 200] loss: 0.016294132430339232
+**STATS for Epoch 12** : 
+Average training loss: 0.0029
+Average validation loss: 0.0752
+Validation Accuracy: 0.9794
+Overfitting: 0.0723
+[Epoch 13, Batch 100] loss: 0.016288970842142588
+[Epoch 13, Batch 200] loss: 0.015364721056539566
+**STATS for Epoch 13** : 
+Average training loss: 0.0022
+Average validation loss: 0.0599
+Validation Accuracy: 0.9830
+Overfitting: 0.0577
+[Epoch 14, Batch 100] loss: 0.010761696897097862
+[Epoch 14, Batch 200] loss: 0.012965322892705444
+**STATS for Epoch 14** : 
+Average training loss: 0.0015
+Average validation loss: 0.0678
+Validation Accuracy: 0.9823
+Overfitting: 0.0663
+[Epoch 15, Batch 100] loss: 0.013001245108171133
+[Epoch 15, Batch 200] loss: 0.012979740348528139
+**STATS for Epoch 15** : 
+Average training loss: 0.0018
+Average validation loss: 0.0618
+Validation Accuracy: 0.9838
+Overfitting: 0.0600
+[Epoch 16, Batch 100] loss: 0.014170160376816057
+[Epoch 16, Batch 200] loss: 0.011177666598377982
+**STATS for Epoch 16** : 
+Average training loss: 0.0014
+Average validation loss: 0.0620
+Validation Accuracy: 0.9841
+Overfitting: 0.0605
+[Epoch 17, Batch 100] loss: 0.005866483408026397
+[Epoch 17, Batch 200] loss: 0.010126739618717693
+**STATS for Epoch 17** : 
+Average training loss: 0.0014
+Average validation loss: 0.0666
+Validation Accuracy: 0.9833
+Overfitting: 0.0652
+[I 2024-11-19 01:07:19,443] Trial 17 pruned. 
+[W 2024-11-19 01:07:19,478] The parameter 'l2' in trial#18 is sampled independently instead of being sampled by multivariate TPE sampler. (optimization performance may be degraded). You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler`, if this independent sampling is intended behavior.
+
+Selected Hyperparameters for Trial 19:
+  l1: 160, l2: 160, lr: 0.0035326124126154497, batch_size: 256
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 2.272634665966034
+**STATS for Epoch 1** : 
+Average training loss: 0.3231
+Average validation loss: 2.0067
+Validation Accuracy: 0.5341
+Overfitting: 1.6836
+Best model saved at epoch 1 with validation loss: 2.0067
+[Epoch 2, Batch 100] loss: 0.8718100062012673
+**STATS for Epoch 2** : 
+Average training loss: 0.0643
+Average validation loss: 0.3772
+Validation Accuracy: 0.8830
+Overfitting: 0.3128
+Best model saved at epoch 2 with validation loss: 0.3772
+[Epoch 3, Batch 100] loss: 0.3138346771895886
+**STATS for Epoch 3** : 
+Average training loss: 0.0385
+Average validation loss: 0.2535
+Validation Accuracy: 0.9245
+Overfitting: 0.2151
+Best model saved at epoch 3 with validation loss: 0.2535
+[Epoch 4, Batch 100] loss: 0.21237537860870362
+**STATS for Epoch 4** : 
+Average training loss: 0.0313
+Average validation loss: 0.1920
+Validation Accuracy: 0.9413
+Overfitting: 0.1607
+Best model saved at epoch 4 with validation loss: 0.1920
+[Epoch 5, Batch 100] loss: 0.1696450385451317
+**STATS for Epoch 5** : 
+Average training loss: 0.0250
+Average validation loss: 0.1580
+Validation Accuracy: 0.9512
+Overfitting: 0.1330
+Best model saved at epoch 5 with validation loss: 0.1580
+[Epoch 6, Batch 100] loss: 0.14152900949120523
+**STATS for Epoch 6** : 
+Average training loss: 0.0188
+Average validation loss: 0.1355
+Validation Accuracy: 0.9588
+Overfitting: 0.1168
+Best model saved at epoch 6 with validation loss: 0.1355
+[Epoch 7, Batch 100] loss: 0.11958229433745146
+**STATS for Epoch 7** : 
+Average training loss: 0.0188
+Average validation loss: 0.1377
+Validation Accuracy: 0.9566
+Overfitting: 0.1189
+[Epoch 8, Batch 100] loss: 0.10590699549764394
+**STATS for Epoch 8** : 
+Average training loss: 0.0145
+Average validation loss: 0.1015
+Validation Accuracy: 0.9676
+Overfitting: 0.0870
+Best model saved at epoch 8 with validation loss: 0.1015
+[Epoch 9, Batch 100] loss: 0.09031085949391127
+**STATS for Epoch 9** : 
+Average training loss: 0.0159
+Average validation loss: 0.1023
+Validation Accuracy: 0.9677
+Overfitting: 0.0864
+[I 2024-11-19 01:08:51,846] Trial 18 pruned. 
+[W 2024-11-19 01:08:51,879] The parameter 'l2' in trial#19 is sampled independently instead of being sampled by multivariate TPE sampler. (optimization performance may be degraded). You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler`, if this independent sampling is intended behavior.
+
+Selected Hyperparameters for Trial 20:
+  l1: 128, l2: 96, lr: 0.0432976338715874, batch_size: 256
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 1.306228705048561
+**STATS for Epoch 1** : 
+Average training loss: 0.0319
+Average validation loss: 0.1812
+Validation Accuracy: 0.9440
+Overfitting: 0.1493
+Best model saved at epoch 1 with validation loss: 0.1812
+[Epoch 2, Batch 100] loss: 0.1450116730481386
+**STATS for Epoch 2** : 
+Average training loss: 0.0152
+Average validation loss: 0.1183
+Validation Accuracy: 0.9628
+Overfitting: 0.1032
+Best model saved at epoch 2 with validation loss: 0.1183
+[Epoch 3, Batch 100] loss: 0.0879177830927074
+**STATS for Epoch 3** : 
+Average training loss: 0.0106
+Average validation loss: 0.0879
+Validation Accuracy: 0.9728
+Overfitting: 0.0773
+Best model saved at epoch 3 with validation loss: 0.0879
+[Epoch 4, Batch 100] loss: 0.06231309397146106
+**STATS for Epoch 4** : 
+Average training loss: 0.0095
+Average validation loss: 0.0777
+Validation Accuracy: 0.9767
+Overfitting: 0.0682
+Best model saved at epoch 4 with validation loss: 0.0777
+[Epoch 5, Batch 100] loss: 0.05389781591482461
+**STATS for Epoch 5** : 
+Average training loss: 0.0097
+Average validation loss: 0.0777
+Validation Accuracy: 0.9767
+Overfitting: 0.0679
+[Epoch 6, Batch 100] loss: 0.045418683206662536
+**STATS for Epoch 6** : 
+Average training loss: 0.0074
+Average validation loss: 0.0853
+Validation Accuracy: 0.9749
+Overfitting: 0.0779
+[Epoch 7, Batch 100] loss: 0.03515710149426013
+**STATS for Epoch 7** : 
+Average training loss: 0.0067
+Average validation loss: 0.0695
+Validation Accuracy: 0.9798
+Overfitting: 0.0628
+Best model saved at epoch 7 with validation loss: 0.0695
+[Epoch 8, Batch 100] loss: 0.034215548210777345
+**STATS for Epoch 8** : 
+Average training loss: 0.0039
+Average validation loss: 0.0698
+Validation Accuracy: 0.9804
+Overfitting: 0.0659
+[Epoch 9, Batch 100] loss: 0.02956209654919803
+**STATS for Epoch 9** : 
+Average training loss: 0.0052
+Average validation loss: 0.0699
+Validation Accuracy: 0.9794
+Overfitting: 0.0647
+[Epoch 10, Batch 100] loss: 0.02653366349171847
+**STATS for Epoch 10** : 
+Average training loss: 0.0050
+Average validation loss: 0.0770
+Validation Accuracy: 0.9803
+Overfitting: 0.0720
+[Epoch 11, Batch 100] loss: 0.024307414579670877
+**STATS for Epoch 11** : 
+Average training loss: 0.0035
+Average validation loss: 0.0771
+Validation Accuracy: 0.9803
+Overfitting: 0.0736
+[Epoch 12, Batch 100] loss: 0.01753846668289043
+**STATS for Epoch 12** : 
+Average training loss: 0.0024
+Average validation loss: 0.0686
+Validation Accuracy: 0.9834
+Overfitting: 0.0662
+Best model saved at epoch 12 with validation loss: 0.0686
+[Epoch 13, Batch 100] loss: 0.021824184431461616
+**STATS for Epoch 13** : 
+Average training loss: 0.0032
+Average validation loss: 0.0739
+Validation Accuracy: 0.9821
+Overfitting: 0.0707
+[Epoch 14, Batch 100] loss: 0.015603791899047792
+**STATS for Epoch 14** : 
+Average training loss: 0.0020
+Average validation loss: 0.0859
+Validation Accuracy: 0.9787
+Overfitting: 0.0840
+[Epoch 15, Batch 100] loss: 0.014016729886643589
+**STATS for Epoch 15** : 
+Average training loss: 0.0033
+Average validation loss: 0.0839
+Validation Accuracy: 0.9789
+Overfitting: 0.0806
+[Epoch 16, Batch 100] loss: 0.016653262599138543
+**STATS for Epoch 16** : 
+Average training loss: 0.0041
+Average validation loss: 0.0806
+Validation Accuracy: 0.9812
+Overfitting: 0.0765
+[Epoch 17, Batch 100] loss: 0.013959577166242526
+**STATS for Epoch 17** : 
+Average training loss: 0.0025
+Average validation loss: 0.0786
+Validation Accuracy: 0.9821
+Overfitting: 0.0761
+[I 2024-11-19 01:11:52,089] Trial 19 pruned. 
+
+Selected Hyperparameters for Trial 21:
+  l1: 448, l2: 224, lr: 0.0007244448034607054, batch_size: 256
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 2.2937556219100954
+**STATS for Epoch 1** : 
+Average training loss: 0.3473
+Average validation loss: 2.2737
+Validation Accuracy: 0.1527
+Overfitting: 1.9264
+Best model saved at epoch 1 with validation loss: 2.2737
+[Epoch 2, Batch 100] loss: 2.2482120871543883
+**STATS for Epoch 2** : 
+Average training loss: 0.3356
+Average validation loss: 2.1870
+Validation Accuracy: 0.5732
+Overfitting: 1.8514
+Best model saved at epoch 2 with validation loss: 2.1870
+[Epoch 3, Batch 100] loss: 2.0444654309749604
+**STATS for Epoch 3** : 
+Average training loss: 0.2575
+Average validation loss: 1.5896
+Validation Accuracy: 0.7275
+Overfitting: 1.3321
+Best model saved at epoch 3 with validation loss: 1.5896
+[Epoch 4, Batch 100] loss: 1.0552450984716415
+**STATS for Epoch 4** : 
+Average training loss: 0.1024
+Average validation loss: 0.6351
+Validation Accuracy: 0.8265
+Overfitting: 0.5327
+Best model saved at epoch 4 with validation loss: 0.6351
+[Epoch 5, Batch 100] loss: 0.5461892911791801
+**STATS for Epoch 5** : 
+Average training loss: 0.0716
+Average validation loss: 0.4636
+Validation Accuracy: 0.8646
+Overfitting: 0.3919
+Best model saved at epoch 5 with validation loss: 0.4636
+[Epoch 6, Batch 100] loss: 0.42789788246154786
+**STATS for Epoch 6** : 
+Average training loss: 0.0606
+Average validation loss: 0.3906
+Validation Accuracy: 0.8863
+Overfitting: 0.3300
+Best model saved at epoch 6 with validation loss: 0.3906
+[Epoch 7, Batch 100] loss: 0.36754455402493474
+**STATS for Epoch 7** : 
+Average training loss: 0.0525
+Average validation loss: 0.3408
+Validation Accuracy: 0.8999
+Overfitting: 0.2883
+Best model saved at epoch 7 with validation loss: 0.3408
+[Epoch 8, Batch 100] loss: 0.3265815588831902
+**STATS for Epoch 8** : 
+Average training loss: 0.0469
+Average validation loss: 0.3050
+Validation Accuracy: 0.9106
+Overfitting: 0.2581
+Best model saved at epoch 8 with validation loss: 0.3050
+[Epoch 9, Batch 100] loss: 0.2958067463338375
+**STATS for Epoch 9** : 
+Average training loss: 0.0434
+Average validation loss: 0.2898
+Validation Accuracy: 0.9145
+Overfitting: 0.2464
+[I 2024-11-19 01:13:29,691] Trial 20 pruned. 
+
+Selected Hyperparameters for Trial 22:
+  l1: 288, l2: 64, lr: 0.0007043081794641798, batch_size: 256
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 2.295018029212952
+**STATS for Epoch 1** : 
+Average training loss: 0.3477
+Average validation loss: 2.2760
+Validation Accuracy: 0.1934
+Overfitting: 1.9283
+Best model saved at epoch 1 with validation loss: 2.2760
+[Epoch 2, Batch 100] loss: 2.2555622625350953
+**STATS for Epoch 2** : 
+Average training loss: 0.3384
+Average validation loss: 2.2118
+Validation Accuracy: 0.4296
+Overfitting: 1.8734
+Best model saved at epoch 2 with validation loss: 2.2118
+[Epoch 3, Batch 100] loss: 2.1370551693439483
+**STATS for Epoch 3** : 
+Average training loss: 0.3023
+Average validation loss: 1.9330
+Validation Accuracy: 0.5527
+Overfitting: 1.6306
+Best model saved at epoch 3 with validation loss: 1.9330
+[Epoch 4, Batch 100] loss: 1.5473312413692475
+**STATS for Epoch 4** : 
+Average training loss: 0.1500
+Average validation loss: 0.8934
+Validation Accuracy: 0.7977
+Overfitting: 0.7434
+Best model saved at epoch 4 with validation loss: 0.8934
+[Epoch 5, Batch 100] loss: 0.6865365874767303
+**STATS for Epoch 5** : 
+Average training loss: 0.0835
+Average validation loss: 0.5438
+Validation Accuracy: 0.8404
+Overfitting: 0.4603
+Best model saved at epoch 5 with validation loss: 0.5438
+[Epoch 6, Batch 100] loss: 0.49073286294937135
+**STATS for Epoch 6** : 
+Average training loss: 0.0688
+Average validation loss: 0.4321
+Validation Accuracy: 0.8755
+Overfitting: 0.3633
+Best model saved at epoch 6 with validation loss: 0.4321
+[Epoch 7, Batch 100] loss: 0.4114187252521515
+**STATS for Epoch 7** : 
+Average training loss: 0.0617
+Average validation loss: 0.3742
+Validation Accuracy: 0.8909
+Overfitting: 0.3125
+Best model saved at epoch 7 with validation loss: 0.3742
+[Epoch 8, Batch 100] loss: 0.3630398797988892
+**STATS for Epoch 8** : 
+Average training loss: 0.0501
+Average validation loss: 0.3358
+Validation Accuracy: 0.9023
+Overfitting: 0.2857
+Best model saved at epoch 8 with validation loss: 0.3358
+[Epoch 9, Batch 100] loss: 0.32356863155961035
+**STATS for Epoch 9** : 
+Average training loss: 0.0466
+Average validation loss: 0.3042
+Validation Accuracy: 0.9098
+Overfitting: 0.2577
+[I 2024-11-19 01:15:07,352] Trial 21 pruned. 
+
+Selected Hyperparameters for Trial 23:
+  l1: 256, l2: 32, lr: 0.002821080178324261, batch_size: 64
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 2.217898244857788
+[Epoch 1, Batch 200] loss: 1.0804545825719833
+[Epoch 1, Batch 300] loss: 0.44721320167183876
+[Epoch 1, Batch 400] loss: 0.2900008676946163
+**STATS for Epoch 1** : 
+Average training loss: 0.0377
+Average validation loss: 0.2363
+Validation Accuracy: 0.9275
+Overfitting: 0.1987
+Best model saved at epoch 1 with validation loss: 0.2363
+[Epoch 2, Batch 100] loss: 0.207579056173563
+[Epoch 2, Batch 200] loss: 0.16657532256096602
+[Epoch 2, Batch 300] loss: 0.14504116263240577
+[Epoch 2, Batch 400] loss: 0.15124767109751702
+**STATS for Epoch 2** : 
+Average training loss: 0.0200
+Average validation loss: 0.1436
+Validation Accuracy: 0.9547
+Overfitting: 0.1236
+Best model saved at epoch 2 with validation loss: 0.1436
+[Epoch 3, Batch 100] loss: 0.10849253178574145
+[Epoch 3, Batch 200] loss: 0.10526638802140952
+[Epoch 3, Batch 300] loss: 0.1065652740933001
+[Epoch 3, Batch 400] loss: 0.10793199768289924
+**STATS for Epoch 3** : 
+Average training loss: 0.0126
+Average validation loss: 0.1066
+Validation Accuracy: 0.9664
+Overfitting: 0.0940
+Best model saved at epoch 3 with validation loss: 0.1066
+[Epoch 4, Batch 100] loss: 0.08048440686427057
+[Epoch 4, Batch 200] loss: 0.09171237636357546
+[Epoch 4, Batch 300] loss: 0.08651070917025208
+[Epoch 4, Batch 400] loss: 0.08223154624458402
+**STATS for Epoch 4** : 
+Average training loss: 0.0105
+Average validation loss: 0.0781
+Validation Accuracy: 0.9750
+Overfitting: 0.0676
+Best model saved at epoch 4 with validation loss: 0.0781
+[Epoch 5, Batch 100] loss: 0.06960338150151074
+[Epoch 5, Batch 200] loss: 0.06078338071005419
+[Epoch 5, Batch 300] loss: 0.07572319308877923
+[Epoch 5, Batch 400] loss: 0.06756383202970027
+**STATS for Epoch 5** : 
+Average training loss: 0.0086
+Average validation loss: 0.0724
+Validation Accuracy: 0.9769
+Overfitting: 0.0638
+Best model saved at epoch 5 with validation loss: 0.0724
+[Epoch 6, Batch 100] loss: 0.0535560569120571
+[Epoch 6, Batch 200] loss: 0.05704599524848163
+[Epoch 6, Batch 300] loss: 0.06174433700973168
+[Epoch 6, Batch 400] loss: 0.05636070493608713
+**STATS for Epoch 6** : 
+Average training loss: 0.0082
+Average validation loss: 0.0784
+Validation Accuracy: 0.9750
+Overfitting: 0.0702
+[Epoch 7, Batch 100] loss: 0.047129302765242756
+[Epoch 7, Batch 200] loss: 0.05545553012285381
+[Epoch 7, Batch 300] loss: 0.04616881186608225
+[Epoch 7, Batch 400] loss: 0.04221245153341442
+**STATS for Epoch 7** : 
+Average training loss: 0.0075
+Average validation loss: 0.0747
+Validation Accuracy: 0.9760
+Overfitting: 0.0673
+[Epoch 8, Batch 100] loss: 0.03158585993340239
+[Epoch 8, Batch 200] loss: 0.04127004797104746
+[Epoch 8, Batch 300] loss: 0.05258330235723406
+[Epoch 8, Batch 400] loss: 0.03854507179697975
+**STATS for Epoch 8** : 
+Average training loss: 0.0054
+Average validation loss: 0.0571
+Validation Accuracy: 0.9821
+Overfitting: 0.0517
+Best model saved at epoch 8 with validation loss: 0.0571
+[Epoch 9, Batch 100] loss: 0.03378432239056565
+[Epoch 9, Batch 200] loss: 0.03283843773126136
+[Epoch 9, Batch 300] loss: 0.04020989033509977
+[Epoch 9, Batch 400] loss: 0.039344024230958896
+**STATS for Epoch 9** : 
+Average training loss: 0.0052
+Average validation loss: 0.0556
+Validation Accuracy: 0.9826
+Overfitting: 0.0504
+Best model saved at epoch 9 with validation loss: 0.0556
+[Epoch 10, Batch 100] loss: 0.027665933028329162
+[Epoch 10, Batch 200] loss: 0.03631503691081889
+[Epoch 10, Batch 300] loss: 0.03127967921085656
+[Epoch 10, Batch 400] loss: 0.029921766825718805
+**STATS for Epoch 10** : 
+Average training loss: 0.0044
+Average validation loss: 0.0595
+Validation Accuracy: 0.9818
+Overfitting: 0.0550
+[Epoch 11, Batch 100] loss: 0.029451975412084722
+[Epoch 11, Batch 200] loss: 0.02614975592936389
+[Epoch 11, Batch 300] loss: 0.023387560899718666
+[Epoch 11, Batch 400] loss: 0.028411706099286674
+**STATS for Epoch 11** : 
+Average training loss: 0.0051
+Average validation loss: 0.0602
+Validation Accuracy: 0.9818
+Overfitting: 0.0551
+[Epoch 12, Batch 100] loss: 0.02083110784937162
+[Epoch 12, Batch 200] loss: 0.024001140386098997
+[Epoch 12, Batch 300] loss: 0.022947958632139488
+[Epoch 12, Batch 400] loss: 0.030614605081500487
+**STATS for Epoch 12** : 
+Average training loss: 0.0038
+Average validation loss: 0.0535
+Validation Accuracy: 0.9838
+Overfitting: 0.0497
+Best model saved at epoch 12 with validation loss: 0.0535
+[Epoch 13, Batch 100] loss: 0.023666945908917113
+[Epoch 13, Batch 200] loss: 0.023692133264266887
+[Epoch 13, Batch 300] loss: 0.02007086111960234
+[Epoch 13, Batch 400] loss: 0.024709284896962346
+**STATS for Epoch 13** : 
+Average training loss: 0.0028
+Average validation loss: 0.0588
+Validation Accuracy: 0.9832
+Overfitting: 0.0560
+[Epoch 14, Batch 100] loss: 0.027233703887322918
+[Epoch 14, Batch 200] loss: 0.014056270254659466
+[Epoch 14, Batch 300] loss: 0.013876338720874628
+[Epoch 14, Batch 400] loss: 0.018196663879789413
+**STATS for Epoch 14** : 
+Average training loss: 0.0034
+Average validation loss: 0.0556
+Validation Accuracy: 0.9839
+Overfitting: 0.0522
+[Epoch 15, Batch 100] loss: 0.014956386905978433
+[Epoch 15, Batch 200] loss: 0.016308968582889063
+[Epoch 15, Batch 300] loss: 0.017046533784014172
+[Epoch 15, Batch 400] loss: 0.017560335054877214
+**STATS for Epoch 15** : 
+Average training loss: 0.0032
+Average validation loss: 0.0667
+Validation Accuracy: 0.9806
+Overfitting: 0.0635
+[Epoch 16, Batch 100] loss: 0.012603076418163255
+[Epoch 16, Batch 200] loss: 0.015332496514893136
+[Epoch 16, Batch 300] loss: 0.016476289605197963
+[Epoch 16, Batch 400] loss: 0.01813498593051918
+**STATS for Epoch 16** : 
+Average training loss: 0.0020
+Average validation loss: 0.0511
+Validation Accuracy: 0.9855
+Overfitting: 0.0490
+Best model saved at epoch 16 with validation loss: 0.0511
+[Epoch 17, Batch 100] loss: 0.011580788187566214
+[Epoch 17, Batch 200] loss: 0.012535025078977923
+[Epoch 17, Batch 300] loss: 0.010377384133462328
+[Epoch 17, Batch 400] loss: 0.0119227242161287
+**STATS for Epoch 17** : 
+Average training loss: 0.0019
+Average validation loss: 0.0635
+Validation Accuracy: 0.9824
+Overfitting: 0.0616
+[Epoch 18, Batch 100] loss: 0.016092944514821284
+[Epoch 18, Batch 200] loss: 0.010516569557366892
+[Epoch 18, Batch 300] loss: 0.00783432435026043
+[Epoch 18, Batch 400] loss: 0.008827766327594872
+**STATS for Epoch 18** : 
+Average training loss: 0.0016
+Average validation loss: 0.0518
+Validation Accuracy: 0.9858
+Overfitting: 0.0501
+[Epoch 19, Batch 100] loss: 0.006350388510109042
+[Epoch 19, Batch 200] loss: 0.011870500645309222
+[Epoch 19, Batch 300] loss: 0.008502915185672463
+[Epoch 19, Batch 400] loss: 0.008281278480353649
+**STATS for Epoch 19** : 
+Average training loss: 0.0013
+Average validation loss: 0.0537
+Validation Accuracy: 0.9855
+Overfitting: 0.0523
+[Epoch 20, Batch 100] loss: 0.004775177564806654
+[Epoch 20, Batch 200] loss: 0.01114938332902966
+[Epoch 20, Batch 300] loss: 0.007493569647631375
+[Epoch 20, Batch 400] loss: 0.008805419868731406
+**STATS for Epoch 20** : 
+Average training loss: 0.0013
+Average validation loss: 0.0535
+Validation Accuracy: 0.9852
+Overfitting: 0.0521
+[Epoch 21, Batch 100] loss: 0.004472958956866933
+[Epoch 21, Batch 200] loss: 0.006198854480680893
+[Epoch 21, Batch 300] loss: 0.01027343343666871
+[Epoch 21, Batch 400] loss: 0.006385346790848416
+**STATS for Epoch 21** : 
+Average training loss: 0.0007
+Average validation loss: 0.0580
+Validation Accuracy: 0.9856
+Overfitting: 0.0572
+[Epoch 22, Batch 100] loss: 0.004387394777513692
+[Epoch 22, Batch 200] loss: 0.005119333024777006
+[Epoch 22, Batch 300] loss: 0.005174534064353793
+[Epoch 22, Batch 400] loss: 0.008140900536527624
+**STATS for Epoch 22** : 
+Average training loss: 0.0007
+Average validation loss: 0.0563
+Validation Accuracy: 0.9858
+Overfitting: 0.0557
+[Epoch 23, Batch 100] loss: 0.004370392569035176
+[Epoch 23, Batch 200] loss: 0.004159600477869389
+[Epoch 23, Batch 300] loss: 0.005478848288971676
+[Epoch 23, Batch 400] loss: 0.00589613032687339
+**STATS for Epoch 23** : 
+Average training loss: 0.0007
+Average validation loss: 0.0570
+Validation Accuracy: 0.9858
+Overfitting: 0.0562
+[Epoch 24, Batch 100] loss: 0.0038249181213541304
+[Epoch 24, Batch 200] loss: 0.00466353009111117
+[Epoch 24, Batch 300] loss: 0.004708470935620426
+[Epoch 24, Batch 400] loss: 0.005581852670147782
+**STATS for Epoch 24** : 
+Average training loss: 0.0005
+Average validation loss: 0.0621
+Validation Accuracy: 0.9854
+Overfitting: 0.0617
+Fold 1 validation loss: 0.0621
+Fold 2/2
+Inner Training set size for fold 2 is 30000
+ Inner Validation set size for fold 2 is 30000
+[Epoch 1, Batch 100] loss: 2.2143406403064727
+[Epoch 1, Batch 200] loss: 0.9522376906871796
+[Epoch 1, Batch 300] loss: 0.45698434934020044
+[Epoch 1, Batch 400] loss: 0.33417832612991333
+**STATS for Epoch 1** : 
+Average training loss: 0.0485
+Average validation loss: 0.3085
+Validation Accuracy: 0.9040
+Overfitting: 0.2600
+Best model saved at epoch 1 with validation loss: 0.3085
+[Epoch 2, Batch 100] loss: 0.249162378013134
+[Epoch 2, Batch 200] loss: 0.2002311434969306
+[Epoch 2, Batch 300] loss: 0.1950978219881654
+[Epoch 2, Batch 400] loss: 0.1719157510623336
+**STATS for Epoch 2** : 
+Average training loss: 0.0233
+Average validation loss: 0.1540
+Validation Accuracy: 0.9523
+Overfitting: 0.1307
+Best model saved at epoch 2 with validation loss: 0.1540
+[Epoch 3, Batch 100] loss: 0.14845174936577676
+[Epoch 3, Batch 200] loss: 0.12694516957737506
+[Epoch 3, Batch 300] loss: 0.12633293449878694
+[Epoch 3, Batch 400] loss: 0.1048552561365068
+**STATS for Epoch 3** : 
+Average training loss: 0.0162
+Average validation loss: 0.1038
+Validation Accuracy: 0.9684
+Overfitting: 0.0876
+Best model saved at epoch 3 with validation loss: 0.1038
+[Epoch 4, Batch 100] loss: 0.09365252287592739
+[Epoch 4, Batch 200] loss: 0.10680152200162411
+[Epoch 4, Batch 300] loss: 0.09296780381351709
+[Epoch 4, Batch 400] loss: 0.08639425022527575
+**STATS for Epoch 4** : 
+Average training loss: 0.0118
+Average validation loss: 0.0874
+Validation Accuracy: 0.9730
+Overfitting: 0.0757
+Best model saved at epoch 4 with validation loss: 0.0874
+[Epoch 5, Batch 100] loss: 0.07793330071028322
+[Epoch 5, Batch 200] loss: 0.07671195990405977
+[Epoch 5, Batch 300] loss: 0.07012317669112235
+[Epoch 5, Batch 400] loss: 0.07611695859581231
+**STATS for Epoch 5** : 
+Average training loss: 0.0110
+Average validation loss: 0.0736
+Validation Accuracy: 0.9767
+Overfitting: 0.0626
+Best model saved at epoch 5 with validation loss: 0.0736
+[Epoch 6, Batch 100] loss: 0.05859537797048688
+[Epoch 6, Batch 200] loss: 0.06611565635539592
+[Epoch 6, Batch 300] loss: 0.06460383202880621
+[Epoch 6, Batch 400] loss: 0.05843142427969724
+**STATS for Epoch 6** : 
+Average training loss: 0.0092
+Average validation loss: 0.0708
+Validation Accuracy: 0.9779
+Overfitting: 0.0617
+Best model saved at epoch 6 with validation loss: 0.0708
+[Epoch 7, Batch 100] loss: 0.05611464803572744
+[Epoch 7, Batch 200] loss: 0.048297146419063214
+[Epoch 7, Batch 300] loss: 0.05202475728467107
+[Epoch 7, Batch 400] loss: 0.05613389153033495
+**STATS for Epoch 7** : 
+Average training loss: 0.0079
+Average validation loss: 0.0653
+Validation Accuracy: 0.9791
+Overfitting: 0.0574
+Best model saved at epoch 7 with validation loss: 0.0653
+[Epoch 8, Batch 100] loss: 0.04100717844674364
+[Epoch 8, Batch 200] loss: 0.05547070729546249
+[Epoch 8, Batch 300] loss: 0.04852830198826268
+[Epoch 8, Batch 400] loss: 0.047960057004820554
+**STATS for Epoch 8** : 
+Average training loss: 0.0073
+Average validation loss: 0.0647
+Validation Accuracy: 0.9802
+Overfitting: 0.0574
+Best model saved at epoch 8 with validation loss: 0.0647
+[Epoch 9, Batch 100] loss: 0.03877305158181116
+[Epoch 9, Batch 200] loss: 0.03536872128141113
+[Epoch 9, Batch 300] loss: 0.03680875631282106
+[Epoch 9, Batch 400] loss: 0.04185878152493387
+**STATS for Epoch 9** : 
+Average training loss: 0.0059
+Average validation loss: 0.0636
+Validation Accuracy: 0.9808
+Overfitting: 0.0577
+Best model saved at epoch 9 with validation loss: 0.0636
+[Epoch 10, Batch 100] loss: 0.026951886150054633
+[Epoch 10, Batch 200] loss: 0.038094235592288896
+[Epoch 10, Batch 300] loss: 0.03361143463291228
+[Epoch 10, Batch 400] loss: 0.031669204497011376
+**STATS for Epoch 10** : 
+Average training loss: 0.0056
+Average validation loss: 0.0622
+Validation Accuracy: 0.9817
+Overfitting: 0.0566
+Best model saved at epoch 10 with validation loss: 0.0622
+[Epoch 11, Batch 100] loss: 0.02622175230644643
+[Epoch 11, Batch 200] loss: 0.030260934649268167
+[Epoch 11, Batch 300] loss: 0.028290035522077234
+[Epoch 11, Batch 400] loss: 0.03155027074972168
+**STATS for Epoch 11** : 
+Average training loss: 0.0055
+Average validation loss: 0.0602
+Validation Accuracy: 0.9823
+Overfitting: 0.0546
+Best model saved at epoch 11 with validation loss: 0.0602
+[Epoch 12, Batch 100] loss: 0.021070925262756647
+[Epoch 12, Batch 200] loss: 0.028816133565269412
+[Epoch 12, Batch 300] loss: 0.029504324664594607
+[Epoch 12, Batch 400] loss: 0.028197324929060415
+**STATS for Epoch 12** : 
+Average training loss: 0.0055
+Average validation loss: 0.0589
+Validation Accuracy: 0.9829
+Overfitting: 0.0534
+Best model saved at epoch 12 with validation loss: 0.0589
+[Epoch 13, Batch 100] loss: 0.02054242786951363
+[Epoch 13, Batch 200] loss: 0.017625836041406728
+[Epoch 13, Batch 300] loss: 0.021162244456645565
+[Epoch 13, Batch 400] loss: 0.03434633247437887
+**STATS for Epoch 13** : 
+Average training loss: 0.0042
+Average validation loss: 0.0642
+Validation Accuracy: 0.9805
+Overfitting: 0.0600
+[Epoch 14, Batch 100] loss: 0.02026842724357266
+[Epoch 14, Batch 200] loss: 0.019400346241309308
+[Epoch 14, Batch 300] loss: 0.02181825954845408
+[Epoch 14, Batch 400] loss: 0.021087310961447656
+**STATS for Epoch 14** : 
+Average training loss: 0.0036
+Average validation loss: 0.0620
+Validation Accuracy: 0.9820
+Overfitting: 0.0584
+[Epoch 15, Batch 100] loss: 0.019527161954320037
+[Epoch 15, Batch 200] loss: 0.01663835339655634
+[Epoch 15, Batch 300] loss: 0.018814800806867423
+[Epoch 15, Batch 400] loss: 0.021668085178243927
+**STATS for Epoch 15** : 
+Average training loss: 0.0025
+Average validation loss: 0.0582
+Validation Accuracy: 0.9836
+Overfitting: 0.0557
+Best model saved at epoch 15 with validation loss: 0.0582
+[Epoch 16, Batch 100] loss: 0.01591433786728885
+[Epoch 16, Batch 200] loss: 0.01796596026455518
+[Epoch 16, Batch 300] loss: 0.018563769672764466
+[Epoch 16, Batch 400] loss: 0.019466947057517246
+**STATS for Epoch 16** : 
+Average training loss: 0.0024
+Average validation loss: 0.0575
+Validation Accuracy: 0.9840
+Overfitting: 0.0551
+Best model saved at epoch 16 with validation loss: 0.0575
+[Epoch 17, Batch 100] loss: 0.016792096901044714
+[Epoch 17, Batch 200] loss: 0.013989114789583255
+[Epoch 17, Batch 300] loss: 0.013931583391386084
+[Epoch 17, Batch 400] loss: 0.013210715289460495
+**STATS for Epoch 17** : 
+Average training loss: 0.0023
+Average validation loss: 0.0577
+Validation Accuracy: 0.9844
+Overfitting: 0.0555
+[Epoch 18, Batch 100] loss: 0.013108896239136811
+[Epoch 18, Batch 200] loss: 0.01187534017022699
+[Epoch 18, Batch 300] loss: 0.014831616203300655
+[Epoch 18, Batch 400] loss: 0.01882874199276557
+**STATS for Epoch 18** : 
+Average training loss: 0.0020
+Average validation loss: 0.0579
+Validation Accuracy: 0.9845
+Overfitting: 0.0559
+[Epoch 19, Batch 100] loss: 0.012472002620343118
+[Epoch 19, Batch 200] loss: 0.012214669466484338
+[Epoch 19, Batch 300] loss: 0.013670306790154428
+[Epoch 19, Batch 400] loss: 0.01170734528965113
+**STATS for Epoch 19** : 
+Average training loss: 0.0023
+Average validation loss: 0.0610
+Validation Accuracy: 0.9837
+Overfitting: 0.0587
+[Epoch 20, Batch 100] loss: 0.011054197069024668
+[Epoch 20, Batch 200] loss: 0.013294700232800096
+[Epoch 20, Batch 300] loss: 0.00816463261435274
+[Epoch 20, Batch 400] loss: 0.013995683637767797
+**STATS for Epoch 20** : 
+Average training loss: 0.0016
+Average validation loss: 0.0576
+Validation Accuracy: 0.9847
+Overfitting: 0.0559
+[Epoch 21, Batch 100] loss: 0.007482035896246088
+[Epoch 21, Batch 200] loss: 0.010322794945095666
+[Epoch 21, Batch 300] loss: 0.011965566722319637
+[Epoch 21, Batch 400] loss: 0.01298263683769619
+**STATS for Epoch 21** : 
+Average training loss: 0.0016
+Average validation loss: 0.0576
+Validation Accuracy: 0.9857
+Overfitting: 0.0561
+[Epoch 22, Batch 100] loss: 0.005873491536040092
+[Epoch 22, Batch 200] loss: 0.004350123567128321
+[Epoch 22, Batch 300] loss: 0.007544401559425751
+[Epoch 22, Batch 400] loss: 0.006713971430071979
+**STATS for Epoch 22** : 
+Average training loss: 0.0013
+Average validation loss: 0.0619
+Validation Accuracy: 0.9836
+Overfitting: 0.0606
+[Epoch 23, Batch 100] loss: 0.008696743644704838
+[Epoch 23, Batch 200] loss: 0.005295701280338108
+[Epoch 23, Batch 300] loss: 0.00446686326606141
+[Epoch 23, Batch 400] loss: 0.006477406541380333
+**STATS for Epoch 23** : 
+Average training loss: 0.0014
+Average validation loss: 0.0590
+Validation Accuracy: 0.9853
+Overfitting: 0.0577
+[Epoch 24, Batch 100] loss: 0.004229025111562805
+[Epoch 24, Batch 200] loss: 0.004988725159710157
+[Epoch 24, Batch 300] loss: 0.00470368063175556
+[Epoch 24, Batch 400] loss: 0.004990775999613106
+**STATS for Epoch 24** : 
+Average training loss: 0.0007
+Average validation loss: 0.0663
+Validation Accuracy: 0.9840
+Overfitting: 0.0655
+Fold 2 validation loss: 0.0663
+Mean validation loss across all folds for Trial 23 is 0.0642 with trial config:  l1: 256, l2: 32, lr: 0.002821080178324261, batch_size: 64
+[I 2024-11-19 01:24:09,400] Trial 22 finished with value: 0.06420775172495878 and parameters: {'l1': 256, 'l2': 32, 'lr': 0.002821080178324261, 'batch_size': 64}. Best is trial 12 with value: 0.05901664003514748.
+
+Selected Hyperparameters for Trial 24:
+  l1: 384, l2: 32, lr: 0.009336920287337963, batch_size: 64
+Training set size: 60000
+Fold 1/2
+Inner Training set size for fold 1 is 30000
+ Inner Validation set size for fold 1 is 30000
+[Epoch 1, Batch 100] loss: 1.567471570968628
+[Epoch 1, Batch 200] loss: 0.3009680495411158
+[Epoch 1, Batch 300] loss: 0.1813510739058256
+[Epoch 1, Batch 400] loss: 0.141068226210773
+**STATS for Epoch 1** : 
+Average training loss: 0.0172
+Average validation loss: 0.1121
+Validation Accuracy: 0.9640
+Overfitting: 0.0949
+Best model saved at epoch 1 with validation loss: 0.1121
+[Epoch 2, Batch 100] loss: 0.0926966851670295
+[Epoch 2, Batch 200] loss: 0.09382644604891538
+[Epoch 2, Batch 300] loss: 0.08676551983691752
+[Epoch 2, Batch 400] loss: 0.08265995130408556
+**STATS for Epoch 2** : 
+Average training loss: 0.0134
+Average validation loss: 0.0686
+Validation Accuracy: 0.9788
+Overfitting: 0.0551
+Best model saved at epoch 2 with validation loss: 0.0686
+[Epoch 3, Batch 100] loss: 0.053204658383037895
+[Epoch 3, Batch 200] loss: 0.06052747669629752
+[Epoch 3, Batch 300] loss: 0.06461689340882003
+[Epoch 3, Batch 400] loss: 0.05454955488909036
+**STATS for Epoch 3** : 
+Average training loss: 0.0094
+Average validation loss: 0.0627
+Validation Accuracy: 0.9804
+Overfitting: 0.0533
+Best model saved at epoch 3 with validation loss: 0.0627
+[Epoch 4, Batch 100] loss: 0.03790469952626154
+[Epoch 4, Batch 200] loss: 0.04513571323826909
+[Epoch 4, Batch 300] loss: 0.04239641392836347
+[Epoch 4, Batch 400] loss: 0.04547037328127772
+**STATS for Epoch 4** : 
+Average training loss: 0.0054
+Average validation loss: 0.0666
+Validation Accuracy: 0.9797
+Overfitting: 0.0612
+[Epoch 5, Batch 100] loss: 0.02370555880246684
+[Epoch 5, Batch 200] loss: 0.032544941218802706
+[Epoch 5, Batch 300] loss: 0.033891714797064196
+[Epoch 5, Batch 400] loss: 0.04411743931937963
+**STATS for Epoch 5** : 
+Average training loss: 0.0045
+Average validation loss: 0.0633
+Validation Accuracy: 0.9813
+Overfitting: 0.0588
+[Epoch 6, Batch 100] loss: 0.01779059131455142
+[Epoch 6, Batch 200] loss: 0.023960155477689114
+[Epoch 6, Batch 300] loss: 0.025434264072100633
+[Epoch 6, Batch 400] loss: 0.027364523907890542
+**STATS for Epoch 6** : 
+Average training loss: 0.0041
+Average validation loss: 0.0548
+Validation Accuracy: 0.9836
+Overfitting: 0.0507
+Best model saved at epoch 6 with validation loss: 0.0548
+[Epoch 7, Batch 100] loss: 0.011917269307887182
+[Epoch 7, Batch 200] loss: 0.023322555073100375
+[Epoch 7, Batch 300] loss: 0.01627061887877062
+[Epoch 7, Batch 400] loss: 0.019846750231372424
+**STATS for Epoch 7** : 
+Average training loss: 0.0049
+Average validation loss: 0.0529
+Validation Accuracy: 0.9851
+Overfitting: 0.0480
+Best model saved at epoch 7 with validation loss: 0.0529
+[Epoch 8, Batch 100] loss: 0.018735898508457468
+[Epoch 8, Batch 200] loss: 0.015729964720085265
+[Epoch 8, Batch 300] loss: 0.01658397415303625
+[Epoch 8, Batch 400] loss: 0.01444303766664234
+**STATS for Epoch 8** : 
+Average training loss: 0.0024
+Average validation loss: 0.0615
+Validation Accuracy: 0.9834
+Overfitting: 0.0591
+[Epoch 9, Batch 100] loss: 0.011863076769950567
+[Epoch 9, Batch 200] loss: 0.010534963130412507
+[Epoch 9, Batch 300] loss: 0.008698272805195301
+[Epoch 9, Batch 400] loss: 0.01693383982172236
+**STATS for Epoch 9** : 
+Average training loss: 0.0021
+Average validation loss: 0.0518
+Validation Accuracy: 0.9862
+Overfitting: 0.0498
+Best model saved at epoch 9 with validation loss: 0.0518
+[Epoch 10, Batch 100] loss: 0.009693580988023314
+[Epoch 10, Batch 200] loss: 0.008404446074346197
+[Epoch 10, Batch 300] loss: 0.01099817034926673
+[Epoch 10, Batch 400] loss: 0.010275938865834177
+**STATS for Epoch 10** : 
+Average training loss: 0.0015
+Average validation loss: 0.0521
+Validation Accuracy: 0.9870
+Overfitting: 0.0506
+[Epoch 11, Batch 100] loss: 0.007455258983827662
+[Epoch 11, Batch 200] loss: 0.005403129934966273
+[Epoch 11, Batch 300] loss: 0.006775547685829224
+[Epoch 11, Batch 400] loss: 0.004583590043912409
+**STATS for Epoch 11** : 
+Average training loss: 0.0008
+Average validation loss: 0.0614
+Validation Accuracy: 0.9858
+Overfitting: 0.0607
+[Epoch 12, Batch 100] loss: 0.004098150767586049
+[Epoch 12, Batch 200] loss: 0.0018266388808115153
+[Epoch 12, Batch 300] loss: 0.0034371503110924096
+[Epoch 12, Batch 400] loss: 0.002922601660238797
+**STATS for Epoch 12** : 
+Average training loss: 0.0007
+Average validation loss: 0.0670
+Validation Accuracy: 0.9855
+Overfitting: 0.0664
+[Epoch 13, Batch 100] loss: 0.004329703142102517
+[Epoch 13, Batch 200] loss: 0.0014117272797921033
+[Epoch 13, Batch 300] loss: 0.0025929781341937994
+[Epoch 13, Batch 400] loss: 0.002495511080342112
+**STATS for Epoch 13** : 
+Average training loss: 0.0007
+Average validation loss: 0.0801
+Validation Accuracy: 0.9831
+Overfitting: 0.0793
+[Epoch 14, Batch 100] loss: 0.004941610870191653
+[Epoch 14, Batch 200] loss: 0.015024944382457762
+[Epoch 14, Batch 300] loss: 0.005866900224564233
+[Epoch 14, Batch 400] loss: 0.006025087293819524
+**STATS for Epoch 14** : 
+Average training loss: 0.0013
+Average validation loss: 0.0733
+Validation Accuracy: 0.9839
+Overfitting: 0.0720
+[Epoch 15, Batch 100] loss: 0.009003615835499659
+[Epoch 15, Batch 200] loss: 0.004961125406734937
+[Epoch 15, Batch 300] loss: 0.006864777322934969
+[Epoch 15, Batch 400] loss: 0.010438632106324803
+**STATS for Epoch 15** : 
+Average training loss: 0.0013
+Average validation loss: 0.0718
+Validation Accuracy: 0.9839
+Overfitting: 0.0705
+[Epoch 16, Batch 100] loss: 0.005476526564561937
+[Epoch 16, Batch 200] loss: 0.006985286270537472
+[Epoch 16, Batch 300] loss: 0.004074372101822519
+[Epoch 16, Batch 400] loss: 0.003985918036569273
+**STATS for Epoch 16** : 
+Average training loss: 0.0008
+Average validation loss: 0.0647
+Validation Accuracy: 0.9864
+Overfitting: 0.0639
+[Epoch 17, Batch 100] loss: 0.004937408293553745
+[Epoch 17, Batch 200] loss: 0.005191397327948834
+[Epoch 17, Batch 300] loss: 0.005453079125745716
+[Epoch 17, Batch 400] loss: 0.003217056031562606
+**STATS for Epoch 17** : 
+Average training loss: 0.0010
+Average validation loss: 0.0778
+Validation Accuracy: 0.9834
+Overfitting: 0.0768
+[I 2024-11-19 01:27:18,838] Trial 23 pruned. 
+Study statistics: 
+  Number of finished trials:  24
+  Number of pruned trials:  20
+  Number of complete trials:  4
+Best hyperparameters found:
+{'l1': 96, 'l2': 96, 'lr': 0.008169619653037311, 'batch_size': 256}
+Best trial:
+  Value:  0.05901664003514748
+Loaded best model checkpoint from: best_checkpoint_trial_12/model.pth
+Using best hyperparameters {'l1': 96, 'l2': 96, 'lr': 0.008169619653037311, 'batch_size': 256} on final Train set with train set size : 60000
+[Epoch 1, Batch 100] loss: 1.8953701162338257
+[Epoch 1, Batch 200] loss: 0.3139790228009224
+**STATS for Epoch 1** : 
+Average training loss: 0.0304
+Best model saved at epoch 1 with training loss: 0.0304
+[Epoch 2, Batch 100] loss: 0.15735042467713356
+[Epoch 2, Batch 200] loss: 0.11305625282227993
+**STATS for Epoch 2** : 
+Average training loss: 0.0154
+Best model saved at epoch 2 with training loss: 0.0154
+[Epoch 3, Batch 100] loss: 0.09120732497423888
+[Epoch 3, Batch 200] loss: 0.08565327707678079
+**STATS for Epoch 3** : 
+Average training loss: 0.0129
+Best model saved at epoch 3 with training loss: 0.0129
+[Epoch 4, Batch 100] loss: 0.06848141795024276
+[Epoch 4, Batch 200] loss: 0.07034962646663188
+**STATS for Epoch 4** : 
+Average training loss: 0.0104
+Best model saved at epoch 4 with training loss: 0.0104
+[Epoch 5, Batch 100] loss: 0.06058808285742998
+[Epoch 5, Batch 200] loss: 0.05479172367602587
+**STATS for Epoch 5** : 
+Average training loss: 0.0083
+Best model saved at epoch 5 with training loss: 0.0083
+[Epoch 6, Batch 100] loss: 0.0501436563115567
+[Epoch 6, Batch 200] loss: 0.055437038131058214
+**STATS for Epoch 6** : 
+Average training loss: 0.0074
+Best model saved at epoch 6 with training loss: 0.0074
+[Epoch 7, Batch 100] loss: 0.04423582394607365
+[Epoch 7, Batch 200] loss: 0.04355242056772113
+**STATS for Epoch 7** : 
+Average training loss: 0.0069
+Best model saved at epoch 7 with training loss: 0.0069
+[Epoch 8, Batch 100] loss: 0.04122982302680612
+[Epoch 8, Batch 200] loss: 0.04435746978968382
+**STATS for Epoch 8** : 
+Average training loss: 0.0062
+Best model saved at epoch 8 with training loss: 0.0062
+[Epoch 9, Batch 100] loss: 0.03857087139505893
+[Epoch 9, Batch 200] loss: 0.03584032498300076
+**STATS for Epoch 9** : 
+Average training loss: 0.0054
+Best model saved at epoch 9 with training loss: 0.0054
+[Epoch 10, Batch 100] loss: 0.034262002240866424
+[Epoch 10, Batch 200] loss: 0.03248789851553738
+**STATS for Epoch 10** : 
+Average training loss: 0.0051
+Best model saved at epoch 10 with training loss: 0.0051
+[Epoch 11, Batch 100] loss: 0.03137209435924888
+[Epoch 11, Batch 200] loss: 0.029226706405170264
+**STATS for Epoch 11** : 
+Average training loss: 0.0040
+Best model saved at epoch 11 with training loss: 0.0040
+[Epoch 12, Batch 100] loss: 0.025679640946909787
+[Epoch 12, Batch 200] loss: 0.027625324751716106
+**STATS for Epoch 12** : 
+Average training loss: 0.0040
+[Epoch 13, Batch 100] loss: 0.025956841974984855
+[Epoch 13, Batch 200] loss: 0.027522603047545998
+**STATS for Epoch 13** : 
+Average training loss: 0.0040
+Best model saved at epoch 13 with training loss: 0.0040
+[Epoch 14, Batch 100] loss: 0.024445252497680484
+[Epoch 14, Batch 200] loss: 0.02186073735356331
+**STATS for Epoch 14** : 
+Average training loss: 0.0034
+Best model saved at epoch 14 with training loss: 0.0034
+[Epoch 15, Batch 100] loss: 0.021170343111734838
+[Epoch 15, Batch 200] loss: 0.023566329705063255
+**STATS for Epoch 15** : 
+Average training loss: 0.0043
+[Epoch 16, Batch 100] loss: 0.019631410078145565
+[Epoch 16, Batch 200] loss: 0.020853836059104652
+**STATS for Epoch 16** : 
+Average training loss: 0.0029
+Best model saved at epoch 16 with training loss: 0.0029
+[Epoch 17, Batch 100] loss: 0.01913872128352523
+[Epoch 17, Batch 200] loss: 0.02109115445287898
+**STATS for Epoch 17** : 
+Average training loss: 0.0024
+Best model saved at epoch 17 with training loss: 0.0024
+[Epoch 18, Batch 100] loss: 0.014594467259012162
+[Epoch 18, Batch 200] loss: 0.01851046389201656
+**STATS for Epoch 18** : 
+Average training loss: 0.0029
+[Epoch 19, Batch 100] loss: 0.015153602701611818
+[Epoch 19, Batch 200] loss: 0.016315633438061923
+**STATS for Epoch 19** : 
+Average training loss: 0.0024
+Best model saved at epoch 19 with training loss: 0.0024
+[Epoch 20, Batch 100] loss: 0.01430077011755202
+[Epoch 20, Batch 200] loss: 0.015545805606525392
+**STATS for Epoch 20** : 
+Average training loss: 0.0024
+[Epoch 21, Batch 100] loss: 0.013513142372248694
+[Epoch 21, Batch 200] loss: 0.015063303181668743
+**STATS for Epoch 21** : 
+Average training loss: 0.0025
+[Epoch 22, Batch 100] loss: 0.010202905350597575
+[Epoch 22, Batch 200] loss: 0.0140804040315561
+**STATS for Epoch 22** : 
+Average training loss: 0.0024
+[Epoch 23, Batch 100] loss: 0.013546823642682284
+[Epoch 23, Batch 200] loss: 0.013436355358571746
+**STATS for Epoch 23** : 
+Average training loss: 0.0016
+Best model saved at epoch 23 with training loss: 0.0016
+[Epoch 24, Batch 100] loss: 0.010733889845432713
+[Epoch 24, Batch 200] loss: 0.011086129378527402
+**STATS for Epoch 24** : 
+Average training loss: 0.0019
+Using best hyperparameters {'l1': 96, 'l2': 96, 'lr': 0.008169619653037311, 'batch_size': 256} on final Test set to find Test loss for overfitting
+Testing loss : 0.0502
+Calculated Overfitting : 0.0482
+Using best hyperparameters {'l1': 96, 'l2': 96, 'lr': 0.008169619653037311, 'batch_size': 256} on final Test set with testing set size : 10000
+Test set accuracy with best hyperparameters: 0.9844
+Total time taken for hyperparameter tuning and evaluation: 1:24:41
+/home/ahussain/PycharmProjects/optunaNew/optuna_TrialPruner.py:470: ExperimentalWarning:
+
+plot_timeline is experimental (supported from v3.2.0). The interface can change in the future.
+
+
+Process finished with exit code 0
+
