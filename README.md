@@ -95,3 +95,9 @@ following packages were used
 | wcwidth                  | 0.2.13    |
 | wheel                    | 0.41.2    |
 | zipp                     | 3.20.2    |
+
+Optuna Documentaion:
+https://optuna.readthedocs.io/en/stable/reference/samplers/index.html
+https://optuna.readthedocs.io/en/stable/reference/pruners.html
+https://optuna.readthedocs.io/en/stable/reference/visualization/index.html
+https://optuna.readthedocs.io/en/stable/reference/trial.html
