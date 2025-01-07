@@ -101,3 +101,5 @@ https://optuna.readthedocs.io/en/stable/reference/samplers/index.html
 https://optuna.readthedocs.io/en/stable/reference/pruners.html
 https://optuna.readthedocs.io/en/stable/reference/visualization/index.html
 https://optuna.readthedocs.io/en/stable/reference/trial.html
+
+MLBCI_implementation.py script gives a proposal for integrating optuna plus CFV in ML-BCI framework.
